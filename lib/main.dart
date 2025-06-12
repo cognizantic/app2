@@ -1,4 +1,4 @@
-// ignore_for_file: library_private_types_in_public_api, unused_import, use_build_context_synchronously
+// ignore_for_file: library_private_types_in_public_api, unused_import, use_build_context_synchronously//
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -788,6 +788,7 @@ class _SignupState extends State<Signup> {
                                 );
                                 if (status == 200) {
                                   Navigator.pushReplacement(
+                                    // ignore: use_build_context_synchronously
                                     context,
                                     MaterialPageRoute(
                                       builder: (context) => const Login(),
