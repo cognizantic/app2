@@ -5,8 +5,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
-final baseurl='http://127.0.0.1:3443';
-var status=0;
+final baseurl = 'http://127.0.0.1:3443';
+var status = 0;
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -18,12 +18,16 @@ class _LoginState extends State<Login> {
   bool _hover1 = false;
   bool _hover2 = false;
   bool _checkrem = false;
-  Future<void> _press1(String username,String passcode) async {
-    try{
-      final response=await http.post(Uri.parse('$baseurl/login'),headers: {'Content-Type': 'application/json'},body: jsonEncode({'username': username,'password':passcode}));
-      status=response.statusCode;
-    }catch(e){
-      status=500;
+  Future<void> _press1(String username, String passcode) async {
+    try {
+      final response = await http.post(
+        Uri.parse('$baseurl/login'),
+        headers: {'Content-Type': 'application/json'},
+        body: jsonEncode({'username': username, 'password': passcode}),
+      );
+      status = response.statusCode;
+    } catch (e) {
+      status = 500;
     }
   }
 
@@ -124,10 +128,7 @@ class _LoginState extends State<Login> {
                             duration: const Duration(seconds: 5),
                             child: ElevatedButton(
                               onPressed: () {
-                                _press1(
-                                  text1.text,
-                                  text2.text,
-                                );
+                                _press1(text1.text, text2.text);
                                 if (status == 500) {
                                   showDialog(
                                     context: context,
@@ -148,17 +149,16 @@ class _LoginState extends State<Login> {
                                       );
                                     },
                                   );
-                                } else if(status==200) {
+                                } else if (status == 200) {
                                   if (_checkrem) {
-                                  } else {
-                                  }
+                                  } else {}
                                   Navigator.pushReplacement(
                                     context,
                                     MaterialPageRoute(
                                       builder: (context) => const Signin(),
                                     ),
                                   );
-                                }else if(status==300){
+                                } else if (status == 300) {
                                   showDialog(
                                     context: context,
                                     builder: (context) {
@@ -178,7 +178,7 @@ class _LoginState extends State<Login> {
                                       );
                                     },
                                   );
-                                }else if(status==302){
+                                } else if (status == 302) {
                                   showDialog(
                                     context: context,
                                     builder: (context) {
@@ -272,13 +272,10 @@ class _LoginState extends State<Login> {
                     ],
                   ),
                 ),
-                AnimatedContainer(duration: const Duration(milliseconds: 300),
-                child:MouseRegion(
-                  child:GestureDetector(
-                    
-                  )
-                )
-                )
+                AnimatedContainer(
+                  duration: const Duration(milliseconds: 300),
+                  child: MouseRegion(child: GestureDetector()),
+                ),
               ],
             ),
           ),
@@ -296,7 +293,7 @@ class Signin extends StatefulWidget {
 
 class _SigninState extends State<Signin> {
   bool _hover1 = false;
-  bool _hover2=false;
+  bool _hover2 = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -306,7 +303,9 @@ class _SigninState extends State<Signin> {
         backgroundColor: Colors.black,
         child: ListView(
           children: [
-            const DrawerHeader(child: Text("home",style:TextStyle(color:Colors.grey))),
+            const DrawerHeader(
+              child: Text("home", style: TextStyle(color: Colors.grey)),
+            ),
             GestureDetector(
               onTap: () {
                 Navigator.pushReplacement(
@@ -316,17 +315,16 @@ class _SigninState extends State<Signin> {
               },
               child: MouseRegion(
                 child: AnimatedContainer(
-                  width:4,
+                  width: 4,
                   duration: const Duration(milliseconds: 300),
                   decoration: BoxDecoration(
                     color: _hover2 ? Colors.grey : Colors.black,
                     border: Border.all(width: 2),
                     borderRadius: BorderRadius.circular(12),
                   ),
-                  
+
                   curve: Curves.easeInOut,
                   child: ListTile(
-                    
                     leading: const Icon(Icons.account_circle),
                     title: AnimatedDefaultTextStyle(
                       duration: const Duration(milliseconds: 300),
@@ -354,17 +352,16 @@ class _SigninState extends State<Signin> {
               },
               child: MouseRegion(
                 child: AnimatedContainer(
-                  width:4,
+                  width: 4,
                   duration: const Duration(milliseconds: 300),
                   decoration: BoxDecoration(
                     color: _hover1 ? Colors.grey : Colors.black,
                     border: Border.all(width: 2),
                     borderRadius: BorderRadius.circular(12),
                   ),
-                  
+
                   curve: Curves.easeInOut,
                   child: ListTile(
-                    
                     leading: const Icon(Icons.logout),
                     title: AnimatedDefaultTextStyle(
                       duration: const Duration(milliseconds: 300),
@@ -383,7 +380,6 @@ class _SigninState extends State<Signin> {
                 },
               ),
             ),
-            
           ],
         ),
       ),
@@ -409,17 +405,43 @@ class _SignupState extends State<Signup> {
     }
     return false;
   }
- 
-  
-  Future<int> sumbit(String username, String firstname, String lastname, String dob, String email, String passcode,String phonenumber,String address, String state, String country) async {
-    try{
-      final response=await http.post(Uri.parse('$baseurl/sign-up'),headers: {'Content-Type': 'application/json'},body: jsonEncode({'username': username, 'firstname':firstname,'lastname':lastname,'dob':dob,'email':email,'password':passcode,'phonenumber':phonenumber,'address':address,'state':state,'country':country}));
-      status=response.statusCode;
+
+  Future<int> sumbit(
+    String username,
+    String firstname,
+    String lastname,
+    String dob,
+    String email,
+    String passcode,
+    String phonenumber,
+    String address,
+    String state,
+    String country,
+  ) async {
+    try {
+      final response = await http.post(
+        Uri.parse('$baseurl/sign-up'),
+        headers: {'Content-Type': 'application/json'},
+        body: jsonEncode({
+          'username': username,
+          'firstname': firstname,
+          'lastname': lastname,
+          'dob': dob,
+          'email': email,
+          'password': passcode,
+          'phonenumber': phonenumber,
+          'address': address,
+          'state': state,
+          'country': country,
+        }),
+      );
+      status = response.statusCode;
       return status;
-    }catch(e){
+    } catch (e) {
       return 500;
     }
   }
+
   final TextEditingController text1 = TextEditingController();
   final TextEditingController text2 = TextEditingController();
   final TextEditingController text3 = TextEditingController();
@@ -432,7 +454,7 @@ class _SignupState extends State<Signup> {
   final TextEditingController text10 = TextEditingController();
   final TextEditingController text11 = TextEditingController();
   @override
-  void dispose(){
+  void dispose() {
     text1.dispose();
     text2.dispose();
     text3.dispose();
@@ -446,6 +468,7 @@ class _SignupState extends State<Signup> {
     text11.dispose();
     super.dispose();
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -467,7 +490,7 @@ class _SignupState extends State<Signup> {
                   SizedBox(
                     width: 5,
                     child: Padding(
-                      padding: const EdgeInsets.only(bottom: 8,top:30),
+                      padding: const EdgeInsets.only(bottom: 8, top: 30),
                       child: TextFormField(
                         style: const TextStyle(color: Colors.grey),
                         textAlign: TextAlign.center,
@@ -475,8 +498,11 @@ class _SignupState extends State<Signup> {
                         validator: (val) {
                           if (val == null || val.isEmpty) {
                             return 'required';
-                          }else if(status==300||status==302||status==304||status==306){
-                            status=0;
+                          } else if (status == 300 ||
+                              status == 302 ||
+                              status == 304 ||
+                              status == 306) {
+                            status = 0;
                             return 'username already exists';
                           }
                           return null;
@@ -541,11 +567,13 @@ class _SignupState extends State<Signup> {
                         validator: (val) {
                           if (val == null || val.isEmpty) {
                             return 'required';
-                            
-                          }else if (!RegExp(r'^\d+$').hasMatch(val)) {
+                          } else if (!RegExp(r'^\d+$').hasMatch(val)) {
                             return 'check';
-                          }else if(status==300||status==303||status==304||status==305){
-                            status=0;
+                          } else if (status == 300 ||
+                              status == 303 ||
+                              status == 304 ||
+                              status == 305) {
+                            status = 0;
                             return 'already exists';
                           }
                           return null;
@@ -670,8 +698,11 @@ class _SignupState extends State<Signup> {
                             return 'required';
                           } else if (!val.contains("@")) {
                             return 'enter proper email';
-                          }else if(status==301 || status==300||status == 305||status==306){
-                            status=0;
+                          } else if (status == 301 ||
+                              status == 300 ||
+                              status == 305 ||
+                              status == 306) {
+                            status = 0;
                             return 'email already exists';
                           }
                           return null;
@@ -704,7 +735,7 @@ class _SignupState extends State<Signup> {
                       ),
                     ),
                   ),
-                  
+
                   SizedBox(
                     width: 5,
                     child: Padding(
@@ -717,8 +748,7 @@ class _SignupState extends State<Signup> {
                           if (val == null || val.isEmpty) {
                             return 'required';
                           }
-                          if (val.isNotEmpty &&
-                              text6.text != text7.text) {
+                          if (val.isNotEmpty && text6.text != text7.text) {
                             return 'check password';
                           }
                           return null;
@@ -731,73 +761,86 @@ class _SignupState extends State<Signup> {
                     ),
                   ),
                   SizedBox(
-                  child:Padding(padding: const EdgeInsets.only(top: 5,bottom: 50),
-                  child:MouseRegion(
-                    onEnter: (_) {
-                      setState(() => _hover1 = true);
-                    },
-                    onExit: (_) {
-                      setState(() => _hover1 = false);
-                    },
-                    child: GestureDetector(
-                      onTap: () async{
-                        if (_formKey.currentState!.validate()) {
-                          if (_checkpass(
-                            text6.text,
-                            text7.text,
-                          )) {
-                            status=await sumbit(text1.text,text2.text,text3.text,text4.text,text5.text,text6.text,text8.text,text9.text,text10.text,text11.text);
-                            if(status==200) {
-                              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> const Login()));
-                            }
-                          } else {
-                            showDialog(
-                                    context: context,
-                                    builder: (context) {
-                                      return AlertDialog(
-                                        content: const Text(
-                                          "error",
-                                          style: TextStyle(color: Colors.black),
-                                        ),
-                                        actions: [
-                                          TextButton(
-                                            onPressed: () {
-                                              Navigator.of(context).pop();
-                                            },
-                                            child: const Text('OK'),
-                                          ),
-                                        ],
-                                      );
-                                    },
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 5, bottom: 50),
+                      child: MouseRegion(
+                        onEnter: (_) {
+                          setState(() => _hover1 = true);
+                        },
+                        onExit: (_) {
+                          setState(() => _hover1 = false);
+                        },
+                        child: GestureDetector(
+                          onTap: () async {
+                            if (_formKey.currentState!.validate()) {
+                              if (_checkpass(text6.text, text7.text)) {
+                                status = await sumbit(
+                                  text1.text,
+                                  text2.text,
+                                  text3.text,
+                                  text4.text,
+                                  text5.text,
+                                  text6.text,
+                                  text8.text,
+                                  text9.text,
+                                  text10.text,
+                                  text11.text,
+                                );
+                                if (status == 200) {
+                                  Navigator.pushReplacement(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => const Login(),
+                                    ),
                                   );
-                          }
-                        } else {
-                        }
-                      },
-                      child: AnimatedContainer(
-                        height: 50,
-                        duration: const Duration(milliseconds: 300),
-                        curve: Curves.easeInOut,
-                        decoration: BoxDecoration(
-                          border: Border.all(color: Colors.grey),
-                          borderRadius: BorderRadius.circular(5),
-                          color: _hover1 ? Colors.black : Colors.grey,
-                        ),
-                        child: Center(
-                          child: AnimatedDefaultTextStyle(
+                                }
+                              } else {
+                                showDialog(
+                                  context: context,
+                                  builder: (context) {
+                                    return AlertDialog(
+                                      content: const Text(
+                                        "error",
+                                        style: TextStyle(color: Colors.black),
+                                      ),
+                                      actions: [
+                                        TextButton(
+                                          onPressed: () {
+                                            Navigator.of(context).pop();
+                                          },
+                                          child: const Text('OK'),
+                                        ),
+                                      ],
+                                    );
+                                  },
+                                );
+                              }
+                            } else {}
+                          },
+                          child: AnimatedContainer(
+                            height: 50,
                             duration: const Duration(milliseconds: 300),
-                            style: TextStyle(
-                              color: _hover1 ? Colors.grey : Colors.black,
-                              fontSize: 16,
-                              fontWeight: FontWeight.w500,
+                            curve: Curves.easeInOut,
+                            decoration: BoxDecoration(
+                              border: Border.all(color: Colors.grey),
+                              borderRadius: BorderRadius.circular(5),
+                              color: _hover1 ? Colors.black : Colors.grey,
                             ),
-                            child: const Text("Submit"),
+                            child: Center(
+                              child: AnimatedDefaultTextStyle(
+                                duration: const Duration(milliseconds: 300),
+                                style: TextStyle(
+                                  color: _hover1 ? Colors.grey : Colors.black,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                                child: const Text("Submit"),
+                              ),
+                            ),
                           ),
                         ),
                       ),
                     ),
-                  ),
-                  ),
                   ),
                 ],
               ),
@@ -809,26 +852,32 @@ class _SignupState extends State<Signup> {
   }
 }
 
-
 class Account extends StatefulWidget {
   const Account({super.key});
   @override
   _AccountState createState() => _AccountState();
 }
-class _AccountState extends State<Account>{
-  bool _hover1=false;
-  bool _hover2=false;
 
+class _AccountState extends State<Account> {
+  bool _hover1 = false;
+  bool _hover2 = false;
 
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      appBar: AppBar(backgroundColor: Colors.grey ,title:const Text("account")),
-      drawer:Drawer(backgroundColor: Colors.black,
-      child:ListView(children:[
-        const DrawerHeader(child:Text("account",style:TextStyle(color:Colors.grey))),
-        GestureDetector(
+      appBar: AppBar(
+        backgroundColor: Colors.grey,
+        title: const Text("account"),
+      ),
+      drawer: Drawer(
+        backgroundColor: Colors.black,
+        child: ListView(
+          children: [
+            const DrawerHeader(
+              child: Text("account", style: TextStyle(color: Colors.grey)),
+            ),
+            GestureDetector(
               onTap: () {
                 Navigator.pushReplacement(
                   context,
@@ -837,17 +886,16 @@ class _AccountState extends State<Account>{
               },
               child: MouseRegion(
                 child: AnimatedContainer(
-                  width:4,
+                  width: 4,
                   duration: const Duration(milliseconds: 300),
                   decoration: BoxDecoration(
                     color: _hover2 ? Colors.grey : Colors.black,
                     border: Border.all(width: 2),
                     borderRadius: BorderRadius.circular(12),
                   ),
-                  
+
                   curve: Curves.easeInOut,
                   child: ListTile(
-                    
                     leading: const Icon(Icons.account_circle),
                     title: AnimatedDefaultTextStyle(
                       duration: const Duration(milliseconds: 300),
@@ -875,17 +923,16 @@ class _AccountState extends State<Account>{
               },
               child: MouseRegion(
                 child: AnimatedContainer(
-                  width:4,
+                  width: 4,
                   duration: const Duration(milliseconds: 300),
                   decoration: BoxDecoration(
                     color: _hover1 ? Colors.grey : Colors.black,
                     border: Border.all(width: 2),
                     borderRadius: BorderRadius.circular(12),
                   ),
-                  
+
                   curve: Curves.easeInOut,
                   child: ListTile(
-                    
                     leading: const Icon(Icons.logout),
                     title: AnimatedDefaultTextStyle(
                       duration: const Duration(milliseconds: 300),
@@ -904,11 +951,13 @@ class _AccountState extends State<Account>{
                 },
               ),
             ),
-      ]))
+          ],
+        ),
+      ),
     );
   }
 }
 
-void main() async{
+void main() async {
   runApp(const MaterialApp(home: Login()));
 }
