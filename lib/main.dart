@@ -49,7 +49,7 @@ class _LoginState extends State<Login> {
         child: Form(
           child: SizedBox(
             width: 300,
-            height: 300,
+            height: 400,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -273,8 +273,21 @@ class _LoginState extends State<Login> {
                   ),
                 ),
                 AnimatedContainer(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 5,
+                    vertical: 5,
+                  ),
                   duration: const Duration(milliseconds: 300),
-                  child: MouseRegion(child: GestureDetector()),
+                  child: MouseRegion(
+                    child: GestureDetector(
+                      onTap: () {},
+                      child: MouseRegion(
+                        onEnter: (_) {},
+                        onExit: (_) {},
+                        child: Text('forget password'),
+                      ),
+                    ),
+                  ),
                 ),
               ],
             ),
