@@ -135,7 +135,6 @@ app1.post('/account-details',async(req,res)=>{
 app1.post('/forgot-password',async(req,res)=>{
   const{username}=req.body;
   const [checker1]=await db_connect.execute(`SELECT user_id FROM profile_ WHERE username = ?`, [username]);
-  const userid=checker1[0].user_id;
-  const [valuegetter]=await db_connect.execute(`SELECT change_token FROM verification_ WHERE user_id=?`,[userid]);
+  const [valuegetter]=await db_connect.execute(`SELECT change_token FROM verification_ WHERE user_id=?`,[checker1[0].user_id]);
   
 });
