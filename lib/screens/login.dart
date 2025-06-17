@@ -1,15 +1,10 @@
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;
-import 'dart:convert';
 import '/barrel1.dart';
-import '/globals.dart';
-
-var status = 0;
 
 class Login extends StatefulWidget {
   const Login({super.key});
   @override
+  // ignore: library_private_types_in_public_api
   _LoginState createState() => _LoginState();
 }
 
@@ -280,7 +275,7 @@ class _LoginState extends State<Login> {
                   curve: Curves.easeInOut,
                   child: GestureDetector(
                     onTap: () {
-                      Navigator.pushReplacement(
+                      Navigator.push(
                         context,
                         MaterialPageRoute(
                           builder: (context) => const Forgot1(),

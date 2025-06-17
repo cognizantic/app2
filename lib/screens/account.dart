@@ -1,9 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;
-import 'dart:convert';
 import '/barrel1.dart';
-import '/globals.dart';
 
 class Account extends StatefulWidget {
   const Account({super.key});

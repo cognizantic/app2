@@ -1,9 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;
-import 'dart:convert';
 import '/barrel1.dart';
-import '/globals.dart';
 
 class Forgot1 extends StatefulWidget {
   const Forgot1({super.key});
@@ -39,54 +35,114 @@ class _Forgot1State extends State<Forgot1> {
     return Scaffold(
       backgroundColor: Colors.black,
       body: Center(
-        child: Column(
+        child: Row(
           children: [
-            SizedBox(
-              width: 300,
-              child: AnimatedContainer(
-                duration: Duration(milliseconds: 300),
-                child: TextFormField(
-                  style: const TextStyle(color: Colors.grey),
-                  textAlign: TextAlign.center,
-                  controller: text1,
-                  validator: (val) {
-                    if (val == null || val.isEmpty) {
-                      return 'required';
-                    } else if (status == 300 ||
-                        status == 302 ||
-                        status == 304 ||
-                        status == 306) {
-                      status = 0;
-                      return 'username already exists';
-                    }
-                    return null;
-                  },
-                  decoration: const InputDecoration(
-                    border: OutlineInputBorder(),
-                    hintText: "username",
+            Center(
+              child: Column(
+                children: [
+                  SizedBox(
+                    width: 300,
+                    child: AnimatedContainer(
+                      duration: Duration(milliseconds: 300),
+                      child: TextFormField(
+                        style: const TextStyle(color: Colors.grey),
+                        textAlign: TextAlign.center,
+                        controller: text1,
+                        validator: (val) {
+                          if (val == null || val.isEmpty) {
+                            return 'required';
+                          } else if (status == 300 ||
+                              status == 302 ||
+                              status == 304 ||
+                              status == 306) {
+                            status = 0;
+                            return 'username already exists';
+                          }
+                          return null;
+                        },
+                        decoration: const InputDecoration(
+                          border: OutlineInputBorder(),
+                          hintText: "username",
+                        ),
+                      ),
+                    ),
                   ),
-                ),
-              ),
-            ),
-            SizedBox(
-              child: AnimatedContainer(
-                duration: Duration(milliseconds: 300),
-                child: GestureDetector(
-                  onTap: () => {},
-                  child: MouseRegion(
-                    onEnter: (_) => {
-                      setState(() {
-                        _hover2 = true;
-                      }),
-                    },
-                    onExit: (_) => {
-                      setState(() {
-                        _hover2 = false;
-                      }),
-                    },
-                    child: Text("submit", style: TextStyle(color: Colors.grey)),
+                  SizedBox(
+                    child: AnimatedContainer(
+                      duration: Duration(milliseconds: 300),
+                      child: GestureDetector(
+                        onTap: () {
+                          _press2(text1.text);
+                          if (status == 200) {
+                            status = 0;
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const Verification(),
+                              ),
+                            );
+                          } else if (status == 300) {
+                            showDialog(
+                              context: context,
+                              builder: (context) {
+                                return AlertDialog(
+                                  content: const Text(
+                                    "no username found",
+                                    style: TextStyle(color: Colors.black),
+                                  ),
+                                  actions: [
+                                    TextButton(
+                                      onPressed: () {
+                                        Navigator.of(context).pop();
+                                      },
+                                      child: const Text('OK'),
+                                    ),
+                                  ],
+                                );
+                              },
+                            );
+                          } else {
+                            showDialog(
+                              context: context,
+                              builder: (context) {
+                                return AlertDialog(
+                                  content: const Text(
+                                    "unexpected error",
+                                    style: TextStyle(color: Colors.black),
+                                  ),
+                                  actions: [
+                                    TextButton(
+                                      onPressed: () {
+                                        Navigator.of(context).pop();
+                                      },
+                                      child: const Text('OK'),
+                                    ),
+                                  ],
+                                );
+                              },
+                            );
+                          }
+                        },
+                        child: MouseRegion(
+                          onEnter: (_) => {
+                            setState(() {
+                              _hover2 = true;
+                            }),
+                          },
+                          onExit: (_) => {
+                            setState(() {
+                              _hover2 = false;
+                            }),
+                          },
+                          child: Text(
+                            "submit",
+                            style: TextStyle(color: Colors.grey),
+                          ),
+                        ),
+                      ),
+                    ),
                   ),
-                ),
+                ],
               ),
             ),
           ],

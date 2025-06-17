@@ -22,6 +22,11 @@ function date_(rawDob){
     return dob;
 };
 
+function sendmail1(email,code){
+  console.log("TO:",email);
+  console.log("MESSAGE:",code);
+};
+
 console.log('database connected');
 const PORT = 3443;
 const IP_HOST='127.0.0.1';
@@ -133,8 +138,23 @@ app1.post('/account-details',async(req,res)=>{
 });
 
 app1.post('/forgot-password',async(req,res)=>{
+  try{
   const{username}=req.body;
-  const [checker1]=await db_connect.execute(`SELECT user_id FROM profile_ WHERE username = ?`, [username]);
-  const [valuegetter]=await db_connect.execute(`SELECT change_token FROM verification_ WHERE user_id=?`,[checker1[0].user_id]);
-  
+  const [checker1]=await db_connect.execute(`SELECT p.email, v.change_token
+   FROM profile_ p
+   INNER JOIN verification_ v ON p.user_id = v.user_id
+   WHERE p.username = ?`, [username]);
+  sendmail1(checker1[0].email,checker1[0].change_token);
+  return res.status(200).json({ message: checker1[0].user_id });
+}catch(e){
+  console.log(e);
+  res.status(500).json({error:"error"});
+}
 });
+
+app1.post('/verification',async(req,res)=>{
+  try{
+    const {username,code}=req.body;
+
+  }catch(e){console.log(e);res.status(500).json({error:"error"});}
+})
