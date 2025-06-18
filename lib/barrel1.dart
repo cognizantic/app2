@@ -4,6 +4,7 @@ export '/screens/home.dart';
 export '/screens/verification.dart';
 export '/screens/signup.dart';
 export '/screens/login.dart';
+export '/screens/appbar.dart';
 
 export '/globals.dart';
 

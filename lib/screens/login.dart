@@ -99,6 +99,11 @@ class _LoginState extends State<Login> {
                       onChanged: (bool? newValue) {
                         setState(() {
                           _checkrem = newValue!;
+                          if (_checkrem) {
+                            saveUsername(text1.text);
+                          } else {
+                            removeUsername();
+                          }
                         });
                       },
                     ),

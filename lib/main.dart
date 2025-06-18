@@ -2,5 +2,11 @@
 import '/barrel1.dart';
 
 void main() async {
-  runApp(const MaterialApp(home: Login()));
+  WidgetsFlutterBinding.ensureInitialized();
+  String? username = await getUsername();
+  if (username == null || username.isEmpty) {
+    runApp(const MaterialApp(home: Login()));
+  } else {
+    runApp(const MaterialApp(home: Signin()));
+  }
 }

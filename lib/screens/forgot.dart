@@ -19,13 +19,18 @@ class _Forgot1State extends State<Forgot1> {
 
   Future<void> _press2(String username) async {
     try {
+      saveUsername(username);
       final response = await http.post(
         Uri.parse('$baseurl/forgot-password'),
         headers: {'Content-Type': 'application/json'},
         body: jsonEncode({'username': username}),
       );
       status = response.statusCode;
+      if (status == 300) {
+        removeUsername();
+      }
     } catch (e) {
+      removeUsername();
       status = 500;
     }
   }
@@ -34,6 +39,7 @@ class _Forgot1State extends State<Forgot1> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
+      //drawer:,
       body: Center(
         child: Row(
           children: [
@@ -51,12 +57,8 @@ class _Forgot1State extends State<Forgot1> {
                         validator: (val) {
                           if (val == null || val.isEmpty) {
                             return 'required';
-                          } else if (status == 300 ||
-                              status == 302 ||
-                              status == 304 ||
-                              status == 306) {
+                          } else if (status == 300) {
                             status = 0;
-                            return 'username already exists';
                           }
                           return null;
                         },
@@ -126,12 +128,12 @@ class _Forgot1State extends State<Forgot1> {
                         child: MouseRegion(
                           onEnter: (_) => {
                             setState(() {
-                              _hover2 = true;
+                              _hover2 = !_hover2;
                             }),
                           },
                           onExit: (_) => {
                             setState(() {
-                              _hover2 = false;
+                              _hover2 = !_hover2;
                             }),
                           },
                           child: Text(
