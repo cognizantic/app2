@@ -109,7 +109,7 @@ class _LoginState extends State<Login> {
                       },
                     ),
                     const Text(
-                      "remember me",
+                      "Remember me",
                       style: TextStyle(color: Colors.grey),
                     ),
                   ],
