@@ -1,4 +1,3 @@
-import 'package:http/http.dart' as http;
 import '/barrel1.dart';
 
 class Signup extends StatefulWidget {
@@ -30,7 +29,7 @@ class _SignupState extends State<Signup> {
     String country,
   ) async {
     try {
-      final response = await http.post(
+      final response = await post(
         Uri.parse('$baseurl/sign-up'),
         headers: {'Content-Type': 'application/json'},
         body: jsonEncode({

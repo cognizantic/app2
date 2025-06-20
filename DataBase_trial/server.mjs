@@ -155,6 +155,16 @@ app1.post('/forgot-password',async(req,res)=>{
 app1.post('/verification',async(req,res)=>{
   try{
     const {username,code}=req.body;
-
+    const [checker1]=await db_connect.execute(`SELECT v.change_token
+   FROM profile_ p
+   INNER JOIN verification_ v ON p.user_id = v.user_id
+   WHERE p.username = ?`, [username]);
+   if(code===checker1[0].change_token){
+    console.log('passed');
+    res.status(200).json({message:"correct"});
+   }else{
+    console.log('failed');
+    res.status(300).json({message:"correct"});
+   }
   }catch(e){console.log(e);res.status(500).json({error:"error"});}
 })

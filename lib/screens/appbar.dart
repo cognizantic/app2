@@ -52,7 +52,7 @@ class _AppBar1State extends State<AppBar1> {
 
                   curve: Curves.easeInOut,
                   child: ListTile(
-                    leading: const Icon(Icons.account_circle),
+                    leading: const Icon(Icons.home),
                     title: AnimatedDefaultTextStyle(
                       duration: const Duration(milliseconds: 300),
                       style: TextStyle(

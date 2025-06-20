@@ -1,4 +1,3 @@
-import 'package:http/http.dart' as http;
 import '/barrel1.dart';
 
 class Login extends StatefulWidget {
@@ -12,9 +11,11 @@ class _LoginState extends State<Login> {
   bool _hover1 = false;
   bool _hover2 = false;
   bool _checkrem = false;
+  bool _hover3 = false;
+
   Future<void> _press1(String username, String passcode) async {
     try {
-      final response = await http.post(
+      final response = await post(
         Uri.parse('$baseurl/login'),
         headers: {'Content-Type': 'application/json'},
         body: jsonEncode({'username': username, 'password': passcode}),
@@ -126,77 +127,89 @@ class _LoginState extends State<Login> {
                           child: AnimatedContainer(
                             duration: const Duration(seconds: 5),
                             child: ElevatedButton(
-                              onPressed: () {
-                                _press1(text1.text, text2.text);
+                              onPressed: () async {
+                                await _press1(text1.text, text2.text);
                                 if (status == 500) {
-                                  showDialog(
-                                    context: context,
-                                    builder: (context) {
-                                      return AlertDialog(
-                                        content: const Text(
-                                          "error",
-                                          style: TextStyle(color: Colors.black),
-                                        ),
-                                        actions: [
-                                          TextButton(
-                                            onPressed: () {
-                                              Navigator.of(context).pop();
-                                            },
-                                            child: const Text('OK'),
+                                  if (context.mounted) {
+                                    showDialog(
+                                      context: context,
+                                      builder: (context) {
+                                        return AlertDialog(
+                                          content: const Text(
+                                            "error",
+                                            style: TextStyle(
+                                              color: Colors.black,
+                                            ),
                                           ),
-                                        ],
-                                      );
-                                    },
-                                  );
+                                          actions: [
+                                            TextButton(
+                                              onPressed: () {
+                                                Navigator.of(context).pop();
+                                              },
+                                              child: const Text('OK'),
+                                            ),
+                                          ],
+                                        );
+                                      },
+                                    );
+                                  }
                                 } else if (status == 200) {
-                                  if (_checkrem) {
-                                  } else {}
-                                  Navigator.pushReplacement(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => const Signin(),
-                                    ),
-                                  );
-                                } else if (status == 300) {
-                                  showDialog(
-                                    context: context,
-                                    builder: (context) {
-                                      return AlertDialog(
-                                        content: const Text(
-                                          "check username/password",
-                                          style: TextStyle(color: Colors.black),
-                                        ),
-                                        actions: [
-                                          TextButton(
-                                            onPressed: () {
-                                              Navigator.of(context).pop();
-                                            },
-                                            child: const Text('OK'),
+                                  if (context.mounted) {
+                                    Navigator.pushReplacement(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => const Signin(),
+                                      ),
+                                    );
+                                  }
+                                } else if (status == 300 || status == 301) {
+                                  if (context.mounted) {
+                                    showDialog(
+                                      context: context,
+                                      builder: (context) {
+                                        return AlertDialog(
+                                          content: const Text(
+                                            "check username/password",
+                                            style: TextStyle(
+                                              color: Colors.black,
+                                            ),
                                           ),
-                                        ],
-                                      );
-                                    },
-                                  );
+                                          actions: [
+                                            TextButton(
+                                              onPressed: () {
+                                                Navigator.of(context).pop();
+                                              },
+                                              child: const Text('OK'),
+                                            ),
+                                          ],
+                                        );
+                                      },
+                                    );
+                                  }
                                 } else if (status == 302) {
-                                  showDialog(
-                                    context: context,
-                                    builder: (context) {
-                                      return AlertDialog(
-                                        content: const Text(
-                                          "no username found",
-                                          style: TextStyle(color: Colors.black),
-                                        ),
-                                        actions: [
-                                          TextButton(
-                                            onPressed: () {
-                                              Navigator.of(context).pop();
-                                            },
-                                            child: const Text('OK'),
+                                  if (context.mounted) {
+                                    showDialog(
+                                      context: context,
+                                      builder: (context) {
+                                        return AlertDialog(
+                                          content: const Text(
+                                            "no username found",
+                                            style: TextStyle(
+                                              color: Colors.black,
+                                            ),
                                           ),
-                                        ],
-                                      );
-                                    },
-                                  );
+                                          actions: [
+                                            TextButton(
+                                              onPressed: () {
+                                                Navigator.of(context).pop();
+                                              },
+                                              child: const Text('OK'),
+                                            ),
+                                          ],
+                                        );
+                                      },
+                                    );
+                                  }
                                 }
                               },
                               style: _hover1
@@ -271,28 +284,41 @@ class _LoginState extends State<Login> {
                     ],
                   ),
                 ),
-                AnimatedContainer(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 5,
-                    vertical: 5,
-                  ),
-                  duration: const Duration(milliseconds: 300),
-                  curve: Curves.easeInOut,
-                  child: GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const Forgot1(),
-                        ),
-                      );
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const Forgot1()),
+                    );
+                  },
+                  child: MouseRegion(
+                    onEnter: (_) {
+                      setState(() {
+                        _hover3 = !_hover3;
+                      });
                     },
-                    child: MouseRegion(
-                      onEnter: (_) {},
-                      onExit: (_) {},
+                    onExit: (_) {
+                      setState(() {
+                        _hover3 = !_hover3;
+                      });
+                    },
+                    child: AnimatedContainer(
+                      decoration: BoxDecoration(
+                        color: _hover3 ? Colors.grey : Colors.black,
+                        border: Border.all(color: Colors.grey),
+                        borderRadius: BorderRadius.circular(5),
+                      ),
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 45,
+                        vertical: 5,
+                      ),
+                      duration: const Duration(milliseconds: 300),
+                      curve: Curves.easeInOut,
                       child: Text(
                         'forget password',
-                        style: TextStyle(color: Colors.grey),
+                        style: TextStyle(
+                          color: _hover3 ? Colors.black : Colors.grey,
+                        ),
                       ),
                     ),
                   ),
