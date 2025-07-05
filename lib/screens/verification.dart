@@ -104,6 +104,7 @@ class _VerificationState extends State<Verification> {
                       child: MouseRegion(
                         onEnter: (_) => {},
                         onExit: (_) => {},
+                        cursor: SystemMouseCursors.click,
                         child: AnimatedDefaultTextStyle(
                           duration: Duration(milliseconds: 300),
                           style: TextStyle(
@@ -143,7 +144,8 @@ class _VerificationState extends State<Verification> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const Verification(),
+                            builder: (context) =>
+                                _choice ? SendPass() : ChangePass(),
                           ),
                         );
                       }
@@ -204,6 +206,7 @@ class _VerificationState extends State<Verification> {
                         _hover2 = !_hover2;
                       }),
                     },
+                    cursor: SystemMouseCursors.click,
                     child: Text(
                       "submit",
                       textAlign: TextAlign.center,

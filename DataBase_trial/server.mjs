@@ -89,12 +89,8 @@ app1.post('/sign-up',async(req,res)=>{
             res.status(306).json({
             message:'value present',
         })
-        }
-        
-        ;
-
-    }
-        
+      };
+    }    
    }catch(err){
     console.log(err);
     res.status(500).json({ error: 'Insert failed' });
@@ -168,3 +164,42 @@ app1.post('/verification',async(req,res)=>{
    }
   }catch(e){console.log(e);res.status(500).json({error:"error"});}
 })
+
+app1.post('/send-password',async(req,res)=>{
+  try{
+    const{username}=req.body;
+    const [checker1]=await db_connect.execute(`SELECT v.hash_pass , p.email
+      FROM profile_ p
+      INNER JOIN verification_ v ON p.user_id=v.user_id
+      WHERE p.username=?`,[username]);
+      if(checker1[0].hash_pass){
+    console.log('passed');
+    await sendmail1(checker1[0].email,checker1[0].hash_pass);
+    res.status(200).json({message:"correct"});
+   }else{
+    console.log('failed');
+    res.status(300).json({message:"correct"});
+   }
+  }catch(e){
+    console.log(e);
+    res.status(500).json({error:"error"});
+  };
+});
+
+app1.post('/change-password',async(req,res)=>{
+  try{
+    const{username,password}=req.body;
+    const [checker1]=await db_connect.execute(`UPDATE verification_ v
+      INNER JOIN profile_ p ON p.user_id = v.user_id
+      SET v.hash_pass = ?
+      WHERE p.username = ?`,[password,username]);
+    if (checker1.affectedRows > 0) {
+      res.status(200).json({ message: "Password updated successfully" });
+    } else {
+      res.status(300).json({ error: "User not found" });
+    }
+  }catch(e){
+    console.log(e);
+    res.status(500).json({error:"error"});
+  };
+});

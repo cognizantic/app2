@@ -83,7 +83,6 @@ class _Forgot1State extends State<Forgot1> {
             ),
             SizedBox(
               width: 150,
-
               child: AnimatedContainer(
                 decoration: BoxDecoration(
                   color: _hover2 ? Colors.grey : Colors.black,
@@ -165,6 +164,7 @@ class _Forgot1State extends State<Forgot1> {
                         _hover2 = !_hover2;
                       }),
                     },
+                    cursor: SystemMouseCursors.click,
                     child: Text(
                       "submit",
                       textAlign: TextAlign.center,

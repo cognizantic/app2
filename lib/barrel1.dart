@@ -5,6 +5,9 @@ export '/screens/verification.dart';
 export '/screens/signup.dart';
 export '/screens/login.dart';
 export '/screens/appbar.dart';
+export '/screens/send_pass.dart';
+export '/screens/change_pass.dart';
+export '/screens/settings.dart';
 
 export '/globals.dart';
 

@@ -8,6 +8,8 @@ class Signup extends StatefulWidget {
 
 class _SignupState extends State<Signup> {
   final _formKey = GlobalKey<FormState>();
+  bool _pass1 = false;
+  bool _pass2 = false;
   bool _hover1 = false;
   bool _checkpass(String pass1, String pass2) {
     if (pass1 == pass2) {
@@ -325,12 +327,14 @@ class _SignupState extends State<Signup> {
                     ),
                   ),
                   SizedBox(
-                    width: 5,
+                    width: 500,
                     child: Padding(
                       padding: const EdgeInsets.symmetric(vertical: 8),
                       child: TextFormField(
                         style: const TextStyle(color: Colors.grey),
                         textAlign: TextAlign.center,
+                        obscuringCharacter: "|",
+                        obscureText: _pass1 ? false : true,
                         controller: text6,
                         validator: (val) {
                           if (val == null || val.isEmpty) {
@@ -338,21 +342,32 @@ class _SignupState extends State<Signup> {
                           }
                           return null;
                         },
-                        decoration: const InputDecoration(
+                        decoration: InputDecoration(
                           border: OutlineInputBorder(),
                           hintText: "password",
+                          suffixIcon: IconButton(
+                            icon: Icon(_pass1
+                                ? Icons.visibility
+                                : Icons.visibility_off),
+                            onPressed: () {
+                              setState(() {
+                                _pass1 = !_pass1;
+                              });
+                            },
+                          ),
                         ),
                       ),
                     ),
                   ),
-
                   SizedBox(
-                    width: 5,
+                    width: 500,
                     child: Padding(
                       padding: const EdgeInsets.symmetric(vertical: 8),
                       child: TextFormField(
                         style: const TextStyle(color: Colors.grey),
                         textAlign: TextAlign.center,
+                        obscuringCharacter: "|",
+                        obscureText: _pass2 ? false : true,
                         controller: text7,
                         validator: (val) {
                           if (val == null || val.isEmpty) {
@@ -363,9 +378,19 @@ class _SignupState extends State<Signup> {
                           }
                           return null;
                         },
-                        decoration: const InputDecoration(
-                          border: OutlineInputBorder(),
+                        decoration: InputDecoration(
+                          border: const OutlineInputBorder(),
                           hintText: "confirm password",
+                          suffixIcon: IconButton(
+                            icon: Icon(_pass2
+                                ? Icons.visibility
+                                : Icons.visibility_off),
+                            onPressed: () {
+                              setState(() {
+                                _pass2 = !_pass2;
+                              });
+                            },
+                          ),
                         ),
                       ),
                     ),
@@ -380,6 +405,7 @@ class _SignupState extends State<Signup> {
                         onExit: (_) {
                           setState(() => _hover1 = false);
                         },
+                        cursor: SystemMouseCursors.click,
                         child: GestureDetector(
                           onTap: () async {
                             if (_formKey.currentState!.validate()) {
