@@ -8,20 +8,6 @@ class AppBar1 extends StatefulWidget {
 }
 
 class _AppBar1State extends State<AppBar1> {
-  late bool _hover1;
-  late bool _hover2;
-  late bool _hover3;
-  late bool _hover4;
-
-  @override
-  void initState() {
-    super.initState();
-    _hover4 = widget.text2disp == 'Settings' ? true : false;
-    _hover3 = widget.text2disp == 'Home' ? true : false;
-    _hover2 = widget.text2disp == 'Account' ? true : false;
-    _hover1 = widget.text2disp == 'Sign out' ? true : false;
-  }
-
   @override
   void dispose() {
     super.dispose();
@@ -31,185 +17,98 @@ class _AppBar1State extends State<AppBar1> {
   Widget build(BuildContext context) {
     return SizedBox(
       width: 300,
-      child: Container(
-        color: Colors.black,
-        child: ListView(
-          children: [
-            DrawerHeader(
-              child: Text(
-                widget.text2disp,
-                style: const TextStyle(color: Colors.grey),
-              ),
+      child: ListView(
+        children: [
+          DrawerHeader(
+            decoration:
+                BoxDecoration(color: Theme.of(context).colorScheme.surface),
+            child: Text(
+              widget.text2disp,
+              style: TextStyle(),
             ),
-            GestureDetector(
-              onTap: () {
+          ),
+          Padding(
+            padding: EdgeInsets.all(3),
+            child: ElevatedButton.icon(
+              onPressed: () {
                 Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(builder: (context) => const Signin()),
                 );
               },
-              child: MouseRegion(
-                onEnter: (_) {
-                  setState(() {
-                    _hover3 = !_hover3;
-                  });
-                },
-                onExit: (_) {
-                  setState(() {
-                    _hover3 = !_hover3;
-                  });
-                },
-                cursor: SystemMouseCursors.click,
-                child: AnimatedContainer(
-                  width: 4,
-                  duration: const Duration(milliseconds: 300),
-                  decoration: BoxDecoration(
-                    color: _hover3 ? Colors.grey : Colors.black,
-                    border: Border.all(width: 2),
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                  curve: Curves.easeInOut,
-                  child: ListTile(
-                    leading: const Icon(Icons.home),
-                    title: AnimatedDefaultTextStyle(
-                      duration: const Duration(milliseconds: 300),
-                      style: TextStyle(
-                        color: _hover3 ? Colors.black : Colors.grey,
-                      ),
-                      child: const Text("Home"),
-                    ),
-                  ),
-                ),
+              style: ButtonStyle(
+                  maximumSize: WidgetStatePropertyAll(Size(200, 50)),
+                  minimumSize: WidgetStatePropertyAll(Size(150, 50))),
+              icon: Icon(Icons.home),
+              iconAlignment: IconAlignment.start,
+              label: Text(
+                "Home",
+                textAlign: TextAlign.left,
               ),
             ),
-            GestureDetector(
-              onTap: () {
+          ),
+          Padding(
+            padding: EdgeInsets.all(3),
+            child: ElevatedButton.icon(
+              onPressed: () {
                 Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(builder: (context) => const Settings()),
                 );
               },
-              child: MouseRegion(
-                onEnter: (_) {
-                  setState(() {
-                    _hover4 = !_hover4;
-                  });
-                },
-                onExit: (_) {
-                  setState(() {
-                    _hover4 = !_hover4;
-                  });
-                },
-                cursor: SystemMouseCursors.click,
-                child: AnimatedContainer(
-                  width: 4,
-                  duration: const Duration(milliseconds: 300),
-                  decoration: BoxDecoration(
-                    color: _hover4 ? Colors.grey : Colors.black,
-                    border: Border.all(width: 2),
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                  curve: Curves.easeInOut,
-                  child: ListTile(
-                    leading: const Icon(Icons.settings),
-                    title: AnimatedDefaultTextStyle(
-                      duration: const Duration(milliseconds: 300),
-                      style: TextStyle(
-                        color: _hover4 ? Colors.black : Colors.grey,
-                      ),
-                      child: const Text("Settings"),
-                    ),
-                  ),
-                ),
+              style: ButtonStyle(
+                  maximumSize: WidgetStatePropertyAll(Size(200, 50)),
+                  minimumSize: WidgetStatePropertyAll(Size(150, 50))),
+              icon: Icon(Icons.settings),
+              iconAlignment: IconAlignment.start,
+              label: Text(
+                "Settings",
+                textAlign: TextAlign.left,
               ),
             ),
-            GestureDetector(
-              onTap: () {
+          ),
+          Padding(
+            padding: EdgeInsets.all(3),
+            child: ElevatedButton.icon(
+              onPressed: () {
                 Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(builder: (context) => const Account()),
                 );
               },
-              child: MouseRegion(
-                onEnter: (_) {
-                  setState(() {
-                    _hover2 = !_hover2;
-                  });
-                },
-                onExit: (_) {
-                  setState(() {
-                    _hover2 = !_hover2;
-                  });
-                },
-                cursor: SystemMouseCursors.click,
-                child: AnimatedContainer(
-                  width: 4,
-                  duration: const Duration(milliseconds: 300),
-                  decoration: BoxDecoration(
-                    color: _hover2 ? Colors.grey : Colors.black,
-                    border: Border.all(width: 2),
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                  curve: Curves.easeInOut,
-                  child: ListTile(
-                    leading: const Icon(Icons.account_circle),
-                    title: AnimatedDefaultTextStyle(
-                      duration: const Duration(milliseconds: 300),
-                      style: TextStyle(
-                        color: _hover2 ? Colors.black : Colors.grey,
-                      ),
-                      child: const Text("Account"),
-                    ),
-                  ),
-                ),
+              style: ButtonStyle(
+                  maximumSize: WidgetStatePropertyAll(Size(200, 50)),
+                  minimumSize: WidgetStatePropertyAll(Size(150, 50))),
+              icon: Icon(Icons.account_circle),
+              iconAlignment: IconAlignment.start,
+              label: Text(
+                "Account",
+                textAlign: TextAlign.left,
               ),
             ),
-            GestureDetector(
-              onTap: () {
+          ),
+          Padding(
+            padding: EdgeInsets.all(3),
+            child: ElevatedButton.icon(
+              onPressed: () {
                 removeUsername();
                 Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(builder: (context) => const Login()),
                 );
               },
-              child: MouseRegion(
-                onEnter: (_) {
-                  setState(() {
-                    _hover1 = !_hover1;
-                  });
-                },
-                onExit: (_) {
-                  setState(() {
-                    {
-                      _hover1 = !_hover1;
-                    }
-                  });
-                },
-                cursor: SystemMouseCursors.click,
-                child: AnimatedContainer(
-                  width: 4,
-                  duration: const Duration(milliseconds: 300),
-                  decoration: BoxDecoration(
-                    color: _hover1 ? Colors.grey : Colors.black,
-                    border: Border.all(width: 2),
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                  curve: Curves.easeInOut,
-                  child: ListTile(
-                    leading: const Icon(Icons.logout),
-                    title: AnimatedDefaultTextStyle(
-                      duration: const Duration(milliseconds: 300),
-                      style: TextStyle(
-                        color: _hover1 ? Colors.black : Colors.grey,
-                      ),
-                      child: const Text("sign out"),
-                    ),
-                  ),
-                ),
+              style: ButtonStyle(
+                  maximumSize: WidgetStatePropertyAll(Size(200, 50)),
+                  minimumSize: WidgetStatePropertyAll(Size(150, 50))),
+              icon: Icon(Icons.logout),
+              iconAlignment: IconAlignment.start,
+              label: Text(
+                "Sign out",
+                textAlign: TextAlign.left,
               ),
             ),
-          ],
-        ),
+          )
+        ],
       ),
     );
   }

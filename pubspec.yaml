@@ -1,4 +1,4 @@
-name: flutter_application_1
+name: anxeious
 description: "A new Flutter project."
 publish_to: 'none'
 version: 0.1.0
@@ -9,9 +9,11 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_colorpicker: ^1.1.0
   google_fonts: ^6.2.1
   http: ^1.4.0
   shared_preferences: ^2.5.3
+  country_picker: ^2.0.19
 
 dev_dependencies:
   flutter_test:
@@ -20,4 +22,6 @@ dev_dependencies:
   
 
 flutter:
+  assets:
+  - assets/login_back2.jpg
   uses-material-design: true

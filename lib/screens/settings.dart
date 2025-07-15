@@ -15,13 +15,20 @@ class _SettingsState extends State<Settings> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
-      appBar:
-          AppBar(backgroundColor: Colors.grey, title: const Text("Settings")),
+      appBar: AppBar(title: const Text("Settings")),
       drawer: AppBar1(text2disp: 'Settings'),
       body: Center(
           child: Scaffold(
-              backgroundColor: Colors.black, body: SingleChildScrollView())),
+              body: SingleChildScrollView(
+        child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              SizedBox(
+                child: Theme1(),
+              )
+            ]),
+      ))),
     );
   }
 }

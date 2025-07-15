@@ -32,9 +32,7 @@ class _SendPassState extends State<SendPass> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
       appBar: AppBar(
-        backgroundColor: Colors.grey,
         title: const Text("send password"),
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
@@ -55,19 +53,15 @@ class _SendPassState extends State<SendPass> {
               padding: EdgeInsets.all(10),
               duration: Duration(milliseconds: 300),
               decoration: BoxDecoration(
-                  border: Border.all(
-                    color: Colors.grey,
-                  ),
-                  color: Colors.grey,
-                  borderRadius: BorderRadius.circular(5)),
+                  border: Border.all(), borderRadius: BorderRadius.circular(5)),
               child: _sent
                   ? Text(
                       "An email has been sent to your registered mail ID",
-                      style: TextStyle(color: Colors.black),
+                      style: TextStyle(),
                     )
                   : Text(
                       "An email will be sent to your registered mail ID",
-                      style: TextStyle(color: Colors.black),
+                      style: TextStyle(),
                     ),
             ),
             MouseRegion(
@@ -98,23 +92,19 @@ class _SendPassState extends State<SendPass> {
                           context: context,
                           builder: (context) {
                             return AlertDialog(
-                              backgroundColor: Colors.grey,
-                              content: const Text(
+                              backgroundColor: Color(secondary),
+                              content: Text(
                                 "Mail sent",
-                                style: TextStyle(
-                                  color: Colors.black,
-                                ),
+                                style: TextStyle(),
                               ),
                               actions: [
                                 TextButton(
                                   onPressed: () {
                                     Navigator.of(context).pop();
                                   },
-                                  child: const Text(
+                                  child: Text(
                                     'OK',
-                                    style: TextStyle(
-                                      color: Colors.black,
-                                    ),
+                                    style: TextStyle(),
                                   ),
                                 ),
                               ],
@@ -130,11 +120,9 @@ class _SendPassState extends State<SendPass> {
                           context: context,
                           builder: (context) {
                             return AlertDialog(
-                              content: const Text(
+                              content: Text(
                                 "error",
-                                style: TextStyle(
-                                  color: Colors.black,
-                                ),
+                                style: TextStyle(),
                               ),
                               actions: [
                                 TextButton(
@@ -158,17 +146,15 @@ class _SendPassState extends State<SendPass> {
                     padding: EdgeInsets.all(5),
                     duration: Duration(milliseconds: 300),
                     decoration: BoxDecoration(
-                      border: Border.all(
-                        color: Colors.grey,
-                      ),
-                      color: _hover1 ? Colors.grey : Colors.black,
+                      border: Border.all(),
+                      color: _hover1 ? Color(secondary) : Color(primary),
                       borderRadius: BorderRadius.circular(5),
                     ),
                     child: AnimatedDefaultTextStyle(
                       duration: Duration(milliseconds: 300),
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        color: _hover1 ? Colors.black : Colors.grey,
+                        color: _hover1 ? Color(primary) : Color(secondary),
                       ),
                       child: _sent
                           ? Text('Resend password')
@@ -204,17 +190,15 @@ class _SendPassState extends State<SendPass> {
                     padding: EdgeInsets.all(5),
                     duration: Duration(milliseconds: 300),
                     decoration: BoxDecoration(
-                      border: Border.all(
-                        color: Colors.grey,
-                      ),
-                      color: _hover2 ? Colors.grey : Colors.black,
+                      border: Border.all(),
+                      color: _hover2 ? Color(secondary) : Color(primary),
                       borderRadius: BorderRadius.circular(5),
                     ),
                     child: AnimatedDefaultTextStyle(
                       duration: Duration(milliseconds: 300),
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        color: _hover2 ? Colors.black : Colors.grey,
+                        color: _hover2 ? Color(primary) : Color(secondary),
                       ),
                       child: Text('Go to login'),
                     ),

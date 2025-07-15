@@ -10,8 +10,7 @@ class _SigninState extends State<Signin> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
-      appBar: AppBar(backgroundColor: Colors.grey, title: const Text("Home")),
+      appBar: AppBar(title: const Text("Home")),
       drawer: AppBar1(text2disp: 'Home'),
       body: const Form(
         child: Column(mainAxisAlignment: MainAxisAlignment.start, children: []),

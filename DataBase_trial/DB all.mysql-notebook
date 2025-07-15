@@ -15,22 +15,22 @@
             {
                 "inSelectionMode": false,
                 "selectionStart": {
-                    "lineNumber": 145,
-                    "column": 1
+                    "lineNumber": 16,
+                    "column": 27
                 },
                 "position": {
-                    "lineNumber": 145,
-                    "column": 1
+                    "lineNumber": 16,
+                    "column": 27
                 }
             }
         ],
         "viewState": {
             "scrollLeft": 0,
             "firstPosition": {
-                "lineNumber": 137,
+                "lineNumber": 8,
                 "column": 1
             },
-            "firstPositionDeltaTop": -8
+            "firstPositionDeltaTop": -9
         },
         "contributionsState": {
             "editor.contrib.folding": {},
@@ -134,7 +134,7 @@
                         }
                     ]
                 },
-                "currentHeight": 254.84375,
+                "currentHeight": 28,
                 "currentSet": 1,
                 "statements": [
                     {

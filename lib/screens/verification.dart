@@ -34,12 +34,12 @@ class _VerificationState extends State<Verification> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
       appBar: AppBar(
-        backgroundColor: Colors.grey,
         title: const Text("verify"),
         leading: IconButton(
-          icon: Icon(Icons.arrow_back),
+          icon: Icon(
+            Icons.arrow_back,
+          ),
           onPressed: () {
             removeUsername();
             if (context.mounted) {
@@ -55,7 +55,7 @@ class _VerificationState extends State<Verification> {
           children: [
             Text(
               "Enter the code sent to your registered mail",
-              style: TextStyle(color: Colors.grey),
+              style: TextStyle(),
             ),
             SizedBox(
               width: 300,
@@ -63,7 +63,7 @@ class _VerificationState extends State<Verification> {
                 padding: EdgeInsets.only(bottom: 5, top: 10),
                 duration: Duration(milliseconds: 300),
                 child: TextFormField(
-                  style: const TextStyle(color: Colors.grey),
+                  style: TextStyle(),
                   textAlign: TextAlign.center,
                   controller: text1,
                   validator: (val) {
@@ -74,7 +74,10 @@ class _VerificationState extends State<Verification> {
                     }
                     return null;
                   },
-                  decoration: const InputDecoration(
+                  decoration: InputDecoration(
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(),
+                    ),
                     border: OutlineInputBorder(),
                     hintText: "verification code",
                   ),
@@ -90,9 +93,9 @@ class _VerificationState extends State<Verification> {
                   child: AnimatedContainer(
                     padding: EdgeInsets.all(10),
                     decoration: BoxDecoration(
-                      border: Border.all(color: Colors.grey),
+                      border: Border.all(),
                       borderRadius: BorderRadius.circular(5),
-                      color: _choice ? Colors.grey : Colors.black,
+                      color: _choice ? Color(secondary) : Color(primary),
                     ),
                     duration: Duration(milliseconds: 300),
                     child: GestureDetector(
@@ -108,7 +111,7 @@ class _VerificationState extends State<Verification> {
                         child: AnimatedDefaultTextStyle(
                           duration: Duration(milliseconds: 300),
                           style: TextStyle(
-                            color: _choice ? Colors.black : Colors.grey,
+                            color: _choice ? Color(primary) : Color(secondary),
                           ),
                           child: Center(
                             child: _choice
@@ -126,9 +129,9 @@ class _VerificationState extends State<Verification> {
               width: 150,
               child: AnimatedContainer(
                 decoration: BoxDecoration(
-                  color: _hover2 ? Colors.grey : Colors.black,
+                  color: _hover2 ? Color(secondary) : Color(primary),
                   border: Border.all(
-                    color: _hover2 ? Colors.black : Colors.grey,
+                    color: _hover2 ? Color(primary) : Color(secondary),
                   ),
                   borderRadius: BorderRadius.circular(5),
                 ),
@@ -155,9 +158,9 @@ class _VerificationState extends State<Verification> {
                           context: context,
                           builder: (context) {
                             return AlertDialog(
-                              content: const Text(
+                              content: Text(
                                 "wrong code",
-                                style: TextStyle(color: Colors.black),
+                                style: TextStyle(),
                               ),
                               actions: [
                                 TextButton(
@@ -177,9 +180,9 @@ class _VerificationState extends State<Verification> {
                           context: context,
                           builder: (context) {
                             return AlertDialog(
-                              content: const Text(
+                              content: Text(
                                 "unexpected error",
-                                style: TextStyle(color: Colors.black),
+                                style: TextStyle(),
                               ),
                               actions: [
                                 TextButton(
@@ -211,7 +214,7 @@ class _VerificationState extends State<Verification> {
                       "submit",
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        color: _hover2 ? Colors.black : Colors.grey,
+                        color: _hover2 ? Color(primary) : Color(secondary),
                       ),
                     ),
                   ),

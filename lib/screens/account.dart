@@ -10,9 +10,7 @@ class _AccountState extends State<Account> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
       appBar: AppBar(
-        backgroundColor: Colors.grey,
         title: const Text("Account"),
       ),
       drawer: AppBar1(text2disp: 'Account'),

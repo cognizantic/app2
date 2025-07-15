@@ -203,3 +203,72 @@ app1.post('/change-password',async(req,res)=>{
     res.status(500).json({error:"error"});
   };
 });
+
+app1.post('/check-username',async(req,res)=>{
+  try{
+    const{username}=req.body;
+    const [checker2]=await db_connect.execute(`SELECT user_id FROM profile_ WHERE username = ?`, [username]);
+        if(checker2.length!=0){
+            console.log("username found");
+            res.status(302).json({
+            message:'value present',
+        })
+        }else{
+          console.log('username not found continue');
+          res.status(200).json({
+            message:'value not present',
+        });
+        }
+  }catch(e){
+    console.log(e);
+    res.status(500).json({
+            message:'error',
+        })
+  }
+})
+
+app1.post('/check-email',async(req,res)=>{
+  try{
+    const{email}=req.body;
+    const [checker1]=await db_connect.execute(`SELECT user_id FROM profile_ WHERE email = ?`, [email]);
+        if(checker1.length!=0){
+            console.log("email found");
+            res.status(301).json({
+            message:'value present',
+        })
+        }else{
+          console.log('email not found continue');
+          res.status(200).json({
+            message:'value not present',
+        });
+        }
+  }catch(e){
+    console.log(e);
+  res.status(500).json({
+            message:'error',
+        })
+  }
+})
+
+app1.post('/check-phone',async(req,res)=>{
+  try{
+    const{phonenumber}=req.body;
+    const [checker3]=await db_connect.execute(`SELECT user_id FROM profile_ WHERE ph_no = ?`, [phonenumber]);
+        if(checker3.length!=0){
+            console.log("phone found");
+            return res.status(304).json({
+            message:'value present',
+        })
+        }else{
+          console.log('phone not found continue');
+          return res.status(200).json({
+            message:'value not present',
+        });
+        }
+  }catch(e){
+    console.log(e);
+   return res.status(500).json({
+            message:'error',
+        })
+  }
+})
