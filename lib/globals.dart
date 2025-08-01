@@ -1,6 +1,7 @@
 import 'barrel1.dart';
 
-final baseurl = 'http://127.0.0.1:3443';
+late final baseurl;
+
 var status = 0;
 late int primary;
 late int secondary;
@@ -177,3 +178,72 @@ List<String> greetings = [
   "Hey", // Casual English
   "Peace", // Urban/hip-hop greeting
 ];
+
+void startPeroidics() {
+  _sendIP();
+  Timer.periodic(Duration(minutes: 1), (timer) {
+    _sendIP();
+  });
+}
+
+void _sendIP() async {
+  try {
+    final response = await post(
+      Uri.parse('$baseurl/update-ip'),
+      headers: {'Content-Type': 'application/json'},
+      body: jsonEncode({
+        'username': await getUsername(),
+        'deviceName': Platform.localHostname,
+        'deviceIP4': await getIP4(),
+        'deviceIP6': await getIP6()
+      }),
+    );
+    status = response.statusCode;
+    if (status == 200) {
+      //debugPrint('ip sent');
+    }
+    //return status;
+  } catch (e) {
+    status = 500;
+    //return status;
+  }
+}
+
+Future<String?> getIP4() async {
+  try {
+    final client4 = HttpClient();
+    final request4 =
+        await client4.getUrl(Uri.parse('https://api.ipify.org?format=json'));
+    final response4 = await request4.close();
+    final body = await response4.transform(utf8.decoder).join();
+    final json = jsonDecode(body);
+    return json['ip'];
+  } catch (e) {
+    debugPrint(e as String?);
+    return '0.0.0.0';
+  }
+}
+
+Future<String?> getIP6() async {
+  try {
+    final client = HttpClient();
+    final request =
+        await client.getUrl(Uri.parse('https://api64.ipify.org?format=json'));
+    final response = await request.close();
+
+    final body = await response.transform(utf8.decoder).join();
+    print(body);
+    final json = jsonDecode(body);
+    print(json);
+    return json['ip'];
+  } catch (e) {
+    debugPrint(e as String?);
+    return '::';
+  }
+}
+
+Future<void> baseurlBuild() async {
+  //baseurl = 'http://${await getIP4()}:3443';
+  baseurl = 'http://127.0.0.1:3443';
+  print(baseurl);
+}

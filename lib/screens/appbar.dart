@@ -50,6 +50,28 @@ class _AppBar1State extends State<AppBar1> {
           Padding(
             padding: EdgeInsets.all(3),
             child: ElevatedButton.icon(
+              onPressed: () async {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const FileExplorer(),
+                  ),
+                );
+              },
+              style: ButtonStyle(
+                  maximumSize: WidgetStatePropertyAll(Size(200, 50)),
+                  minimumSize: WidgetStatePropertyAll(Size(150, 50))),
+              icon: Icon(Icons.folder),
+              iconAlignment: IconAlignment.start,
+              label: Text(
+                "Files",
+                textAlign: TextAlign.left,
+              ),
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.all(3),
+            child: ElevatedButton.icon(
               onPressed: () {
                 Navigator.pushReplacement(
                   context,
@@ -107,7 +129,7 @@ class _AppBar1State extends State<AppBar1> {
                 textAlign: TextAlign.left,
               ),
             ),
-          )
+          ),
         ],
       ),
     );

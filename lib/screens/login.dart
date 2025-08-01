@@ -266,11 +266,6 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
                                   onChanged: (bool? newValue) {
                                     setState(() {
                                       _checkrem = newValue!;
-                                      if (_checkrem) {
-                                        saveUsername(text1.text);
-                                      } else {
-                                        removeUsername();
-                                      }
                                     });
                                   },
                                 ),
@@ -319,6 +314,11 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
                                             }
                                           } else {
                                             if (status == 200) {
+                                              if (_checkrem) {
+                                                saveUsername(text1.text);
+                                              } else {
+                                                setclearusername(text1.text);
+                                              }
                                               if (context.mounted) {
                                                 Navigator.pushReplacement(
                                                   context,

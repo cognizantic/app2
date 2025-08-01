@@ -14,6 +14,11 @@ dependencies:
   http: ^1.4.0
   shared_preferences: ^2.5.3
   country_picker: ^2.0.19
+  web_socket_channel: ^2.4.0
+  flutter_webrtc: ^0.9.40
+  uuid: ^4.0.0
+  path: ^1.8.3
+
 
 dev_dependencies:
   flutter_test:

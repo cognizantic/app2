@@ -1,4 +1,5 @@
 DROP DATABASE app1;
+set global event_scheduler=on;
 CREATE DATABASE app1;
 USE app1;
 
@@ -11,7 +12,7 @@ CREATE TABLE profile_(
     dob DATE,
     ph_no VARCHAR(20) UNIQUE,
     address VARCHAR(255),
-    state TEXT,
+    state TEXT NOT NULL,
     country TEXT NOT NULL,
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     banned_until TIMESTAMP
@@ -39,25 +40,18 @@ CREATE TABLE authen(
 CREATE TABLE devices_wifi(
     device_id INT PRIMARY KEY AUTO_INCREMENT,
     user_id VARCHAR(255) NOT NULL,
-    counter INT NOT NULL,
+    username varchar(45) not null,
     device_name VARCHAR(255) NOT NULL,
-    ip6 BOOLEAN NOT NULL,
-    ip_addr VARCHAR(45) NOT NULL,
-    ip_default_gateway VARCHAR(45) NOT NULL,
-    port_no INT NOT NULL CHECK(port_no BETWEEN 1 AND 65535),
-    mac VARCHAR(30),
-    start_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    usage_time double not null default(0.0),
+    data_transfer double not null default(0.0),
+    ip_addr_v4 VARCHAR(45) DEFAULT('0.0.0.0'),
+    ip_addr_v6 VARCHAR(45) DEFAULT('::'),
+    last_update TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    status_update boolean not null default(false),
+    port_no INT NOT NULL CHECK(port_no BETWEEN 1 AND 65535) default(443),
     FOREIGN KEY (user_id) REFERENCES profile_(user_id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
-CREATE TABLE login_history(
-    user_id VARCHAR(255) NOT NULL,
-    login_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP PRIMARY KEY,
-    logout_time TIMESTAMP,
-    device_id INT,
-    FOREIGN KEY (device_id) REFERENCES devices_wifi(device_id),
-    FOREIGN KEY (user_id) REFERENCES profile_(user_id) ON DELETE CASCADE ON UPDATE CASCADE
-);
 
 DELIMITER $$
 
@@ -74,12 +68,10 @@ BEGIN
             6,
             '0'
         );
-
         SELECT COUNT(*) INTO exists_count
         FROM verification_
         WHERE change_token = candidate;
     END WHILE;
-
     RETURN candidate;
 END $$
 
@@ -88,7 +80,6 @@ AFTER INSERT ON profile_
 FOR EACH ROW
 BEGIN
     DECLARE token VARCHAR(6);
-
     REPEAT
         SET token = generate_unique_token();
     UNTIL NOT EXISTS (
@@ -105,35 +96,23 @@ AFTER UPDATE ON profile_
 FOR EACH ROW
 BEGIN
     DECLARE token VARCHAR(6);
-
     REPEAT
         SET token = generate_unique_token();
     UNTIL NOT EXISTS (
         SELECT 1 FROM verification_ WHERE change_token = token
     )
     END REPEAT;
-
     INSERT INTO verification_ (user_id, change_token)
     VALUES (NEW.user_id, token);
 END $$
 
-CREATE TRIGGER counter_value
-BEFORE INSERT ON devices_wifi
-FOR EACH ROW
-BEGIN
-    DECLARE max_val INT;
-    DECLARE limit_val INT;
+create event if not exists ip_clean
+on schedule every 1 minute
+do
+begin
+	update devices_wifi set status_update =false where timestampdiff(minute,last_update,now())>=2;
+end $$
 
-    SELECT device_limit INTO limit_val FROM profile_ WHERE user_id = NEW.user_id;
-
-    SELECT COALESCE(MAX(counter), 0) INTO max_val FROM devices_wifi WHERE user_id = NEW.user_id;
-
-    IF max_val < limit_val THEN
-        SET NEW.counter = max_val + 1;
-    ELSE 
-        SIGNAL SQLSTATE '45000'
-        SET MESSAGE_TEXT = 'Device limit reached for this user.';
-    END IF;
-END $$
 
 DELIMITER ;
+

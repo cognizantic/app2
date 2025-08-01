@@ -9,6 +9,8 @@ export '/screens/send_pass.dart';
 export '/screens/change_pass.dart';
 export '/screens/settings.dart';
 export '/screens/appearance.dart';
+export '/isolates.dart';
+export 'screens/files.dart';
 
 export '/globals.dart';
 
@@ -21,3 +23,6 @@ export 'package:shared_preferences/shared_preferences.dart';
 export 'package:country_picker/country_picker.dart';
 export 'package:flutter/gestures.dart';
 export 'dart:math';
+export 'dart:isolate';
+export 'dart:async';
+export 'dart:io';

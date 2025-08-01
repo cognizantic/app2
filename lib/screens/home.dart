@@ -8,6 +8,12 @@ class Signin extends StatefulWidget {
 
 class _SigninState extends State<Signin> {
   @override
+  void initState() {
+    super.initState();
+    startPeroidics();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text("Home")),
