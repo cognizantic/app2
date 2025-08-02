@@ -17,11 +17,12 @@ class _FileExplorerState extends State<FileExplorer> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: const Text("Files")),
-        drawer: const AppBar1(
-          text2disp: 'Files',
-        ),
-        body: Row(
+      appBar: AppBar(title: const Text("Files")),
+      drawer: const AppBar1(
+        text2disp: 'Files',
+      ),
+      body: Container(
+        child: Row(
           children: [
             //left side
             Flexible(child: Column(children: [_projectList(projectFiles)])),
@@ -30,7 +31,9 @@ class _FileExplorerState extends State<FileExplorer> {
             //right side
             Flexible(child: Column(children: [])),
           ],
-        ));
+        ),
+      ),
+    );
   }
 
   Widget _projectList(List<String> projectFiles) {
