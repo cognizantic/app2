@@ -1,138 +1,64 @@
-//import 'package:path/path.dart';
-
 import '/barrel1.dart';
 
 class FileExplorer extends StatefulWidget {
   const FileExplorer({super.key});
   @override
-  _FileExplorer createState() => _FileExplorer();
+  _FileExplorerState createState() => _FileExplorerState();
 }
 
-class _FileExplorer extends State<FileExplorer> {
-  late List<FileSystemEntity> futurePath = [];
+class _FileExplorerState extends State<FileExplorer> {
+  late List<String> projectFiles = [];
   @override
   void initState() {
     super.initState();
-    //futurePath = _getDrives();
+    projectFiles = ['project 1', 'project 2'];
   }
-
-  late List<FileSystemEntity> currentPath = [];
-  late String displayPath = '';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Files")),
-      drawer: AppBar1(
-        text2disp: 'Files',
-      ),
-      body: Scaffold(
-        appBar: AppBar(
-          title: Row(
-            children: [
-              IconButton(
-                  onPressed: () async {
-                    if (currentPath.isNotEmpty) {
-                      currentPath.removeLast();
-                    } else {
-                      futurePath = await _getDrives();
-                    }
-                    setState(() {
-                      displayPath = (_currentFolder(currentPath)).isEmpty
-                          ? "start1"
-                          : _currentFolder(currentPath);
-                    });
-                  },
-                  icon: Icon(Icons.arrow_back)),
-              Text(displayPath),
-            ],
-          ),
+        appBar: AppBar(title: const Text("Files")),
+        drawer: const AppBar1(
+          text2disp: 'Files',
         ),
-        drawer: Drawer(),
-        body: ListView.builder(
-            itemCount: futurePath.length,
-            itemBuilder: (context, index) {
-              return ListTile(
-                leading: Icon(Icons.folder),
-                title: Text(futurePath[index].toString()),
-                onTap: () async {
-                  currentPath.add(futurePath[index]);
-                  futurePath = await _getFileList(_currentFolder1(currentPath));
-                  setState(() {
-                    print(futurePath);
-                    displayPath = _currentFolder(currentPath);
-                  });
-                },
-              );
-            }),
+        body: Row(
+          children: [
+            //left side
+            Flexible(child: Column(children: [_projectList(projectFiles)])),
+            //main content
+            Flexible(child: Column(children: [])),
+            //right side
+            Flexible(child: Column(children: [])),
+          ],
+        ));
+  }
+
+  Widget _projectList(List<String> projectFiles) {
+    return Container(
+      width: 200,
+      child: Column(
+        children: [
+          Flexible(
+            fit: FlexFit.tight,
+            child: ListView.builder(
+              itemCount: projectFiles.length,
+              itemBuilder: (context, int index) {
+                return Wrap(
+                  //scrollDirection: Axis.horizontal,
+                  children: [
+                    TextButton.icon(
+                      onPressed: () {},
+                      label: Text(
+                        projectFiles[index],
+                      ),
+                    ),
+                  ],
+                );
+              },
+            ),
+          ),
+        ],
       ),
     );
-  }
-
-  Future<List<FileSystemEntity>> _getFileList(String filePath) async {
-    final directory = Directory(filePath);
-    if (directory.existsSync()) {
-      var temp1 = directory.listSync(recursive: false).toList();
-      print(temp1);
-      return temp1;
-    } else {
-      print('no directory found');
-      return [];
-    }
-  }
-
-  Future<List<FileSystemEntity>> _getDrives() async {
-    List<FileSystemEntity> finalList = [];
-    const driveList = [
-      'A:',
-      'B:',
-      'C:',
-      'D:',
-      'E:',
-      'F:',
-      'G:',
-      'H:',
-      'I:',
-      'J:',
-      'K:',
-      'L:',
-      'M:',
-      'N:',
-      'O:',
-      'P:',
-      'Q:',
-      'R:',
-      'S:',
-      'T:',
-      'U:',
-      'V:',
-      'W:',
-      'X:',
-      'Y:',
-      'Z:'
-    ];
-    for (final letter in driveList) {
-      final drive = Directory('$letter\\');
-      if (drive.existsSync()) {
-        finalList.add(drive);
-      }
-    }
-    return finalList;
-  }
-
-  String _currentFolder(List<FileSystemEntity> currentPath) {
-    print(currentPath);
-    var temp1 = currentPath.map((e) => e.path).join('\\');
-    print(temp1);
-    return temp1;
-  }
-
-  String _currentFolder1(List<FileSystemEntity> currentPath) {
-    print(currentPath);
-    print(currentPath.length);
-    //var temp1 = currentPath.map((e) => e.path).join('\\');
-    var temp1 = currentPath[(currentPath.length) - 1].toString();
-    print(temp1);
-    return temp1;
   }
 }

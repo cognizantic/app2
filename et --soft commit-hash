@@ -1,0 +1,102 @@
+[33mcommit 4e0cd38dd747ce235de93e5672818f9e64316dd6[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mcogizantic[m[33m)[m
+Author: parthipan <parthipan@sacrasys.com>
+Date:   Sat Aug 2 14:47:00 2025 +0530
+
+    latest
+
+[33mcommit e6cde8f22bcb4e4f2598802b0ca9c3a021709514[m
+Author: parthipan <parthipan@sacrasys.com>
+Date:   Sat Aug 2 14:40:06 2025 +0530
+
+    Removed large model files and added LFS tracking
+
+[33mcommit 6df386fc08d73a0a5df513d0eb100e6c17e8f840[m[33m ([m[1;32midky[m[33m)[m
+Author: parthipan <parthipan@sacrasys.com>
+Date:   Fri Aug 1 16:21:35 2025 +0530
+
+    1/8/2025
+
+[33mcommit 3c7f0af4ddb313c9e00702bda5394982a9f9cc28[m[33m ([m[1;31morigin/cogizantic[m[33m)[m
+Author: parthipan <parthipan@sacrasys.com>
+Date:   Tue Jul 15 15:46:00 2025 +0530
+
+    login complete
+
+[33mcommit e084b2488e5bfd8b600b115368aa745b52b7b67d[m
+Author: parthipan <parthipan@sacrasys.com>
+Date:   Sat Jul 5 21:09:55 2025 +0530
+
+    forget password - send password working
+
+[33mcommit 1b95ebdacf9810bf4a0ba01fd671c2000e5c4e1f[m
+Merge: 4ad7c9c b34a139
+Author: parthipan <parthipan@sacrasys.com>
+Date:   Fri Jun 20 23:00:16 2025 +0530
+
+    Merge branch 'cogizantic' of https://github.com/cognizantic/app2 into cogizantic
+
+[33mcommit 4ad7c9cbc74e421b161432044ad4fd328af122fc[m
+Author: parthipan <parthipan@sacrasys.com>
+Date:   Fri Jun 20 23:00:04 2025 +0530
+
+    DB txt file added
+
+[33mcommit b34a1394380a3bcfa05886996a2466a6d62e487c[m
+Author: cognizantic <rsharan2004@gmail.com>
+Date:   Fri Jun 20 21:50:42 2025 +0530
+
+    Update pubspec.yaml
+
+[33mcommit b2515d1597cfb32b83b486bc5de849b149d02bc2[m
+Author: parthipan <parthipan@sacrasys.com>
+Date:   Fri Jun 20 11:03:57 2025 +0530
+
+    no problems with limtied progress on verification page
+
+[33mcommit 0bd0cc929eaf68a8b494a680e5619a5f3fd21aaa[m
+Author: parthipan <parthipan@sacrasys.com>
+Date:   Wed Jun 18 13:45:16 2025 +0530
+
+    changed appbar to sep file
+
+[33mcommit b7d82f42a8bff256546c001babdfeb3619e7af6b[m
+Author: parthipan <parthipan@sacrasys.com>
+Date:   Tue Jun 17 12:16:39 2025 +0530
+
+    1
+
+[33mcommit bb6973180fd7303abbf496f67470594ce89a1cd2[m
+Author: parthipan <parthipan@sacrasys.com>
+Date:   Sat Jun 14 13:50:49 2025 +0530
+
+    cleaned up code 1
+
+[33mcommit e46dc121365b6857249c759c4b3ae9065fe7d19a[m
+Author: parthipan <parthipan@sacrasys.com>
+Date:   Sat Jun 14 13:50:05 2025 +0530
+
+    cleaned up code
+
+[33mcommit 384a6b158d86b36bb8057786ebe9968fd06cf637[m
+Author: parthipan <parthipan@sacrasys.com>
+Date:   Fri Jun 13 10:11:48 2025 +0530
+
+    with database
+
+[33mcommit df81a8b86c0150cb3750964683c5707c33a86ba5[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Author: parthipan <parthipan@sacrasys.com>
+Date:   Thu Jun 12 17:35:28 2025 +0530
+
+    .
+
+[33mcommit 3e55c44bd88252979dc640815ca489549658b219[m
+Author: parthipan <parthipan@sacrasys.com>
+Date:   Thu Jun 12 17:29:08 2025 +0530
+
+    new
+
+[33mcommit 1a20efbf483185edcfb02bb1391f841f98f2576a[m
+Author: parthipan <parthipan@sacrasys.com>
+Date:   Thu Jun 12 17:16:06 2025 +0530
+
+    .

@@ -3,6 +3,7 @@ import cv2
 import json
 from ultralytics import YOLO
 from collections import defaultdict
+import sys
 
 VIDEO_FOLDER = 'videos'
 FRAME_INTERVAL_SECONDS = 1
@@ -61,4 +62,24 @@ def main():
     save_to_json(object_to_videos, OUTPUT_JSON)
 
 if __name__ == '__main__':
+    for line in sys.stdin:
+    line = line.strip()
+    if not line:
+        continue
+    try:
+        request = json.loads(line)
+        command = request.get("command")
+        params = request.get("params", {})
+
+        if command in COMMANDS:
+            result = COMMANDS[command](params)
+            response = {"status": "success", "command": command, "data": result}
+        else:
+            response = {"status": "error", "error": f"Unknown command: {command}"}
+
+        print(json.dumps(response))
+        sys.stdout.flush()
+    except Exception as e:
+        print(json.dumps({"status": "error", "error": str(e)}))
+        sys.stdout.flush()
     main()
