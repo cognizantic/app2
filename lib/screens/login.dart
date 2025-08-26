@@ -219,7 +219,18 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
                                   return null;
                                 },
                                 decoration: InputDecoration(
-                                    hintText: 'username',
+                                    labelText: 'Username',
+                                    labelStyle: TextStyle(
+                                      color: Theme.of(context)
+                                          .colorScheme
+                                          .onPrimary,
+                                    ),
+                                    floatingLabelStyle: TextStyle(
+                                      fontSize: 20,
+                                      color: Theme.of(context)
+                                          .colorScheme
+                                          .onPrimary,
+                                    ),
                                     suffixIcon: Icon(Icons.account_box)),
                               ),
                             ),
@@ -230,7 +241,7 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
                               ),
                               child: TextFormField(
                                 textAlign: TextAlign.center,
-                                obscuringCharacter: "|",
+                                obscuringCharacter: "*",
                                 obscureText: _pass1 ? false : true,
                                 controller: text2,
                                 validator: (val) {
@@ -240,7 +251,16 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
                                   return null;
                                 },
                                 decoration: InputDecoration(
-                                  hintText: 'password',
+                                  labelText: 'Password',
+                                  labelStyle: TextStyle(
+                                    color:
+                                        Theme.of(context).colorScheme.onPrimary,
+                                  ),
+                                  floatingLabelStyle: TextStyle(
+                                    fontSize: 20,
+                                    color:
+                                        Theme.of(context).colorScheme.onPrimary,
+                                  ),
                                   suffixIcon: IconButton(
                                     icon: Icon(
                                         color: Theme.of(context)

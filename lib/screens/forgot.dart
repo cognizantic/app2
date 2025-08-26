@@ -126,6 +126,7 @@ class _Forgot1State extends State<Forgot1> with SingleTickerProviderStateMixin {
     }
   }
 
+  // ignore: unused_element
   Widget _verficationBar() {
     return Container();
   }
@@ -150,10 +151,15 @@ class _Forgot1State extends State<Forgot1> with SingleTickerProviderStateMixin {
             child: TextFormField(
               textAlign: TextAlign.center,
               controller: text1,
-              decoration: const InputDecoration(
-                focusedBorder: OutlineInputBorder(),
-                border: OutlineInputBorder(),
-                hintText: "username",
+              decoration: InputDecoration(
+                labelText: 'Username',
+                labelStyle: TextStyle(
+                  color: Theme.of(context).colorScheme.onPrimary,
+                ),
+                floatingLabelStyle: TextStyle(
+                  fontSize: 20,
+                  color: Theme.of(context).colorScheme.onPrimary,
+                ),
               ),
             ),
           ),

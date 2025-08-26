@@ -10,13 +10,19 @@ const PORT = 3443;
 let IP_HOST;
 
 https.get('https://api.ipify.org?format=json&ipAddressType=IPv4', function(resp) {
-  resp.on('data', function(ip) {
+  resp.on('data', function(ip) {try{
     console.log("My public IP address is: " + ip);
     IP_HOST='0.0.0.0';
     app1.listen(PORT,IP_HOST,()=>{
     console.log(`express server started and running on http://${IP_HOST}:${PORT}/`);
 });
-  });
+ }catch(e){
+  if(e){
+    IP_HOST='0.0.0.0';
+    app1.listen(PORT,IP_HOST,()=>{
+    console.log(`express server started and running on http://${IP_HOST}:${PORT}/`);});
+  }
+ } });
 });
 
 
@@ -287,15 +293,17 @@ app1.post('/check-phone',async(req,res)=>{
 app1.post('/update-ip',async(req,res)=>{
   try{
   const{username,deviceName,deviceIP4,deviceIP6}=req.body;
-  console.log(req.body);
-  const [checker4]=await db_connect.execute(`SELECT username from devices_wifi where device_name=?`,[deviceName]);
+  
+  const [checker4]=await db_connect.execute(`SELECT username, ip_addr_v4 from devices_wifi where device_name=?`,[deviceName]);
   if(checker4.length!=0){
-    if(checker4[0].username==username){
+    if(checker4[0].username==username && checker4[0].ip_addr_v4!=deviceIP4){
+      console.log(req.body);
       const [checker2]=await db_connect.execute(`update devices_wifi set ip_addr_v4 =?, ip_addr_v6=?,status_update=?,last_update= CURRENT_TIMESTAMP   where username=? and device_name=?`,[deviceIP4,deviceIP6,true,username,deviceName]);
       console.log('ip value changed');
       return res.status(200).json({message:'changed value',});
     }else{
-      console.log("hello");
+      
+      console.log("no change in ip");
     }
   }else{
       const [checker1]=await db_connect.execute(`select user_id from profile_ where username=?`,[username])

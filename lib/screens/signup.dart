@@ -177,7 +177,16 @@ class _SignupState extends State<Signup> {
                               return null;
                             },
                             decoration: InputDecoration(
-                                hintText: "username",
+                                labelText: 'Username',
+                                labelStyle: TextStyle(
+                                  color:
+                                      Theme.of(context).colorScheme.onPrimary,
+                                ),
+                                floatingLabelStyle: TextStyle(
+                                  fontSize: 20,
+                                  color:
+                                      Theme.of(context).colorScheme.onPrimary,
+                                ),
                                 suffixIcon: Icon(
                                     color: Color(0xFF003739),
                                     Icons.account_box_outlined)),
@@ -199,7 +208,14 @@ class _SignupState extends State<Signup> {
                               return null;
                             },
                             decoration: InputDecoration(
-                              hintText: "first name",
+                              labelText: 'First name',
+                              labelStyle: TextStyle(
+                                color: Theme.of(context).colorScheme.onPrimary,
+                              ),
+                              floatingLabelStyle: TextStyle(
+                                fontSize: 20,
+                                color: Theme.of(context).colorScheme.onPrimary,
+                              ),
                               suffixIcon:
                                   Icon(color: Color(0xFF003739), Icons.abc),
                             ),
@@ -221,7 +237,14 @@ class _SignupState extends State<Signup> {
                               return null;
                             },
                             decoration: InputDecoration(
-                              hintText: "last name",
+                              labelText: 'Last rname',
+                              labelStyle: TextStyle(
+                                color: Theme.of(context).colorScheme.onPrimary,
+                              ),
+                              floatingLabelStyle: TextStyle(
+                                fontSize: 20,
+                                color: Theme.of(context).colorScheme.onPrimary,
+                              ),
                               suffixIcon:
                                   Icon(color: Color(0xFF003739), Icons.abc),
                             ),
@@ -319,7 +342,14 @@ class _SignupState extends State<Signup> {
                               return null;
                             },
                             decoration: InputDecoration(
-                              hintText: "phone number",
+                              labelText: 'Phone Number',
+                              labelStyle: TextStyle(
+                                color: Theme.of(context).colorScheme.onPrimary,
+                              ),
+                              floatingLabelStyle: TextStyle(
+                                fontSize: 20,
+                                color: Theme.of(context).colorScheme.onPrimary,
+                              ),
                               suffixIcon: IconButton(
                                 onPressed: () {
                                   showCountryPicker(
@@ -366,7 +396,14 @@ class _SignupState extends State<Signup> {
                               return null;
                             },
                             decoration: InputDecoration(
-                              hintText: "Email",
+                              labelText: 'Email',
+                              labelStyle: TextStyle(
+                                color: Theme.of(context).colorScheme.onPrimary,
+                              ),
+                              floatingLabelStyle: TextStyle(
+                                fontSize: 20,
+                                color: Theme.of(context).colorScheme.onPrimary,
+                              ),
                               suffixIcon: Icon(
                                   color: Color(0xFF00BFA6),
                                   Icons.email_outlined),
@@ -458,7 +495,14 @@ class _SignupState extends State<Signup> {
                               return null;
                             },
                             decoration: InputDecoration(
-                              hintText: "address",
+                              labelText: 'Address',
+                              labelStyle: TextStyle(
+                                color: Theme.of(context).colorScheme.onPrimary,
+                              ),
+                              floatingLabelStyle: TextStyle(
+                                fontSize: 20,
+                                color: Theme.of(context).colorScheme.onPrimary,
+                              ),
                               suffixIcon: Icon(
                                   color: Color(0xFF003739),
                                   Icons.home_work_outlined),
@@ -481,7 +525,14 @@ class _SignupState extends State<Signup> {
                               return null;
                             },
                             decoration: InputDecoration(
-                              hintText: "state",
+                              labelText: 'State',
+                              labelStyle: TextStyle(
+                                color: Theme.of(context).colorScheme.onPrimary,
+                              ),
+                              floatingLabelStyle: TextStyle(
+                                fontSize: 20,
+                                color: Theme.of(context).colorScheme.onPrimary,
+                              ),
                               suffixIcon: Icon(
                                   color: Color(0xFF003739),
                                   Icons.location_on_outlined),
@@ -506,7 +557,14 @@ class _SignupState extends State<Signup> {
                               return null;
                             },
                             decoration: InputDecoration(
-                              hintText: "country",
+                              labelText: 'Country',
+                              labelStyle: TextStyle(
+                                color: Theme.of(context).colorScheme.onPrimary,
+                              ),
+                              floatingLabelStyle: TextStyle(
+                                fontSize: 20,
+                                color: Theme.of(context).colorScheme.onPrimary,
+                              ),
                               suffixIcon: IconButton(
                                 onPressed: () {
                                   showCountryPicker(
@@ -623,7 +681,15 @@ class _SignupState extends State<Signup> {
                               return null;
                             },
                             decoration: InputDecoration(
-                              hintText: "DOB(MM-DD-YYYY)",
+                              hintText: 'MM-DD-YYYY',
+                              labelText: 'Date of Birth',
+                              labelStyle: TextStyle(
+                                color: Theme.of(context).colorScheme.onPrimary,
+                              ),
+                              floatingLabelStyle: TextStyle(
+                                fontSize: 20,
+                                color: Theme.of(context).colorScheme.onPrimary,
+                              ),
                               suffixIcon: IconButton(
                                 onPressed: () async {
                                   DateTime? picked = await showDatePicker(
@@ -723,7 +789,14 @@ class _SignupState extends State<Signup> {
                               return null;
                             },
                             decoration: InputDecoration(
-                              hintText: "password",
+                              labelText: 'Password',
+                              labelStyle: TextStyle(
+                                color: Theme.of(context).colorScheme.onPrimary,
+                              ),
+                              floatingLabelStyle: TextStyle(
+                                fontSize: 20,
+                                color: Theme.of(context).colorScheme.onPrimary,
+                              ),
                               suffixIcon: IconButton(
                                 color: Color(0xFF00BFA6),
                                 icon: Icon(_pass1
@@ -759,7 +832,14 @@ class _SignupState extends State<Signup> {
                               return null;
                             },
                             decoration: InputDecoration(
-                              hintText: "confirm password",
+                              labelText: 'Confirm password',
+                              labelStyle: TextStyle(
+                                color: Theme.of(context).colorScheme.onPrimary,
+                              ),
+                              floatingLabelStyle: TextStyle(
+                                fontSize: 20,
+                                color: Theme.of(context).colorScheme.onPrimary,
+                              ),
                               suffixIcon: IconButton(
                                 color: Color(0xFF00BFA6),
                                 icon: Icon(_pass2

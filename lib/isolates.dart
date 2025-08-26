@@ -1,6 +1,7 @@
 import 'barrel1.dart';
 
 void isolateMain(SendPort mainSend) {
+  // ignore: unused_local_variable
   final isolateRecieve = ReceivePort();
   while (true) {
     //_sendIP();

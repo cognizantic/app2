@@ -1,6 +1,6 @@
 import 'barrel1.dart';
 
-late final baseurl;
+late final String baseurl;
 
 var status = 0;
 late int primary;
@@ -232,9 +232,9 @@ Future<String?> getIP6() async {
     final response = await request.close();
 
     final body = await response.transform(utf8.decoder).join();
-    print(body);
+
     final json = jsonDecode(body);
-    print(json);
+
     return json['ip'];
   } catch (e) {
     debugPrint(e as String?);
@@ -245,5 +245,7 @@ Future<String?> getIP6() async {
 Future<void> baseurlBuild() async {
   //baseurl = 'http://${await getIP4()}:3443';
   baseurl = 'http://127.0.0.1:3443';
-  print(baseurl);
 }
+
+Future<void> projectList(
+    String projectName, String inputPath, String outputPath) async {}

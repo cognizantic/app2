@@ -2,6 +2,8 @@ import '/barrel1.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Hive.initFlutter();
+  await Hive.openBox("projectDetails");
   await baseurlBuild();
   //final receiveMain = ReceivePort();
   //SendPort? isolateSendPort;
@@ -170,7 +172,86 @@ void main() async {
           appBarTheme: AppBarTheme(
             backgroundColor: Color(0xFF121212),
             foregroundColor: Color(0xFF00BFA6),
-          )),
+          ),
+          textTheme: TextTheme(
+            displayLarge: TextStyle(
+              decoration: TextDecoration.none,
+              fontWeight: FontWeight.normal,
+              color: Color(0xFF00BFA6),
+            ),
+            displayMedium: TextStyle(
+              decoration: TextDecoration.none,
+              fontWeight: FontWeight.normal,
+              color: Color(0xFF00BFA6),
+            ),
+            displaySmall: TextStyle(
+              decoration: TextDecoration.none,
+              fontWeight: FontWeight.normal,
+              color: Color(0xFF00BFA6),
+            ),
+            headlineLarge: TextStyle(
+              decoration: TextDecoration.none,
+              fontWeight: FontWeight.normal,
+              color: Color(0xFF00BFA6),
+            ),
+            headlineMedium: TextStyle(
+              decoration: TextDecoration.none,
+              fontWeight: FontWeight.normal,
+              color: Color(0xFF00BFA6),
+            ),
+            headlineSmall: TextStyle(
+              decoration: TextDecoration.none,
+              fontWeight: FontWeight.normal,
+              color: Color(0xFF00BFA6),
+            ),
+            titleLarge: TextStyle(
+              decoration: TextDecoration.none,
+              fontWeight: FontWeight.normal,
+              color: Color(0xFF00BFA6),
+            ),
+            titleMedium: TextStyle(
+              decoration: TextDecoration.none,
+              fontWeight: FontWeight.normal,
+              color: Color(0xFF00BFA6),
+            ),
+            titleSmall: TextStyle(
+              decoration: TextDecoration.none,
+              fontWeight: FontWeight.normal,
+              color: Color(0xFF00BFA6),
+            ),
+            bodyLarge: TextStyle(
+              decoration: TextDecoration.none,
+              fontWeight: FontWeight.normal,
+              color: Color(0xFF00BFA6),
+            ),
+            bodyMedium: TextStyle(
+              decoration: TextDecoration.none,
+              fontWeight: FontWeight.normal,
+              color: Color(0xFF00BFA6),
+            ),
+            bodySmall: TextStyle(
+              decoration: TextDecoration.none,
+              fontWeight: FontWeight.normal,
+              color: Color(0xFF00BFA6),
+            ),
+            labelLarge: TextStyle(
+              decoration: TextDecoration.none,
+              fontWeight: FontWeight.normal,
+              color: Color(0xFF00BFA6),
+            ),
+            labelMedium: TextStyle(
+              decoration: TextDecoration.none,
+              fontWeight: FontWeight.normal,
+              color: Color(0xFF00BFA6),
+            ),
+            labelSmall: TextStyle(
+              decoration: TextDecoration.none,
+              fontWeight: FontWeight.normal,
+              color: Color(0xFF00BFA6),
+            ),
+          )
+          //final
+          ),
       themeMode: ThemeMode.system,
       debugShowCheckedModeBanner: false,
       home: (username == null || username.isEmpty) ? Login() : Signin()));

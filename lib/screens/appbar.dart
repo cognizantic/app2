@@ -15,7 +15,8 @@ class _AppBar1State extends State<AppBar1> {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return Container(
+      color: Theme.of(context).colorScheme.surface,
       width: 300,
       child: ListView(
         children: [

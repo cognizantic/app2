@@ -10,8 +10,8 @@ export '/screens/change_pass.dart';
 export '/screens/settings.dart';
 export '/screens/appearance.dart';
 export '/isolates.dart';
-export 'screens/files.dart';
-
+export '/screens/files.dart';
+export 'project_files.dart';
 export '/globals.dart';
 
 export 'package:flutter/material.dart';
@@ -26,3 +26,5 @@ export 'dart:math';
 export 'dart:isolate';
 export 'dart:async';
 export 'dart:io';
+export 'package:file_picker/file_picker.dart';
+

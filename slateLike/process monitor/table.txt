@@ -1,0 +1,595 @@
+Process ID | Call Type | File Format | Count | Previous File | Current File
+________________________________________________________________________________________________________________________
+1 | static | dll | 1 | None | chrome_elf.dll
+2 | static | dll | 1 | chrome_elf.dll | VERSION.dll
+3 | static | dll | 1 | VERSION.dll | KERNEL32.dll
+4 | static | dll | 1 | KERNEL32.dll | ntdll.dll
+5 | dynamic | pak | 16 | None | C:\Program Files\Google\Chrome\Application\138.0.7204.185\Locales\en-US.pak
+6 | dynamic | dll | 16 | C:\Program Files\Google\Chrome\Application\138.0.7204.185\Locales\en-US.pak | C:\Program Files\Google\Chrome\Application\138.0.7204.185\chrome.dll
+7 | dynamic | pak | 16 | C:\Program Files\Google\Chrome\Application\138.0.7204.185\chrome.dll | C:\Program Files\Google\Chrome\Application\138.0.7204.185\chrome_100_percent.pak
+8 | dynamic | pak | 16 | C:\Program Files\Google\Chrome\Application\138.0.7204.185\chrome_100_percent.pak | C:\Program Files\Google\Chrome\Application\138.0.7204.185\chrome_200_percent.pak
+9 | dynamic | dll | 16 | C:\Program Files\Google\Chrome\Application\138.0.7204.185\chrome_200_percent.pak | C:\Program Files\Google\Chrome\Application\138.0.7204.185\chrome_elf.dll
+10 | dynamic | dat | 15 | C:\Program Files\Google\Chrome\Application\138.0.7204.185\chrome_elf.dll | C:\Program Files\Google\Chrome\Application\138.0.7204.185\icudtl.dat
+11 | dynamic | pak | 14 | C:\Program Files\Google\Chrome\Application\138.0.7204.185\icudtl.dat | C:\Program Files\Google\Chrome\Application\138.0.7204.185\resources.pak
+12 | dynamic | bin | 15 | C:\Program Files\Google\Chrome\Application\138.0.7204.185\resources.pak | C:\Program Files\Google\Chrome\Application\138.0.7204.185\v8_context_snapshot.bin
+13 | dynamic | exe | 15 | C:\Program Files\Google\Chrome\Application\138.0.7204.185\v8_context_snapshot.bin | C:\Program Files\Google\Chrome\Application\chrome.exe
+14 | dynamic | - | 1 | C:\Program Files\Google\Chrome\Application\chrome.exe | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Cache\Cache_Data\data_0
+15 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Cache\Cache_Data\data_0 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Cache\Cache_Data\data_1
+16 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Cache\Cache_Data\data_1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Cache\Cache_Data\data_2
+17 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Cache\Cache_Data\data_2 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Cache\Cache_Data\data_3
+18 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Cache\Cache_Data\data_3 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Cache\Cache_Data\index
+19 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Cache\Cache_Data\index | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Network\Cookies
+20 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Network\Cookies | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Network\Cookies-journal
+21 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Network\Cookies-journal | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Network\Device Bound Sessions
+22 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Network\Device Bound Sessions | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Network\Reporting and NEL
+23 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Network\Reporting and NEL | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Network\Reporting and NEL-journal
+24 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Network\Reporting and NEL-journal | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Network\Trust Tokens
+25 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Network\Trust Tokens | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Safe Browsing Network\Safe Browsing Cookies
+26 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Safe Browsing Network\Safe Browsing Cookies | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Safe Browsing Network\Safe Browsing Cookies-journal
+27 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Safe Browsing Network\Safe Browsing Cookies-journal | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Shared Dictionary\db
+28 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Shared Dictionary\db | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Shared Dictionary\db-journal
+29 | dynamic | nls | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Shared Dictionary\db-journal | C:\Windows\Globalization\Sorting\SortDefault.nls
+30 | dynamic | dll | 5 | C:\Windows\Globalization\Sorting\SortDefault.nls | C:\Windows\System32\AcLayers.dll
+31 | dynamic | dll | 1 | C:\Windows\System32\AcLayers.dll | C:\Windows\System32\DWrite.dll
+32 | dynamic | DLL | 1 | C:\Windows\System32\DWrite.dll | C:\Windows\System32\FWPUCLNT.DLL
+33 | dynamic | DLL | 1 | C:\Windows\System32\FWPUCLNT.DLL | C:\Windows\System32\IPHLPAPI.DLL
+34 | dynamic | dll | 15 | C:\Windows\System32\IPHLPAPI.DLL | C:\Windows\System32\KernelBase.dll
+35 | dynamic | dll | 15 | C:\Windows\System32\KernelBase.dll | C:\Windows\System32\SHCore.dll
+36 | dynamic | dll | 15 | C:\Windows\System32\SHCore.dll | C:\Windows\System32\advapi32.dll
+37 | dynamic | dll | 6 | C:\Windows\System32\advapi32.dll | C:\Windows\System32\apphelp.dll
+38 | dynamic | dll | 4 | C:\Windows\System32\apphelp.dll | C:\Windows\System32\bcrypt.dll
+39 | dynamic | dll | 18 | C:\Windows\System32\bcrypt.dll | C:\Windows\System32\bcryptprimitives.dll
+40 | dynamic | dll | 1 | C:\Windows\System32\bcryptprimitives.dll | C:\Windows\System32\clbcatq.dll
+41 | dynamic | dll | 3 | C:\Windows\System32\clbcatq.dll | C:\Windows\System32\combase.dll
+42 | dynamic | dll | 16 | C:\Windows\System32\combase.dll | C:\Windows\System32\crypt32.dll
+43 | dynamic | dll | 3 | C:\Windows\System32\crypt32.dll | C:\Windows\System32\cryptbase.dll
+44 | dynamic | dll | 1 | C:\Windows\System32\cryptbase.dll | C:\Windows\System32\dbghelp.dll
+45 | dynamic | dll | 14 | C:\Windows\System32\dbghelp.dll | C:\Windows\System32\dhcpcsvc.dll
+46 | dynamic | dll | 2 | C:\Windows\System32\dhcpcsvc.dll | C:\Windows\System32\dhcpcsvc6.dll
+47 | dynamic | dll | 1 | C:\Windows\System32\dhcpcsvc6.dll | C:\Windows\System32\dnsapi.dll
+48 | dynamic | dll | 2 | C:\Windows\System32\dnsapi.dll | C:\Windows\System32\dpapi.dll
+49 | dynamic | dll | 2 | C:\Windows\System32\dpapi.dll | C:\Windows\System32\gdi32.dll
+50 | dynamic | dll | 7 | C:\Windows\System32\gdi32.dll | C:\Windows\System32\gdi32full.dll
+51 | dynamic | dll | 6 | C:\Windows\System32\gdi32full.dll | C:\Windows\System32\imm32.dll
+52 | dynamic | dll | 5 | C:\Windows\System32\imm32.dll | C:\Windows\System32\kernel.appcore.dll
+53 | dynamic | dll | 5 | C:\Windows\System32\kernel.appcore.dll | C:\Windows\System32\kernel32.dll
+54 | dynamic | nls | 16 | C:\Windows\System32\kernel32.dll | C:\Windows\System32\locale.nls
+55 | dynamic | dll | 15 | C:\Windows\System32\locale.nls | C:\Windows\System32\msasn1.dll
+56 | dynamic | dll | 15 | C:\Windows\System32\msasn1.dll | C:\Windows\System32\msvcp_win.dll
+57 | dynamic | dll | 18 | C:\Windows\System32\msvcp_win.dll | C:\Windows\System32\msvcrt.dll
+58 | dynamic | dll | 2 | C:\Windows\System32\msvcrt.dll | C:\Windows\System32\mswsock.dll
+59 | dynamic | dll | 1 | C:\Windows\System32\mswsock.dll | C:\Windows\System32\netprofm.dll
+60 | dynamic | dll | 1 | C:\Windows\System32\netprofm.dll | C:\Windows\System32\nlaapi.dll
+61 | dynamic | dll | 2 | C:\Windows\System32\nlaapi.dll | C:\Windows\System32\nlmproxy.dll
+62 | dynamic | dll | 1 | C:\Windows\System32\nlmproxy.dll | C:\Windows\System32\npmproxy.dll
+63 | dynamic | dll | 2 | C:\Windows\System32\npmproxy.dll | C:\Windows\System32\nsi.dll
+64 | dynamic | dll | 1 | C:\Windows\System32\nsi.dll | C:\Windows\System32\ntdll.dll
+65 | dynamic | dll | 4 | C:\Windows\System32\ntdll.dll | C:\Windows\System32\ntmarta.dll
+66 | dynamic | dll | 4 | C:\Windows\System32\ntmarta.dll | C:\Windows\System32\ole32.dll
+67 | dynamic | dll | 4 | C:\Windows\System32\ole32.dll | C:\Windows\System32\oleaut32.dll
+68 | dynamic | dll | 1 | C:\Windows\System32\oleaut32.dll | C:\Windows\System32\rasadhlp.dll
+69 | dynamic | dll | 1 | C:\Windows\System32\rasadhlp.dll | C:\Windows\System32\rpcrt4.dll
+70 | dynamic | dll | 17 | C:\Windows\System32\rpcrt4.dll | C:\Windows\System32\sechost.dll
+71 | dynamic | dll | 17 | C:\Windows\System32\sechost.dll | C:\Windows\System32\secur32.dll
+72 | dynamic | dll | 3 | C:\Windows\System32\secur32.dll | C:\Windows\System32\sfc.dll
+73 | dynamic | dll | 6 | C:\Windows\System32\sfc.dll | C:\Windows\System32\sfc_os.dll
+74 | dynamic | dll | 6 | C:\Windows\System32\sfc_os.dll | C:\Windows\System32\shell32.dll
+75 | dynamic | dll | 6 | C:\Windows\System32\shell32.dll | C:\Windows\System32\shlwapi.dll
+76 | dynamic | dll | 4 | C:\Windows\System32\shlwapi.dll | C:\Windows\System32\sspicli.dll
+77 | dynamic | dll | 14 | C:\Windows\System32\sspicli.dll | C:\Windows\System32\ucrtbase.dll
+78 | dynamic | dll | 4 | C:\Windows\System32\ucrtbase.dll | C:\Windows\System32\user32.dll
+79 | dynamic | dll | 6 | C:\Windows\System32\user32.dll | C:\Windows\System32\userenv.dll
+80 | dynamic | dll | 3 | C:\Windows\System32\userenv.dll | C:\Windows\System32\uxtheme.dll
+81 | dynamic | dll | 5 | C:\Windows\System32\uxtheme.dll | C:\Windows\System32\version.dll
+82 | dynamic | dll | 7 | C:\Windows\System32\version.dll | C:\Windows\System32\win32u.dll
+83 | dynamic | dll | 5 | C:\Windows\System32\win32u.dll | C:\Windows\System32\winhttp.dll
+84 | dynamic | dll | 17 | C:\Windows\System32\winhttp.dll | C:\Windows\System32\winmm.dll
+85 | dynamic | drv | 16 | C:\Windows\System32\winmm.dll | C:\Windows\System32\winspool.drv
+86 | dynamic | dll | 16 | C:\Windows\System32\winspool.drv | C:\Windows\System32\wintrust.dll
+87 | dynamic | dll | 16 | C:\Windows\System32\wintrust.dll | C:\Windows\System32\ws2_32.dll
+88 | dynamic | 0\Ruleset Data | 11 | C:\Program Files\Google\Chrome\Application\chrome.exe | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Subresource Filter\Indexed Rules\36\9.58.0\Ruleset Data
+89 | dynamic | tflite | 4 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Subresource Filter\Indexed Rules\36\9.58.0\Ruleset Data | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\optimization_guide_model_store\25\E6DC4029A1E4B4C1\A44CFE443BFF1F5C\visual_model_desktop.tflite
+90 | dynamic | tflite | 5 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\optimization_guide_model_store\25\E6DC4029A1E4B4C1\A44CFE443BFF1F5C\visual_model_desktop.tflite | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\optimization_guide_model_store\30\E6DC4029A1E4B4C1\1EBAF634ED79AC48\model.tflite
+91 | dynamic | tmp | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\optimization_guide_model_store\30\E6DC4029A1E4B4C1\1EBAF634ED79AC48\model.tflite | C:\Users\SacraSystemsWS12\AppData\Local\Temp\3cf984ae-83b1-4ef3-86bf-7c13f4a69411.tmp
+92 | dynamic | ttf | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Temp\3cf984ae-83b1-4ef3-86bf-7c13f4a69411.tmp | C:\Windows\Fonts\arial.ttf
+93 | dynamic | ttf | 10 | C:\Windows\Fonts\arial.ttf | C:\Windows\Fonts\arialbd.ttf
+94 | dynamic | ttf | 10 | C:\Windows\Fonts\arialbd.ttf | C:\Windows\Fonts\arialbi.ttf
+95 | dynamic | ttf | 10 | C:\Windows\Fonts\arialbi.ttf | C:\Windows\Fonts\ariali.ttf
+96 | dynamic | ttf | 10 | C:\Windows\Fonts\ariali.ttf | C:\Windows\Fonts\ariblk.ttf
+97 | dynamic | ttf | 4 | C:\Windows\Fonts\ariblk.ttf | C:\Windows\Fonts\times.ttf
+98 | dynamic | ttf | 10 | C:\Windows\Fonts\times.ttf | C:\Windows\Fonts\timesbd.ttf
+99 | dynamic | ttf | 10 | C:\Windows\Fonts\timesbd.ttf | C:\Windows\Fonts\timesbi.ttf
+100 | dynamic | ttf | 10 | C:\Windows\Fonts\timesbi.ttf | C:\Windows\Fonts\timesi.ttf
+101 | dynamic | nls | 9 | C:\Windows\Fonts\timesi.ttf | C:\Windows\Globalization\Sorting\SortDefault.nls
+102 | dynamic | dll | 12 | C:\Windows\Globalization\Sorting\SortDefault.nls | C:\Windows\System32\DWrite.dll
+103 | dynamic | DLL | 13 | C:\Windows\System32\DWrite.dll | C:\Windows\System32\IPHLPAPI.DLL
+104 | dynamic | dll | 12 | C:\Windows\System32\advapi32.dll | C:\Windows\System32\bcrypt.dll
+105 | dynamic | dll | 13 | C:\Windows\System32\bcryptprimitives.dll | C:\Windows\System32\combase.dll
+106 | dynamic | dll | 13 | C:\Windows\System32\crypt32.dll | C:\Windows\System32\dbghelp.dll
+107 | dynamic | dll | 15 | C:\Windows\System32\dhcpcsvc.dll | C:\Windows\System32\dpapi.dll
+108 | dynamic | dll | 11 | C:\Windows\System32\dpapi.dll | C:\Windows\System32\kernel32.dll
+109 | dynamic | dll | 15 | C:\Windows\System32\msvcrt.dll | C:\Windows\System32\ntdll.dll
+110 | dynamic | dll | 13 | C:\Windows\System32\ntdll.dll | C:\Windows\System32\oleaut32.dll
+111 | dynamic | dll | 13 | C:\Windows\System32\oleaut32.dll | C:\Windows\System32\rpcrt4.dll
+112 | dynamic | dll | 11 | C:\Windows\System32\secur32.dll | C:\Windows\System32\sspicli.dll
+113 | dynamic | dll | 11 | C:\Windows\System32\ucrtbase.dll | C:\Windows\System32\userenv.dll
+114 | dynamic | dll | 13 | C:\Windows\System32\userenv.dll | C:\Windows\System32\version.dll
+115 | dynamic | dll | 11 | C:\Windows\System32\version.dll | C:\Windows\System32\winhttp.dll
+116 | dynamic | hyb | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Subresource Filter\Indexed Rules\36\9.58.0\Ruleset Data | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\hyphen-data\120.0.6050.0\hyph-en-gb.hyb
+117 | dynamic | tflite | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\hyphen-data\120.0.6050.0\hyph-en-gb.hyb | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\optimization_guide_model_store\25\E6DC4029A1E4B4C1\A44CFE443BFF1F5C\visual_model_desktop.tflite
+118 | dynamic | tmp | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\optimization_guide_model_store\30\E6DC4029A1E4B4C1\1EBAF634ED79AC48\model.tflite | C:\Users\SacraSystemsWS12\AppData\Local\Temp\3bf5a95a-4bdf-4b9a-a213-df4a94712d09.tmp
+119 | dynamic | ttf | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Temp\3bf5a95a-4bdf-4b9a-a213-df4a94712d09.tmp | C:\Windows\Fonts\Nirmala.ttf
+120 | dynamic | ttf | 2 | C:\Windows\Fonts\Nirmala.ttf | C:\Windows\Fonts\NirmalaB.ttf
+121 | dynamic | ttf | 2 | C:\Windows\Fonts\NirmalaB.ttf | C:\Windows\Fonts\NirmalaS.ttf
+122 | dynamic | ttf | 2 | C:\Windows\Fonts\NirmalaS.ttf | C:\Windows\Fonts\arial.ttf
+123 | dynamic | ttc | 1 | C:\Windows\Fonts\ariblk.ttf | C:\Windows\Fonts\cambria.ttc
+124 | dynamic | ttf | 1 | C:\Windows\Fonts\cambria.ttc | C:\Windows\Fonts\consola.ttf
+125 | dynamic | ttf | 4 | C:\Windows\Fonts\consola.ttf | C:\Windows\Fonts\consolab.ttf
+126 | dynamic | ttf | 4 | C:\Windows\Fonts\consolab.ttf | C:\Windows\Fonts\consolai.ttf
+127 | dynamic | ttf | 4 | C:\Windows\Fonts\consolai.ttf | C:\Windows\Fonts\consolaz.ttf
+128 | dynamic | ttc | 1 | C:\Windows\Fonts\consolaz.ttf | C:\Windows\Fonts\msyh.ttc
+129 | dynamic | ttc | 1 | C:\Windows\Fonts\msyh.ttc | C:\Windows\Fonts\msyhbd.ttc
+130 | dynamic | ttc | 1 | C:\Windows\Fonts\msyhbd.ttc | C:\Windows\Fonts\msyhl.ttc
+131 | dynamic | ttf | 1 | C:\Windows\Fonts\msyhl.ttc | C:\Windows\Fonts\segoeui.ttf
+132 | dynamic | ttf | 7 | C:\Windows\Fonts\segoeui.ttf | C:\Windows\Fonts\segoeuib.ttf
+133 | dynamic | ttf | 7 | C:\Windows\Fonts\segoeuib.ttf | C:\Windows\Fonts\segoeuii.ttf
+134 | dynamic | ttf | 6 | C:\Windows\Fonts\segoeuii.ttf | C:\Windows\Fonts\segoeuil.ttf
+135 | dynamic | ttf | 6 | C:\Windows\Fonts\segoeuil.ttf | C:\Windows\Fonts\segoeuisl.ttf
+136 | dynamic | ttf | 6 | C:\Windows\Fonts\segoeuisl.ttf | C:\Windows\Fonts\segoeuiz.ttf
+137 | dynamic | ttf | 6 | C:\Windows\Fonts\segoeuiz.ttf | C:\Windows\Fonts\seguibl.ttf
+138 | dynamic | ttf | 6 | C:\Windows\Fonts\seguibl.ttf | C:\Windows\Fonts\seguibli.ttf
+139 | dynamic | ttf | 2 | C:\Windows\Fonts\seguibli.ttf | C:\Windows\Fonts\seguiemj.ttf
+140 | dynamic | ttf | 2 | C:\Windows\Fonts\seguiemj.ttf | C:\Windows\Fonts\seguili.ttf
+141 | dynamic | ttf | 6 | C:\Windows\Fonts\seguili.ttf | C:\Windows\Fonts\seguisb.ttf
+142 | dynamic | ttf | 6 | C:\Windows\Fonts\seguisb.ttf | C:\Windows\Fonts\seguisbi.ttf
+143 | dynamic | ttf | 6 | C:\Windows\Fonts\seguisbi.ttf | C:\Windows\Fonts\seguisli.ttf
+144 | dynamic | ttf | 6 | C:\Windows\Fonts\seguisli.ttf | C:\Windows\Fonts\times.ttf
+145 | dynamic | dll | 1 | None | C:\Program Files\Google\Chrome\Application\138.0.7204.185\chrome_elf.dll
+146 | dynamic | exe | 1 | C:\Program Files\Google\Chrome\Application\138.0.7204.185\chrome_elf.dll | C:\Program Files\Google\Chrome\Application\chrome.exe
+147 | dynamic | nls | 2 | C:\Program Files\Google\Chrome\Application\chrome.exe | C:\Windows\Globalization\Sorting\SortDefault.nls
+148 | dynamic | dll | 1 | C:\Windows\System32\AcLayers.dll | C:\Windows\System32\KernelBase.dll
+149 | dynamic | mui | 1 | C:\Windows\System32\combase.dll | C:\Windows\System32\en-US\KernelBase.dll.mui
+150 | dynamic | dll | 2 | C:\Windows\System32\en-US\KernelBase.dll.mui | C:\Windows\System32\gdi32.dll
+151 | dynamic | dll | 2 | C:\Windows\System32\imm32.dll | C:\Windows\System32\kernel32.dll
+152 | dynamic | dll | 1 | C:\Windows\System32\locale.nls | C:\Windows\System32\msctf.dll
+153 | dynamic | dll | 2 | C:\Windows\System32\msctf.dll | C:\Windows\System32\msvcp_win.dll
+154 | dynamic | dll | 1 | C:\Windows\System32\sechost.dll | C:\Windows\System32\sfc.dll
+155 | dynamic | dll | 1 | C:\Windows\System32\shlwapi.dll | C:\Windows\System32\ucrtbase.dll
+156 | dynamic | dll | 1 | C:\Windows\System32\user32.dll | C:\Windows\System32\uxtheme.dll
+157 | dynamic | drv | 1 | C:\Windows\System32\win32u.dll | C:\Windows\System32\winspool.drv
+158 | dynamic | dll | 1 | None | C:\Program Files\Google\Chrome\Application\138.0.7204.185\chrome.dll
+159 | dynamic | dll | 1 | C:\Program Files\Google\Chrome\Application\138.0.7204.185\chrome.dll | C:\Program Files\Google\Chrome\Application\138.0.7204.185\chrome_elf.dll
+160 | dynamic | dll | 1 | C:\Program Files\Google\Chrome\Application\138.0.7204.185\chrome_elf.dll | C:\Program Files\Google\Chrome\Application\138.0.7204.185\d3dcompiler_47.dll
+161 | dynamic | dll | 1 | C:\Program Files\Google\Chrome\Application\138.0.7204.185\d3dcompiler_47.dll | C:\Program Files\Google\Chrome\Application\138.0.7204.185\dxcompiler.dll
+162 | dynamic | dll | 2 | C:\Program Files\Google\Chrome\Application\138.0.7204.185\dxcompiler.dll | C:\Program Files\Google\Chrome\Application\138.0.7204.185\dxil.dll
+163 | dynamic | dat | 2 | C:\Program Files\Google\Chrome\Application\138.0.7204.185\dxil.dll | C:\Program Files\Google\Chrome\Application\138.0.7204.185\icudtl.dat
+164 | dynamic | dll | 1 | C:\Program Files\Google\Chrome\Application\138.0.7204.185\icudtl.dat | C:\Program Files\Google\Chrome\Application\138.0.7204.185\libEGL.dll
+165 | dynamic | dll | 1 | C:\Program Files\Google\Chrome\Application\138.0.7204.185\libEGL.dll | C:\Program Files\Google\Chrome\Application\138.0.7204.185\libGLESv2.dll
+166 | dynamic | dll | 1 | C:\Program Files\Google\Chrome\Application\138.0.7204.185\libGLESv2.dll | C:\Program Files\Google\Chrome\Application\138.0.7204.185\vk_swiftshader.dll
+167 | dynamic | exe | 1 | C:\Program Files\Google\Chrome\Application\138.0.7204.185\vk_swiftshader.dll | C:\Program Files\Google\Chrome\Application\chrome.exe
+168 | dynamic | - | 1 | C:\Program Files\Google\Chrome\Application\chrome.exe | C:\Users\SacraSystemsWS12\AppData\LocalLow\Intel\ShaderCache\ee7b4bfe088a555d935289b8eb448464c5e42de90a2d7f398279ede9a109a1f6
+169 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\LocalLow\Intel\ShaderCache\ee7b4bfe088a555d935289b8eb448464c5e42de90a2d7f398279ede9a109a1f6 | C:\Users\SacraSystemsWS12\AppData\LocalLow\Intel\ShaderCache\fff47f7b4ba2195bf9a43263c6e5fc54d86ed9b0ba45592f8f09fbae80131e7a
+170 | dynamic | nls | 1 | C:\Users\SacraSystemsWS12\AppData\LocalLow\Intel\ShaderCache\fff47f7b4ba2195bf9a43263c6e5fc54d86ed9b0ba45592f8f09fbae80131e7a | C:\Windows\Globalization\Sorting\SortDefault.nls
+171 | dynamic | dll | 1 | C:\Windows\System32\AcLayers.dll | C:\Windows\System32\CompPkgSup.dll
+172 | dynamic | dll | 1 | C:\Windows\System32\CompPkgSup.dll | C:\Windows\System32\DWrite.dll
+173 | dynamic | dll | 2 | C:\Windows\System32\DWrite.dll | C:\Windows\System32\DXCore.dll
+174 | dynamic | dll | 2 | C:\Windows\System32\DXCore.dll | C:\Windows\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_d0b39b11619fd0c4\igc64.dll
+175 | dynamic | dll | 1 | C:\Windows\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_d0b39b11619fd0c4\igc64.dll | C:\Windows\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_d0b39b11619fd0c4\igd10iumd64.dll
+176 | dynamic | dll | 1 | C:\Windows\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_d0b39b11619fd0c4\igd10iumd64.dll | C:\Windows\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_d0b39b11619fd0c4\igd11dxva64.dll
+177 | dynamic | dll | 1 | C:\Windows\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_d0b39b11619fd0c4\igd11dxva64.dll | C:\Windows\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_d0b39b11619fd0c4\igdgmm64.dll
+178 | dynamic | dll | 1 | C:\Windows\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_d0b39b11619fd0c4\igdgmm64.dll | C:\Windows\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_d0b39b11619fd0c4\igdinfo64.dll
+179 | dynamic | dll | 1 | C:\Windows\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_d0b39b11619fd0c4\igdinfo64.dll | C:\Windows\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_d0b39b11619fd0c4\libmfxhw64.dll
+180 | dynamic | dll | 1 | C:\Windows\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_d0b39b11619fd0c4\libmfxhw64.dll | C:\Windows\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_d0b39b11619fd0c4\mfx_mft_h264ve_64.dll
+181 | dynamic | dll | 1 | C:\Windows\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_d0b39b11619fd0c4\mfx_mft_h264ve_64.dll | C:\Windows\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_d0b39b11619fd0c4\mfx_mft_h265ve_64.dll
+182 | dynamic | DLL | 1 | C:\Windows\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_d0b39b11619fd0c4\mfx_mft_h265ve_64.dll | C:\Windows\System32\IPHLPAPI.DLL
+183 | dynamic | dll | 1 | C:\Windows\System32\KernelBase.dll | C:\Windows\System32\RTWorkQ.dll
+184 | dynamic | dll | 1 | C:\Windows\System32\RTWorkQ.dll | C:\Windows\System32\SHCore.dll
+185 | dynamic | dll | 1 | C:\Windows\System32\SHCore.dll | C:\Windows\System32\WinTypes.dll
+186 | dynamic | dll | 1 | C:\Windows\System32\WinTypes.dll | C:\Windows\System32\Windows.Media.dll
+187 | dynamic | dll | 1 | C:\Windows\System32\Windows.Media.dll | C:\Windows\System32\advapi32.dll
+188 | dynamic | dll | 4 | C:\Windows\System32\bcryptprimitives.dll | C:\Windows\System32\cfgmgr32.dll
+189 | dynamic | dll | 3 | C:\Windows\System32\cfgmgr32.dll | C:\Windows\System32\clbcatq.dll
+190 | dynamic | dll | 1 | C:\Windows\System32\cryptbase.dll | C:\Windows\System32\d3d11.dll
+191 | dynamic | dll | 3 | C:\Windows\System32\d3d11.dll | C:\Windows\System32\dbghelp.dll
+192 | dynamic | dll | 2 | C:\Windows\System32\dbghelp.dll | C:\Windows\System32\dcomp.dll
+193 | dynamic | dll | 1 | C:\Windows\System32\dcomp.dll | C:\Windows\System32\dhcpcsvc.dll
+194 | dynamic | dll | 2 | C:\Windows\System32\dpapi.dll | C:\Windows\System32\dwmapi.dll
+195 | dynamic | dll | 2 | C:\Windows\System32\dwmapi.dll | C:\Windows\System32\dxgi.dll
+196 | dynamic | dll | 1 | C:\Windows\System32\dxgi.dll | C:\Windows\System32\dxva2.dll
+197 | dynamic | dll | 1 | C:\Windows\System32\dxva2.dll | C:\Windows\System32\gdi32.dll
+198 | dynamic | dll | 1 | C:\Windows\System32\kernel32.dll | C:\Windows\System32\ksuser.dll
+199 | dynamic | nls | 1 | C:\Windows\System32\ksuser.dll | C:\Windows\System32\locale.nls
+200 | dynamic | dll | 1 | C:\Windows\System32\locale.nls | C:\Windows\System32\mf.dll
+201 | dynamic | dll | 1 | C:\Windows\System32\mf.dll | C:\Windows\System32\mfcore.dll
+202 | dynamic | dll | 1 | C:\Windows\System32\mfcore.dll | C:\Windows\System32\mfplat.dll
+203 | dynamic | dll | 1 | C:\Windows\System32\mfplat.dll | C:\Windows\System32\msasn1.dll
+204 | dynamic | dll | 1 | C:\Windows\System32\msasn1.dll | C:\Windows\System32\msctf.dll
+205 | dynamic | dll | 1 | C:\Windows\System32\msvcrt.dll | C:\Windows\System32\ncrypt.dll
+206 | dynamic | dll | 1 | C:\Windows\System32\ncrypt.dll | C:\Windows\System32\ntasn1.dll
+207 | dynamic | dll | 2 | C:\Windows\System32\ntasn1.dll | C:\Windows\System32\ntdll.dll
+208 | dynamic | dll | 1 | C:\Windows\System32\ntdll.dll | C:\Windows\System32\ole32.dll
+209 | dynamic | dll | 2 | C:\Windows\System32\oleaut32.dll | C:\Windows\System32\powrprof.dll
+210 | dynamic | dll | 2 | C:\Windows\System32\powrprof.dll | C:\Windows\System32\propsys.dll
+211 | dynamic | dll | 2 | C:\Windows\System32\propsys.dll | C:\Windows\System32\rpcrt4.dll
+212 | dynamic | dll | 2 | C:\Windows\System32\secur32.dll | C:\Windows\System32\setupapi.dll
+213 | dynamic | dll | 2 | C:\Windows\System32\setupapi.dll | C:\Windows\System32\sfc.dll
+214 | dynamic | dll | 3 | C:\Windows\System32\ucrtbase.dll | C:\Windows\System32\umpdc.dll
+215 | dynamic | dll | 2 | C:\Windows\System32\umpdc.dll | C:\Windows\System32\user32.dll
+216 | dynamic | tmp | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\optimization_guide_model_store\30\E6DC4029A1E4B4C1\1EBAF634ED79AC48\model.tflite | C:\Users\SacraSystemsWS12\AppData\Local\Temp\c051cdb9-5073-4991-8a77-1efb48bf906a.tmp
+217 | dynamic | ttf | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Temp\c051cdb9-5073-4991-8a77-1efb48bf906a.tmp | C:\Windows\Fonts\arial.ttf
+218 | dynamic | ttf | 2 | C:\Windows\Fonts\ariblk.ttf | C:\Windows\Fonts\segoeui.ttf
+219 | dynamic | ttf | 4 | C:\Windows\Fonts\seguibli.ttf | C:\Windows\Fonts\seguili.ttf
+220 | dynamic | dll | 2 | C:\Program Files\Google\Chrome\Application\138.0.7204.185\icudtl.dat | C:\Program Files\Google\Chrome\Application\138.0.7204.185\optimization_guide_internal.dll
+221 | dynamic | pak | 2 | C:\Program Files\Google\Chrome\Application\138.0.7204.185\optimization_guide_internal.dll | C:\Program Files\Google\Chrome\Application\138.0.7204.185\resources.pak
+222 | dynamic | exe | 1 | C:\Program Files\Google\Chrome\Application\138.0.7204.185\resources.pak | C:\Program Files\Google\Chrome\Application\chrome.exe
+223 | dynamic | db | 1 | C:\Program Files\Google\Chrome\Application\chrome.exe | C:\ProgramData\Microsoft\Windows\Caches\cversions.2.db
+224 | dynamic | db | 1 | C:\ProgramData\Microsoft\Windows\Caches\cversions.2.db | C:\ProgramData\Microsoft\Windows\Caches\{67C66813-7238-4D45-A62E-3631BB4205B8}.2.ver0x0000000000000004.db
+225 | dynamic | db | 1 | C:\ProgramData\Microsoft\Windows\Caches\{67C66813-7238-4D45-A62E-3631BB4205B8}.2.ver0x0000000000000004.db | C:\ProgramData\Microsoft\Windows\Caches\{6AF0698E-D558-4F6E-9B3C-3716689AF493}.2.ver0x0000000000000007.db
+226 | dynamic | db | 1 | C:\ProgramData\Microsoft\Windows\Caches\{6AF0698E-D558-4F6E-9B3C-3716689AF493}.2.ver0x0000000000000007.db | C:\ProgramData\Microsoft\Windows\Caches\{9CDC7522-669D-4909-8C7B-EA2A739CD456}.2.ver0x0000000000000004.db
+227 | dynamic | db | 1 | C:\ProgramData\Microsoft\Windows\Caches\{9CDC7522-669D-4909-8C7B-EA2A739CD456}.2.ver0x0000000000000004.db | C:\ProgramData\Microsoft\Windows\Caches\{DDF571F2-BE98-426D-8288-1A9A39C3FDA2}.2.ver0x0000000000000005.db
+228 | dynamic | pma | 1 | C:\ProgramData\Microsoft\Windows\Caches\{DDF571F2-BE98-426D-8288-1A9A39C3FDA2}.2.ver0x0000000000000005.db | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\BrowserMetrics\BrowserMetrics-68A41532-2208.pma
+229 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\BrowserMetrics\BrowserMetrics-68A41532-2208.pma | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\GrShaderCache\data_0
+230 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\GrShaderCache\data_0 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\GrShaderCache\data_1
+231 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\GrShaderCache\data_1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\GrShaderCache\data_2
+232 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\GrShaderCache\data_2 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\GrShaderCache\data_3
+233 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\GrShaderCache\data_3 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\GrShaderCache\index
+234 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\GrShaderCache\index | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\GraphiteDawnCache\data_0
+235 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\GraphiteDawnCache\data_0 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\GraphiteDawnCache\data_1
+236 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\GraphiteDawnCache\data_1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\GraphiteDawnCache\data_2
+237 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\GraphiteDawnCache\data_2 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\GraphiteDawnCache\data_3
+238 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\GraphiteDawnCache\data_3 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\GraphiteDawnCache\index
+239 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\GraphiteDawnCache\index | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Account Web Data
+240 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Account Web Data | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Affiliation Database
+241 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Affiliation Database | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Affiliation Database-journal
+242 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Affiliation Database-journal | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\AggregationService
+243 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\AggregationService | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\BrowsingTopicsSiteData
+244 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\BrowsingTopicsSiteData | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Conversions
+245 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Conversions | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\DIPS
+246 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\DIPS | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\DIPS-wal
+247 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\DIPS-wal | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\DawnGraphiteCache\data_0
+248 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\DawnGraphiteCache\data_0 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\DawnGraphiteCache\data_1
+249 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\DawnGraphiteCache\data_1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\DawnGraphiteCache\data_2
+250 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\DawnGraphiteCache\data_2 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\DawnGraphiteCache\data_3
+251 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\DawnGraphiteCache\data_3 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\DawnGraphiteCache\index
+252 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\DawnGraphiteCache\index | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\DawnWebGPUCache\data_0
+253 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\DawnWebGPUCache\data_0 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\DawnWebGPUCache\data_1
+254 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\DawnWebGPUCache\data_1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\DawnWebGPUCache\data_2
+255 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\DawnWebGPUCache\data_2 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\DawnWebGPUCache\data_3
+256 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\DawnWebGPUCache\data_3 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\DawnWebGPUCache\index
+257 | dynamic | log | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\DawnWebGPUCache\index | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Extension State\000003.log
+258 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Extension State\000003.log | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Extension State\LOCK
+259 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Extension State\LOCK | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Extension State\LOG
+260 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Extension State\LOG | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Extension State\MANIFEST-000001
+261 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Extension State\MANIFEST-000001 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Favicons
+262 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Favicons | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Favicons-journal
+263 | dynamic | log | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Favicons-journal | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\File System\001\p\Paths\000003.log
+264 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\File System\001\p\Paths\000003.log | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\File System\001\p\Paths\LOCK
+265 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\File System\001\p\Paths\LOCK | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\File System\001\p\Paths\LOG
+266 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\File System\001\p\Paths\LOG | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\File System\001\p\Paths\MANIFEST-000001
+267 | dynamic | log | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\File System\001\p\Paths\MANIFEST-000001 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\File System\Origins\000003.log
+268 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\File System\Origins\000003.log | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\File System\Origins\LOCK
+269 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\File System\Origins\LOCK | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\File System\Origins\LOG
+270 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\File System\Origins\LOG | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\File System\Origins\MANIFEST-000001
+271 | dynamic | log | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\File System\Origins\MANIFEST-000001 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\GCM Store\000004.log
+272 | dynamic | ldb | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\GCM Store\000004.log | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\GCM Store\000005.ldb
+273 | dynamic | log | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\GCM Store\000005.ldb | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\GCM Store\Encryption\000003.log
+274 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\GCM Store\Encryption\000003.log | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\GCM Store\Encryption\LOCK
+275 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\GCM Store\Encryption\LOCK | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\GCM Store\Encryption\LOG
+276 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\GCM Store\Encryption\LOG | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\GCM Store\Encryption\MANIFEST-000001
+277 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\GCM Store\Encryption\MANIFEST-000001 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\GCM Store\LOCK
+278 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\GCM Store\LOCK | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\GCM Store\LOG
+279 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\GCM Store\LOG | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\GCM Store\MANIFEST-000001
+280 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\GCM Store\MANIFEST-000001 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\GPUCache\data_0
+281 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\GPUCache\data_0 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\GPUCache\data_1
+282 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\GPUCache\data_1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\GPUCache\data_2
+283 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\GPUCache\data_2 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\GPUCache\data_3
+284 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\GPUCache\data_3 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\GPUCache\index
+285 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\GPUCache\index | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\History
+286 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\History | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\History-journal
+287 | dynamic | ldb | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\History-journal | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\IndexedDB\https_chatgpt.com_0.indexeddb.leveldb\000037.ldb
+288 | dynamic | ldb | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\IndexedDB\https_chatgpt.com_0.indexeddb.leveldb\000037.ldb | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\IndexedDB\https_chatgpt.com_0.indexeddb.leveldb\000040.ldb
+289 | dynamic | log | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\IndexedDB\https_chatgpt.com_0.indexeddb.leveldb\000040.ldb | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\IndexedDB\https_chatgpt.com_0.indexeddb.leveldb\000042.log
+290 | dynamic | ldb | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\IndexedDB\https_chatgpt.com_0.indexeddb.leveldb\000042.log | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\IndexedDB\https_chatgpt.com_0.indexeddb.leveldb\000043.ldb
+291 | dynamic | leveldb\LOCK | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\IndexedDB\https_chatgpt.com_0.indexeddb.leveldb\000043.ldb | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\IndexedDB\https_chatgpt.com_0.indexeddb.leveldb\LOCK
+292 | dynamic | leveldb\LOG | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\IndexedDB\https_chatgpt.com_0.indexeddb.leveldb\LOCK | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\IndexedDB\https_chatgpt.com_0.indexeddb.leveldb\LOG
+293 | dynamic | leveldb\MANIFEST-000001 | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\IndexedDB\https_chatgpt.com_0.indexeddb.leveldb\LOG | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\IndexedDB\https_chatgpt.com_0.indexeddb.leveldb\MANIFEST-000001
+294 | dynamic | log | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\IndexedDB\https_chatgpt.com_0.indexeddb.leveldb\MANIFEST-000001 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Local Extension Settings\fiegdmejfepffgpnejdinekhfieaogmj\000003.log
+295 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Local Extension Settings\fiegdmejfepffgpnejdinekhfieaogmj\000003.log | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Local Extension Settings\fiegdmejfepffgpnejdinekhfieaogmj\LOCK
+296 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Local Extension Settings\fiegdmejfepffgpnejdinekhfieaogmj\LOCK | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Local Extension Settings\fiegdmejfepffgpnejdinekhfieaogmj\LOG
+297 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Local Extension Settings\fiegdmejfepffgpnejdinekhfieaogmj\LOG | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Local Extension Settings\fiegdmejfepffgpnejdinekhfieaogmj\MANIFEST-000001
+298 | dynamic | log | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Local Extension Settings\fiegdmejfepffgpnejdinekhfieaogmj\MANIFEST-000001 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Local Extension Settings\ghbmnnjooekpmoecnnnilnnbdlolhkhi\000003.log
+299 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Local Extension Settings\ghbmnnjooekpmoecnnnilnnbdlolhkhi\000003.log | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Local Extension Settings\ghbmnnjooekpmoecnnnilnnbdlolhkhi\LOCK
+300 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Local Extension Settings\ghbmnnjooekpmoecnnnilnnbdlolhkhi\LOCK | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Local Extension Settings\ghbmnnjooekpmoecnnnilnnbdlolhkhi\LOG
+301 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Local Extension Settings\ghbmnnjooekpmoecnnnilnnbdlolhkhi\LOG | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Local Extension Settings\ghbmnnjooekpmoecnnnilnnbdlolhkhi\MANIFEST-000001
+302 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Local Extension Settings\ghbmnnjooekpmoecnnnilnnbdlolhkhi\MANIFEST-000001 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Local Storage\leveldb\LOCK
+303 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Local Storage\leveldb\LOCK | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Login Data
+304 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Login Data | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Login Data For Account
+305 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Login Data For Account | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Login Data-journal
+306 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Login Data-journal | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Network Action Predictor
+307 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Network Action Predictor | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Network Action Predictor-journal
+308 | dynamic | log | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Network Action Predictor-journal | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Platform Notifications\000003.log
+309 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Platform Notifications\000003.log | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Platform Notifications\LOCK
+310 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Platform Notifications\LOCK | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Platform Notifications\LOG
+311 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Platform Notifications\LOG | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Platform Notifications\MANIFEST-000001
+312 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Platform Notifications\MANIFEST-000001 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\ServerCertificate
+313 | dynamic | log | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\ServerCertificate | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Service Worker\Database\000021.log
+314 | dynamic | ldb | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Service Worker\Database\000021.log | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Service Worker\Database\000023.ldb
+315 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Service Worker\Database\000023.ldb | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Service Worker\Database\LOCK
+316 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Service Worker\Database\LOCK | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Service Worker\Database\LOG
+317 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Service Worker\Database\LOG | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Service Worker\Database\MANIFEST-000001
+318 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Service Worker\Database\MANIFEST-000001 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Session Storage\LOCK
+319 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Session Storage\LOCK | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Sessions\Session_13400140152310826
+320 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Sessions\Session_13400140152310826 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Sessions\Tabs_13400057398033395
+321 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Sessions\Tabs_13400057398033395 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\SharedStorage
+322 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\SharedStorage | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\SharedStorage-wal
+323 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\SharedStorage-wal | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Shortcuts
+324 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Shortcuts | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Shortcuts-journal
+325 | dynamic | log | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Shortcuts-journal | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Site Characteristics Database\000003.log
+326 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Site Characteristics Database\000003.log | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Site Characteristics Database\LOCK
+327 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Site Characteristics Database\LOCK | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Site Characteristics Database\LOG
+328 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Site Characteristics Database\LOG | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Site Characteristics Database\MANIFEST-000001
+329 | dynamic | ldb | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Site Characteristics Database\MANIFEST-000001 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Sync Data\LevelDB\000005.ldb
+330 | dynamic | ldb | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Sync Data\LevelDB\000005.ldb | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Sync Data\LevelDB\000233.ldb
+331 | dynamic | ldb | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Sync Data\LevelDB\000233.ldb | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Sync Data\LevelDB\000235.ldb
+332 | dynamic | log | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Sync Data\LevelDB\000235.ldb | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Sync Data\LevelDB\000237.log
+333 | dynamic | ldb | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Sync Data\LevelDB\000237.log | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Sync Data\LevelDB\000238.ldb
+334 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Sync Data\LevelDB\000238.ldb | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Sync Data\LevelDB\LOCK
+335 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Sync Data\LevelDB\LOCK | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Sync Data\LevelDB\LOG
+336 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Sync Data\LevelDB\LOG | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Sync Data\LevelDB\MANIFEST-000001
+337 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Sync Data\LevelDB\MANIFEST-000001 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Top Sites
+338 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Top Sites | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Top Sites-journal
+339 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Top Sites-journal | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Web Data
+340 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Web Data | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Web Data-journal
+341 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Web Data-journal | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\WebStorage\QuotaManager
+342 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\WebStorage\QuotaManager | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\WebStorage\QuotaManager-journal
+343 | dynamic | db | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\WebStorage\QuotaManager-journal | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\heavy_ad_intervention_opt_out.db
+344 | dynamic | log | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\heavy_ad_intervention_opt_out.db | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\shared_proto_db\000007.log
+345 | dynamic | ldb | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\shared_proto_db\000007.log | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\shared_proto_db\000010.ldb
+346 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\shared_proto_db\000010.ldb | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\shared_proto_db\LOCK
+347 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\shared_proto_db\LOCK | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\shared_proto_db\LOG
+348 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\shared_proto_db\LOG | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\shared_proto_db\MANIFEST-000001
+349 | dynamic | log | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\shared_proto_db\MANIFEST-000001 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\shared_proto_db\metadata\000003.log
+350 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\shared_proto_db\metadata\000003.log | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\shared_proto_db\metadata\LOCK
+351 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\shared_proto_db\metadata\LOCK | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\shared_proto_db\metadata\LOG
+352 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\shared_proto_db\metadata\LOG | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\shared_proto_db\metadata\MANIFEST-000001
+353 | dynamic | 32_13400141004102211 | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\shared_proto_db\metadata\MANIFEST-000001 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Safe Browsing\ChromeExtMalware.store.32_13400141004102211
+354 | dynamic | 4_13400146398353120 | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Safe Browsing\ChromeExtMalware.store.32_13400141004102211 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Safe Browsing\UrlBilling.store.4_13400146398353120
+355 | dynamic | 32_13400146398356841 | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Safe Browsing\UrlBilling.store.4_13400146398353120 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Safe Browsing\UrlCsdAllowlist.store.32_13400146398356841
+356 | dynamic | 4_13400146398356604 | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Safe Browsing\UrlCsdAllowlist.store.32_13400146398356841 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Safe Browsing\UrlCsdAllowlist.store.4_13400146398356604
+357 | dynamic | 32_13391067029948087 | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Safe Browsing\UrlCsdAllowlist.store.4_13400146398356604 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Safe Browsing\UrlCsdDownloadAllowlist.store.32_13391067029948087
+358 | dynamic | 32_13400093497988308 | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Safe Browsing\UrlCsdDownloadAllowlist.store.32_13391067029948087 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Safe Browsing\UrlHighConfidenceAllowlist.store.32_13400093497988308
+359 | dynamic | 4_13400146398348895 | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Safe Browsing\UrlHighConfidenceAllowlist.store.32_13400093497988308 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Safe Browsing\UrlMalBin.store.4_13400146398348895
+360 | dynamic | 4_13400146398333068 | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Safe Browsing\UrlMalBin.store.4_13400146398348895 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Safe Browsing\UrlMalware.store.4_13400146398333068
+361 | dynamic | 4_13400146397841015 | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Safe Browsing\UrlMalware.store.4_13400146398333068 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Safe Browsing\UrlSoceng.store.4_13400146397841015
+362 | dynamic | 4_13400146398362348 | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Safe Browsing\UrlSoceng.store.4_13400146397841015 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Safe Browsing\UrlSubresourceFilter.store.4_13400146398362348
+363 | dynamic | 4_13400137393458519 | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Safe Browsing\UrlSubresourceFilter.store.4_13400146398362348 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Safe Browsing\UrlSuspiciousSite.store.4_13400137393458519
+364 | dynamic | 4_13400146398341216 | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Safe Browsing\UrlSuspiciousSite.store.4_13400137393458519 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Safe Browsing\UrlUws.store.4_13400146398341216
+365 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Safe Browsing\UrlUws.store.4_13400146398341216 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\ShaderCache\data_0
+366 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\ShaderCache\data_0 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\ShaderCache\data_1
+367 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\ShaderCache\data_1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\ShaderCache\data_2
+368 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\ShaderCache\data_2 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\ShaderCache\data_3
+369 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\ShaderCache\data_3 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\ShaderCache\index
+370 | dynamic | 0\Ruleset Data | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\ShaderCache\index | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Subresource Filter\Indexed Rules\36\9.58.0\Ruleset Data
+371 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Subresource Filter\Indexed Rules\36\9.58.0\Ruleset Data | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\ZxcvbnData\3\ranked_dicts
+372 | dynamic | db | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\ZxcvbnData\3\ranked_dicts | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\first_party_sets.db
+373 | dynamic | db-journal | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\first_party_sets.db | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\first_party_sets.db-journal
+374 | dynamic | hyb | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\first_party_sets.db-journal | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\hyphen-data\120.0.6050.0\hyph-en-gb.hyb
+375 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\hyphen-data\120.0.6050.0\hyph-en-gb.hyb | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\lockfile
+376 | dynamic | tflite | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\lockfile | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\optimization_guide_model_store\24\E6DC4029A1E4B4C1\0662EC76C1A97EB7\model.tflite
+377 | dynamic | tflite | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\optimization_guide_model_store\24\E6DC4029A1E4B4C1\0662EC76C1A97EB7\model.tflite | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\optimization_guide_model_store\25\E6DC4029A1E4B4C1\14C381D90B00D645\visual_model_desktop.tflite
+378 | dynamic | tflite | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\optimization_guide_model_store\25\E6DC4029A1E4B4C1\14C381D90B00D645\visual_model_desktop.tflite | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\optimization_guide_model_store\26\E6DC4029A1E4B4C1\81F30FF082C5CD5E\model.tflite
+379 | dynamic | tflite | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\optimization_guide_model_store\26\E6DC4029A1E4B4C1\81F30FF082C5CD5E\model.tflite | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\optimization_guide_model_store\2\E6DC4029A1E4B4C1\375567CF151A1B12\model.tflite
+380 | dynamic | tflite | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\optimization_guide_model_store\2\E6DC4029A1E4B4C1\375567CF151A1B12\model.tflite | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\optimization_guide_model_store\30\E6DC4029A1E4B4C1\1EBAF634ED79AC48\model.tflite
+381 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\optimization_guide_model_store\30\E6DC4029A1E4B4C1\1EBAF634ED79AC48\model.tflite | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\segmentation_platform\ukm_db
+382 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\segmentation_platform\ukm_db | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\segmentation_platform\ukm_db-wal
+383 | dynamic | db | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\segmentation_platform\ukm_db-wal | C:\Users\SacraSystemsWS12\AppData\Local\Microsoft\Windows\Caches\{AFBF9F1A-8EE8-4C77-AF34-C647E37CA0D9}.1.ver0x0000000000000157.db
+384 | dynamic | ttf | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Microsoft\Windows\Caches\{AFBF9F1A-8EE8-4C77-AF34-C647E37CA0D9}.1.ver0x0000000000000157.db | C:\Windows\Fonts\arial.ttf
+385 | dynamic | ttf | 1 | C:\Windows\Fonts\arial.ttf | C:\Windows\Fonts\segoeui.ttf
+386 | dynamic | ttf | 1 | C:\Windows\Fonts\segoeuii.ttf | C:\Windows\Fonts\seguisb.ttf
+387 | dynamic | lex | 1 | C:\Windows\Fonts\seguisb.ttf | C:\Windows\Globalization\ELS\SpellDictionaries\MsSp7en-US.lex
+388 | dynamic | nls | 1 | C:\Windows\Globalization\ELS\SpellDictionaries\MsSp7en-US.lex | C:\Windows\Globalization\Sorting\SortDefault.nls
+389 | dynamic | dat | 1 | C:\Windows\Globalization\Sorting\SortDefault.nls | C:\Windows\ServiceProfiles\LocalService\AppData\Local\FontCache\~FontCache-FontFace.dat
+390 | dynamic | dat | 1 | C:\Windows\ServiceProfiles\LocalService\AppData\Local\FontCache\~FontCache-FontFace.dat | C:\Windows\ServiceProfiles\LocalService\AppData\Local\FontCache\~FontCache-S-1-5-21-1133590556-2223955450-543306588-1003.dat
+391 | dynamic | dat | 1 | C:\Windows\ServiceProfiles\LocalService\AppData\Local\FontCache\~FontCache-S-1-5-21-1133590556-2223955450-543306588-1003.dat | C:\Windows\ServiceProfiles\LocalService\AppData\Local\FontCache\~FontCache-System.dat
+392 | dynamic | dll | 1 | C:\Windows\ServiceProfiles\LocalService\AppData\Local\FontCache\~FontCache-System.dat | C:\Windows\System32\AcLayers.dll
+393 | dynamic | dll | 1 | C:\Windows\System32\AcLayers.dll | C:\Windows\System32\BCP47Langs.dll
+394 | dynamic | dll | 1 | C:\Windows\System32\BCP47Langs.dll | C:\Windows\System32\CoreMessaging.dll
+395 | dynamic | dll | 2 | C:\Windows\System32\CoreMessaging.dll | C:\Windows\System32\CoreUIComponents.dll
+396 | dynamic | dll | 2 | C:\Windows\System32\CoreUIComponents.dll | C:\Windows\System32\DWrite.dll
+397 | dynamic | dll | 1 | C:\Windows\System32\DWrite.dll | C:\Windows\System32\DataExchange.dll
+398 | dynamic | dll | 1 | C:\Windows\System32\DataExchange.dll | C:\Windows\System32\ExplorerFrame.dll
+399 | dynamic | dll | 1 | C:\Windows\System32\ExplorerFrame.dll | C:\Windows\System32\FirewallAPI.dll
+400 | dynamic | DLL | 1 | C:\Windows\System32\FirewallAPI.dll | C:\Windows\System32\IPHLPAPI.DLL
+401 | dynamic | dll | 2 | C:\Windows\System32\IPHLPAPI.DLL | C:\Windows\System32\InputHost.dll
+402 | dynamic | dll | 2 | C:\Windows\System32\InputHost.dll | C:\Windows\System32\KernelBase.dll
+403 | dynamic | dll | 2 | C:\Windows\System32\KernelBase.dll | C:\Windows\System32\MMDevAPI.dll
+404 | dynamic | dll | 1 | C:\Windows\System32\MMDevAPI.dll | C:\Windows\System32\MsSpellCheckingFacility.dll
+405 | dynamic | dll | 1 | C:\Windows\System32\MsSpellCheckingFacility.dll | C:\Windows\System32\OneCoreUAPCommonProxyStub.dll
+406 | dynamic | dll | 1 | C:\Windows\System32\OneCoreUAPCommonProxyStub.dll | C:\Windows\System32\PCPKsp.dll
+407 | dynamic | dll | 1 | C:\Windows\System32\PCPKsp.dll | C:\Windows\System32\SHCore.dll
+408 | dynamic | dll | 1 | C:\Windows\System32\SHCore.dll | C:\Windows\System32\Speech\Common\sapi.dll
+409 | dynamic | dll | 1 | C:\Windows\System32\Speech\Common\sapi.dll | C:\Windows\System32\TextInputFramework.dll
+410 | dynamic | dll | 2 | C:\Windows\System32\TextInputFramework.dll | C:\Windows\System32\WinTypes.dll
+411 | dynamic | dll | 2 | C:\Windows\System32\WinTypes.dll | C:\Windows\System32\WindowManagementAPI.dll
+412 | dynamic | dll | 1 | C:\Windows\System32\WindowManagementAPI.dll | C:\Windows\System32\Windows.FileExplorer.Common.dll
+413 | dynamic | dll | 1 | C:\Windows\System32\Windows.FileExplorer.Common.dll | C:\Windows\System32\Windows.Media.dll
+414 | dynamic | dll | 1 | C:\Windows\System32\Windows.Media.dll | C:\Windows\System32\Windows.System.Profile.SystemManufacturers.dll
+415 | dynamic | dll | 1 | C:\Windows\System32\Windows.System.Profile.SystemManufacturers.dll | C:\Windows\System32\Windows.UI.dll
+416 | dynamic | dll | 2 | C:\Windows\System32\Windows.UI.dll | C:\Windows\System32\advapi32.dll
+417 | dynamic | dll | 1 | C:\Windows\System32\apphelp.dll | C:\Windows\System32\atlthunk.dll
+418 | dynamic | dll | 1 | C:\Windows\System32\atlthunk.dll | C:\Windows\System32\bcrypt.dll
+419 | dynamic | dll | 1 | C:\Windows\System32\clbcatq.dll | C:\Windows\System32\coloradapterclient.dll
+420 | dynamic | dll | 1 | C:\Windows\System32\coloradapterclient.dll | C:\Windows\System32\combase.dll
+421 | dynamic | dll | 1 | C:\Windows\System32\combase.dll | C:\Windows\System32\coml2.dll
+422 | dynamic | dll | 1 | C:\Windows\System32\coml2.dll | C:\Windows\System32\crypt32.dll
+423 | dynamic | dll | 1 | C:\Windows\System32\cryptbase.dll | C:\Windows\System32\cryptnet.dll
+424 | dynamic | dll | 1 | C:\Windows\System32\cryptnet.dll | C:\Windows\System32\cryptsp.dll
+425 | dynamic | dll | 1 | C:\Windows\System32\cryptsp.dll | C:\Windows\System32\d2d1.dll
+426 | dynamic | dll | 1 | C:\Windows\System32\d2d1.dll | C:\Windows\System32\d3d11.dll
+427 | dynamic | dll | 1 | C:\Windows\System32\dcomp.dll | C:\Windows\System32\devobj.dll
+428 | dynamic | dll | 2 | C:\Windows\System32\devobj.dll | C:\Windows\System32\dhcpcsvc.dll
+429 | dynamic | dll | 1 | C:\Windows\System32\dhcpcsvc6.dll | C:\Windows\System32\directmanipulation.dll
+430 | dynamic | dll | 1 | C:\Windows\System32\directmanipulation.dll | C:\Windows\System32\dnsapi.dll
+431 | dynamic | mui | 1 | C:\Windows\System32\dxgi.dll | C:\Windows\System32\en-US\KernelBase.dll.mui
+432 | dynamic | mui | 1 | C:\Windows\System32\en-US\KernelBase.dll.mui | C:\Windows\System32\en-US\crypt32.dll.mui
+433 | dynamic | mui | 1 | C:\Windows\System32\en-US\crypt32.dll.mui | C:\Windows\System32\en-US\kernel32.dll.mui
+434 | dynamic | mui | 1 | C:\Windows\System32\en-US\kernel32.dll.mui | C:\Windows\System32\en-US\propsys.dll.mui
+435 | dynamic | mui | 1 | C:\Windows\System32\en-US\propsys.dll.mui | C:\Windows\System32\en-US\user32.dll.mui
+436 | dynamic | dll | 1 | C:\Windows\System32\en-US\user32.dll.mui | C:\Windows\System32\fwbase.dll
+437 | dynamic | dll | 1 | C:\Windows\System32\fwbase.dll | C:\Windows\System32\fwpolicyiomgr.dll
+438 | dynamic | dll | 1 | C:\Windows\System32\fwpolicyiomgr.dll | C:\Windows\System32\gdi32.dll
+439 | dynamic | dll | 1 | C:\Windows\System32\gdi32full.dll | C:\Windows\System32\gpapi.dll
+440 | dynamic | dll | 1 | C:\Windows\System32\gpapi.dll | C:\Windows\System32\iertutil.dll
+441 | dynamic | dll | 1 | C:\Windows\System32\iertutil.dll | C:\Windows\System32\imagehlp.dll
+442 | dynamic | dll | 1 | C:\Windows\System32\imagehlp.dll | C:\Windows\System32\imm32.dll
+443 | dynamic | dll | 1 | C:\Windows\System32\kernel32.dll | C:\Windows\System32\linkinfo.dll
+444 | dynamic | nls | 1 | C:\Windows\System32\linkinfo.dll | C:\Windows\System32\locale.nls
+445 | dynamic | dll | 1 | C:\Windows\System32\locale.nls | C:\Windows\System32\msacm32.dll
+446 | dynamic | dll | 1 | C:\Windows\System32\msacm32.dll | C:\Windows\System32\msasn1.dll
+447 | dynamic | dll | 1 | C:\Windows\System32\msasn1.dll | C:\Windows\System32\mscms.dll
+448 | dynamic | dll | 1 | C:\Windows\System32\mscms.dll | C:\Windows\System32\msctf.dll
+449 | dynamic | dll | 1 | C:\Windows\System32\msctf.dll | C:\Windows\System32\msdmo.dll
+450 | dynamic | dll | 1 | C:\Windows\System32\msdmo.dll | C:\Windows\System32\msvcp_win.dll
+451 | dynamic | dll | 1 | C:\Windows\System32\mswsock.dll | C:\Windows\System32\msxml6.dll
+452 | dynamic | dll | 1 | C:\Windows\System32\msxml6.dll | C:\Windows\System32\msxml6r.dll
+453 | dynamic | dll | 1 | C:\Windows\System32\msxml6r.dll | C:\Windows\System32\ncrypt.dll
+454 | dynamic | dll | 1 | C:\Windows\System32\ncrypt.dll | C:\Windows\System32\ncryptprov.dll
+455 | dynamic | dll | 1 | C:\Windows\System32\ncryptprov.dll | C:\Windows\System32\netprofm.dll
+456 | dynamic | dll | 1 | C:\Windows\System32\netprofm.dll | C:\Windows\System32\netutils.dll
+457 | dynamic | dll | 1 | C:\Windows\System32\netutils.dll | C:\Windows\System32\ngcksp.dll
+458 | dynamic | dll | 1 | C:\Windows\System32\ngcksp.dll | C:\Windows\System32\nlaapi.dll
+459 | dynamic | nls | 1 | C:\Windows\System32\nlmproxy.dll | C:\Windows\System32\normnfc.nls
+460 | dynamic | dll | 1 | C:\Windows\System32\normnfc.nls | C:\Windows\System32\npmproxy.dll
+461 | dynamic | dll | 1 | C:\Windows\System32\nsi.dll | C:\Windows\System32\ntasn1.dll
+462 | dynamic | dll | 1 | C:\Windows\System32\ole32.dll | C:\Windows\System32\oleacc.dll
+463 | dynamic | dll | 1 | C:\Windows\System32\oleacc.dll | C:\Windows\System32\oleaccrc.dll
+464 | dynamic | dll | 1 | C:\Windows\System32\oleaccrc.dll | C:\Windows\System32\oleaut32.dll
+465 | dynamic | dll | 1 | C:\Windows\System32\oleaut32.dll | C:\Windows\System32\pdh.dll
+466 | dynamic | dll | 1 | C:\Windows\System32\pdh.dll | C:\Windows\System32\perfos.dll
+467 | dynamic | dll | 1 | C:\Windows\System32\perfos.dll | C:\Windows\System32\powrprof.dll
+468 | dynamic | dll | 1 | C:\Windows\System32\powrprof.dll | C:\Windows\System32\profapi.dll
+469 | dynamic | dll | 2 | C:\Windows\System32\profapi.dll | C:\Windows\System32\profext.dll
+470 | dynamic | dll | 1 | C:\Windows\System32\profext.dll | C:\Windows\System32\propsys.dll
+471 | dynamic | dll | 1 | C:\Windows\System32\propsys.dll | C:\Windows\System32\rmclient.dll
+472 | dynamic | dll | 1 | C:\Windows\System32\rmclient.dll | C:\Windows\System32\rpcrt4.dll
+473 | dynamic | dll | 1 | C:\Windows\System32\rpcrt4.dll | C:\Windows\System32\rsaenh.dll
+474 | dynamic | dll | 1 | C:\Windows\System32\rsaenh.dll | C:\Windows\System32\sechost.dll
+475 | dynamic | dll | 1 | C:\Windows\System32\shlwapi.dll | C:\Windows\System32\srvcli.dll
+476 | dynamic | dll | 1 | C:\Windows\System32\srvcli.dll | C:\Windows\System32\sspicli.dll
+477 | dynamic | dll | 1 | C:\Windows\System32\sspicli.dll | C:\Windows\System32\sxs.dll
+478 | dynamic | dll | 1 | C:\Windows\System32\sxs.dll | C:\Windows\System32\taskschd.dll
+479 | dynamic | dll | 1 | C:\Windows\System32\taskschd.dll | C:\Windows\System32\tbs.dll
+480 | dynamic | dll | 1 | C:\Windows\System32\tbs.dll | C:\Windows\System32\twinapi.appcore.dll
+481 | dynamic | dll | 1 | C:\Windows\System32\twinapi.appcore.dll | C:\Windows\System32\twinapi.dll
+482 | dynamic | dll | 1 | C:\Windows\System32\twinapi.dll | C:\Windows\System32\ucrtbase.dll
+483 | dynamic | dll | 1 | C:\Windows\System32\umpdc.dll | C:\Windows\System32\urlmon.dll
+484 | dynamic | dll | 1 | C:\Windows\System32\urlmon.dll | C:\Windows\System32\user32.dll
+485 | dynamic | dll | 1 | C:\Windows\System32\userenv.dll | C:\Windows\System32\usermgrcli.dll
+486 | dynamic | dll | 1 | C:\Windows\System32\usermgrcli.dll | C:\Windows\System32\uxtheme.dll
+487 | dynamic | dll | 1 | C:\Windows\System32\win32u.dll | C:\Windows\System32\windows.storage.dll
+488 | dynamic | dll | 1 | C:\Windows\System32\windows.storage.dll | C:\Windows\System32\winhttp.dll
+489 | dynamic | dll | 1 | C:\Windows\System32\winmm.dll | C:\Windows\System32\winmmbase.dll
+490 | dynamic | drv | 1 | C:\Windows\System32\winmmbase.dll | C:\Windows\System32\winspool.drv
+491 | dynamic | dll | 1 | C:\Windows\System32\winspool.drv | C:\Windows\System32\winsta.dll
+492 | dynamic | dll | 1 | C:\Windows\System32\winsta.dll | C:\Windows\System32\wintrust.dll
+493 | dynamic | dll | 1 | C:\Windows\System32\wintrust.dll | C:\Windows\System32\wkscli.dll
+494 | dynamic | dll | 1 | C:\Windows\System32\wkscli.dll | C:\Windows\System32\wldp.dll
+495 | dynamic | dll | 1 | C:\Windows\System32\wldp.dll | C:\Windows\System32\wpnapps.dll
+496 | dynamic | dll | 1 | C:\Windows\System32\wpnapps.dll | C:\Windows\System32\ws2_32.dll
+497 | dynamic | dll | 1 | C:\Windows\System32\ws2_32.dll | C:\Windows\System32\wtsapi32.dll
+498 | dynamic | dll | 1 | C:\Windows\System32\wtsapi32.dll | C:\Windows\System32\xmllite.dll
+499 | dynamic | dll | 1 | C:\Windows\System32\xmllite.dll | C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.5915_none_60b4b9d171f9c7c7\comctl32.dll
+500 | dynamic | tmp | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\optimization_guide_model_store\30\E6DC4029A1E4B4C1\1EBAF634ED79AC48\model.tflite | C:\Users\SacraSystemsWS12\AppData\Local\Temp\eb654cb4-0871-4fd8-851a-1c4270235977.tmp
+501 | dynamic | ttf | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Temp\eb654cb4-0871-4fd8-851a-1c4270235977.tmp | C:\Windows\Fonts\arial.ttf
+502 | dynamic | ttf | 1 | C:\Windows\Fonts\ariblk.ttf | C:\Windows\Fonts\comic.ttf
+503 | dynamic | ttf | 1 | C:\Windows\Fonts\comic.ttf | C:\Windows\Fonts\comicbd.ttf
+504 | dynamic | ttf | 1 | C:\Windows\Fonts\comicbd.ttf | C:\Windows\Fonts\comici.ttf
+505 | dynamic | ttf | 1 | C:\Windows\Fonts\comici.ttf | C:\Windows\Fonts\comicz.ttf
+506 | dynamic | ttf | 1 | C:\Windows\Fonts\comicz.ttf | C:\Windows\Fonts\consola.ttf
+507 | dynamic | ttf | 1 | C:\Windows\Fonts\consolaz.ttf | C:\Windows\Fonts\cour.ttf
+508 | dynamic | ttf | 1 | C:\Windows\Fonts\cour.ttf | C:\Windows\Fonts\courbd.ttf
+509 | dynamic | ttf | 1 | C:\Windows\Fonts\courbd.ttf | C:\Windows\Fonts\courbi.ttf
+510 | dynamic | ttf | 1 | C:\Windows\Fonts\courbi.ttf | C:\Windows\Fonts\couri.ttf
+511 | dynamic | ttf | 1 | C:\Windows\Fonts\couri.ttf | C:\Windows\Fonts\georgia.ttf
+512 | dynamic | ttf | 1 | C:\Windows\Fonts\georgia.ttf | C:\Windows\Fonts\georgiab.ttf
+513 | dynamic | ttf | 1 | C:\Windows\Fonts\georgiab.ttf | C:\Windows\Fonts\georgiai.ttf
+514 | dynamic | ttf | 1 | C:\Windows\Fonts\georgiai.ttf | C:\Windows\Fonts\georgiaz.ttf
+515 | dynamic | ttf | 1 | C:\Windows\Fonts\georgiaz.ttf | C:\Windows\Fonts\impact.ttf
+516 | dynamic | ttf | 1 | C:\Windows\Fonts\impact.ttf | C:\Windows\Fonts\l_10646.ttf
+517 | dynamic | ttf | 1 | C:\Windows\Fonts\l_10646.ttf | C:\Windows\Fonts\lucon.ttf
+518 | dynamic | ttf | 1 | C:\Windows\Fonts\lucon.ttf | C:\Windows\Fonts\segoeui.ttf
+519 | dynamic | ttf | 1 | C:\Windows\Fonts\timesi.ttf | C:\Windows\Fonts\trebuc.ttf
+520 | dynamic | ttf | 1 | C:\Windows\Fonts\trebuc.ttf | C:\Windows\Fonts\trebucbd.ttf
+521 | dynamic | ttf | 1 | C:\Windows\Fonts\trebucbd.ttf | C:\Windows\Fonts\trebucbi.ttf
+522 | dynamic | ttf | 1 | C:\Windows\Fonts\trebucbi.ttf | C:\Windows\Fonts\trebucit.ttf
+523 | dynamic | ttf | 1 | C:\Windows\Fonts\trebucit.ttf | C:\Windows\Fonts\verdana.ttf
+524 | dynamic | ttf | 1 | C:\Windows\Fonts\verdana.ttf | C:\Windows\Fonts\verdanab.ttf
+525 | dynamic | ttf | 1 | C:\Windows\Fonts\verdanab.ttf | C:\Windows\Fonts\verdanai.ttf
+526 | dynamic | ttf | 1 | C:\Windows\Fonts\verdanai.ttf | C:\Windows\Fonts\verdanaz.ttf
+527 | dynamic | nls | 1 | C:\Windows\Fonts\verdanaz.ttf | C:\Windows\Globalization\Sorting\SortDefault.nls
+528 | dynamic | tflite | 6 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Subresource Filter\Indexed Rules\36\9.58.0\Ruleset Data | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\optimization_guide_model_store\25\E6DC4029A1E4B4C1\14C381D90B00D645\visual_model_desktop.tflite
+529 | dynamic | tflite | 6 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\optimization_guide_model_store\25\E6DC4029A1E4B4C1\14C381D90B00D645\visual_model_desktop.tflite | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\optimization_guide_model_store\30\E6DC4029A1E4B4C1\1EBAF634ED79AC48\model.tflite
+530 | dynamic | tmp | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\optimization_guide_model_store\30\E6DC4029A1E4B4C1\1EBAF634ED79AC48\model.tflite | C:\Users\SacraSystemsWS12\AppData\Local\Temp\1f24dda6-6c8a-40b7-b769-24a15367e2fd.tmp
+531 | dynamic | ttf | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Temp\1f24dda6-6c8a-40b7-b769-24a15367e2fd.tmp | C:\Windows\Fonts\Nirmala.ttf
+532 | dynamic | ttf | 2 | C:\Windows\Fonts\ariblk.ttf | C:\Windows\Fonts\consola.ttf
+533 | dynamic | ttf | 2 | C:\Windows\Fonts\consolaz.ttf | C:\Windows\Fonts\segoeui.ttf
+534 | dynamic | dll | 1 | C:\Windows\System32\AcLayers.dll | C:\Windows\System32\AudioSes.dll
+535 | dynamic | dll | 1 | C:\Windows\System32\AudioSes.dll | C:\Windows\System32\CoreMessaging.dll
+536 | dynamic | dll | 1 | C:\Windows\System32\MMDevAPI.dll | C:\Windows\System32\ResourcePolicyClient.dll
+537 | dynamic | dll | 1 | C:\Windows\System32\ResourcePolicyClient.dll | C:\Windows\System32\SHCore.dll
+538 | dynamic | dll | 1 | C:\Windows\System32\SHCore.dll | C:\Windows\System32\TextInputFramework.dll
+539 | dynamic | dll | 1 | C:\Windows\System32\WindowManagementAPI.dll | C:\Windows\System32\Windows.UI.dll
+540 | dynamic | dll | 1 | C:\Windows\System32\apphelp.dll | C:\Windows\System32\avrt.dll
+541 | dynamic | dll | 1 | C:\Windows\System32\avrt.dll | C:\Windows\System32\bcrypt.dll
+542 | dynamic | dll | 1 | C:\Windows\System32\dbghelp.dll | C:\Windows\System32\devobj.dll
+543 | dynamic | mui | 1 | C:\Windows\System32\dpapi.dll | C:\Windows\System32\en-US\KernelBase.dll.mui
+544 | dynamic | dll | 2 | C:\Windows\System32\sspicli.dll | C:\Windows\System32\twinapi.appcore.dll
+545 | dynamic | dll | 2 | C:\Windows\System32\twinapi.appcore.dll | C:\Windows\System32\ucrtbase.dll
+546 | dynamic | tmp | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\optimization_guide_model_store\30\E6DC4029A1E4B4C1\1EBAF634ED79AC48\model.tflite | C:\Users\SacraSystemsWS12\AppData\Local\Temp\7ee2f497-dc0e-401c-ba88-3abe56624d7f.tmp
+547 | dynamic | ttf | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Temp\7ee2f497-dc0e-401c-ba88-3abe56624d7f.tmp | C:\Windows\Fonts\arial.ttf
+548 | dynamic | ldb | 1 | C:\Program Files\Google\Chrome\Application\chrome.exe | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Local Storage\leveldb\000005.ldb
+549 | dynamic | ldb | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Local Storage\leveldb\000005.ldb | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Local Storage\leveldb\000967.ldb
+550 | dynamic | log | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Local Storage\leveldb\000967.ldb | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Local Storage\leveldb\000968.log
+551 | dynamic | ldb | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Local Storage\leveldb\000968.log | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Local Storage\leveldb\000969.ldb
+552 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Local Storage\leveldb\000969.ldb | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Local Storage\leveldb\LOG
+553 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Local Storage\leveldb\LOG | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Local Storage\leveldb\MANIFEST-000001
+554 | dynamic | ldb | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Local Storage\leveldb\MANIFEST-000001 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Session Storage\000212.ldb
+555 | dynamic | log | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Session Storage\000212.ldb | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Session Storage\000213.log
+556 | dynamic | ldb | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Session Storage\000213.log | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Session Storage\000214.ldb
+557 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Session Storage\000214.ldb | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Session Storage\LOG
+558 | dynamic | - | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Session Storage\LOG | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Session Storage\MANIFEST-000001
+559 | dynamic | nls | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\Profile 5\Session Storage\MANIFEST-000001 | C:\Windows\Globalization\Sorting\SortDefault.nls
+560 | dynamic | dll | 1 | C:\Windows\System32\secur32.dll | C:\Windows\System32\shell32.dll
+561 | dynamic | dll | 1 | C:\Windows\System32\shell32.dll | C:\Windows\System32\sspicli.dll
+562 | dynamic | tmp | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\optimization_guide_model_store\30\E6DC4029A1E4B4C1\1EBAF634ED79AC48\model.tflite | C:\Users\SacraSystemsWS12\AppData\Local\Temp\e52e2008-6f3d-4183-a156-4153725aafff.tmp
+563 | dynamic | ttf | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Temp\e52e2008-6f3d-4183-a156-4153725aafff.tmp | C:\Windows\Fonts\arial.ttf
+564 | dynamic | dll | 1 | C:\Program Files\Google\Chrome\Application\138.0.7204.185\chrome_elf.dll | C:\Program Files\Google\Chrome\Application\138.0.7204.185\dxcompiler.dll
+565 | dynamic | idx | 1 | C:\Program Files\Google\Chrome\Application\chrome.exe | C:\Users\SacraSystemsWS12\AppData\Local\Packages\cr.sb.odm3E4D1A088C1F6D498C84F3C86DE73CE49F82A104\AC\F4EB2D6C-ED2B-4BDD-AD9D-F913287E6768.idx
+566 | dynamic | lock | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Packages\cr.sb.odm3E4D1A088C1F6D498C84F3C86DE73CE49F82A104\AC\F4EB2D6C-ED2B-4BDD-AD9D-F913287E6768.idx | C:\Users\SacraSystemsWS12\AppData\Local\Packages\cr.sb.odm3E4D1A088C1F6D498C84F3C86DE73CE49F82A104\AC\F4EB2D6C-ED2B-4BDD-AD9D-F913287E6768.lock
+567 | dynamic | val | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Packages\cr.sb.odm3E4D1A088C1F6D498C84F3C86DE73CE49F82A104\AC\F4EB2D6C-ED2B-4BDD-AD9D-F913287E6768.lock | C:\Users\SacraSystemsWS12\AppData\Local\Packages\cr.sb.odm3E4D1A088C1F6D498C84F3C86DE73CE49F82A104\AC\F4EB2D6C-ED2B-4BDD-AD9D-F913287E6768.val
+568 | dynamic | nls | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Packages\cr.sb.odm3E4D1A088C1F6D498C84F3C86DE73CE49F82A104\AC\F4EB2D6C-ED2B-4BDD-AD9D-F913287E6768.val | C:\Windows\Globalization\Sorting\SortDefault.nls
+569 | dynamic | dll | 1 | C:\Windows\System32\AcLayers.dll | C:\Windows\System32\D3D12.dll
+570 | dynamic | dll | 1 | C:\Windows\System32\D3D12.dll | C:\Windows\System32\D3D12Core.dll
+571 | dynamic | dll | 1 | C:\Windows\System32\D3D12Core.dll | C:\Windows\System32\D3DCompiler_47.dll
+572 | dynamic | dll | 1 | C:\Windows\System32\D3DCompiler_47.dll | C:\Windows\System32\D3DSCache.dll
+573 | dynamic | dll | 1 | C:\Windows\System32\D3DSCache.dll | C:\Windows\System32\DWrite.dll
+574 | dynamic | dll | 1 | C:\Windows\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_d0b39b11619fd0c4\igc64.dll | C:\Windows\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_d0b39b11619fd0c4\igd12um64kbl.dll
+575 | dynamic | dll | 1 | C:\Windows\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_d0b39b11619fd0c4\igd12um64kbl.dll | C:\Windows\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_d0b39b11619fd0c4\igd12umd64.dll
+576 | dynamic | dll | 1 | C:\Windows\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_d0b39b11619fd0c4\igd12umd64.dll | C:\Windows\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_d0b39b11619fd0c4\igdgmm64.dll
+577 | dynamic | DLL | 1 | C:\Windows\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_d0b39b11619fd0c4\igdgmm64.dll | C:\Windows\System32\IPHLPAPI.DLL
+578 | dynamic | dll | 1 | C:\Windows\System32\cfgmgr32.dll | C:\Windows\System32\combase.dll
+579 | dynamic | dll | 1 | C:\Windows\System32\crypt32.dll | C:\Windows\System32\cryptsp.dll
+580 | dynamic | dll | 1 | C:\Windows\System32\cryptsp.dll | C:\Windows\System32\d3d10warp.dll
+581 | dynamic | dll | 1 | C:\Windows\System32\d3d10warp.dll | C:\Windows\System32\d3d11.dll
+582 | dynamic | dll | 1 | C:\Windows\System32\dpapi.dll | C:\Windows\System32\dxgi.dll
+583 | dynamic | dll | 1 | C:\Windows\System32\dxgi.dll | C:\Windows\System32\gdi32.dll
+584 | dynamic | dll | 1 | C:\Windows\System32\oleaut32.dll | C:\Windows\System32\profapi.dll
+585 | dynamic | dll | 1 | C:\Windows\System32\profext.dll | C:\Windows\System32\rpcrt4.dll
+586 | dynamic | tmp | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\optimization_guide_model_store\30\E6DC4029A1E4B4C1\1EBAF634ED79AC48\model.tflite | C:\Users\SacraSystemsWS12\AppData\Local\Temp\b6f3edc3-7d06-4df3-8083-9402bbef8f19.tmp
+587 | dynamic | ttf | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Temp\b6f3edc3-7d06-4df3-8083-9402bbef8f19.tmp | C:\Windows\Fonts\arial.ttf
+588 | dynamic | tmp | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\optimization_guide_model_store\30\E6DC4029A1E4B4C1\1EBAF634ED79AC48\model.tflite | C:\Users\SacraSystemsWS12\AppData\Local\Temp\3cfe4de1-3c6e-4997-a5a0-5e92a4235b9b.tmp
+589 | dynamic | ttf | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Temp\3cfe4de1-3c6e-4997-a5a0-5e92a4235b9b.tmp | C:\Windows\Fonts\arial.ttf
+590 | dynamic | tmp | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\optimization_guide_model_store\30\E6DC4029A1E4B4C1\1EBAF634ED79AC48\model.tflite | C:\Users\SacraSystemsWS12\AppData\Local\Temp\a0897d7d-8dc9-4e93-8dbf-731cdeddf4b2.tmp
+591 | dynamic | ttf | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Temp\a0897d7d-8dc9-4e93-8dbf-731cdeddf4b2.tmp | C:\Windows\Fonts\arial.ttf
+592 | dynamic | tmp | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Google\Chrome\User Data\optimization_guide_model_store\30\E6DC4029A1E4B4C1\1EBAF634ED79AC48\model.tflite | C:\Users\SacraSystemsWS12\AppData\Local\Temp\50bc9f87-3b63-456c-a9fd-8fd13ea030ce.tmp
+593 | dynamic | nls | 1 | C:\Users\SacraSystemsWS12\AppData\Local\Temp\50bc9f87-3b63-456c-a9fd-8fd13ea030ce.tmp | C:\Windows\Globalization\Sorting\SortDefault.nls
