@@ -2,8 +2,6 @@ import '/barrel1.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Hive.initFlutter();
-  await Hive.openBox("projectDetails");
   await baseurlBuild();
   //final receiveMain = ReceivePort();
   //SendPort? isolateSendPort;
