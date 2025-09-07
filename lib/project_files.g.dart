@@ -30,8 +30,7 @@ const NewProjectSchema = CollectionSchema(
     r'completedFilePath': PropertySchema(
       id: 2,
       name: r'completedFilePath',
-      type: IsarType.objectList,
-      target: r'FileToKeyValueArray',
+      type: IsarType.stringList,
     ),
     r'fileCount': PropertySchema(
       id: 3,
@@ -87,8 +86,7 @@ const NewProjectSchema = CollectionSchema(
     r'uncompletedFilePath': PropertySchema(
       id: 13,
       name: r'uncompletedFilePath',
-      type: IsarType.objectList,
-      target: r'FileToKeyValueArray',
+      type: IsarType.stringList,
     )
   },
   estimateSize: _newProjectEstimateSize,
@@ -98,10 +96,7 @@ const NewProjectSchema = CollectionSchema(
   idName: r'projectId',
   indexes: {},
   links: {},
-  embeddedSchemas: {
-    r'FileToKeyValueArray': FileToKeyValueArraySchema,
-    r'FileToKeyValueList': FileToKeyValueListSchema
-  },
+  embeddedSchemas: {r'FileToKeyValueList': FileToKeyValueListSchema},
   getId: _newProjectGetId,
   getLinks: _newProjectGetLinks,
   attach: _newProjectAttach,
@@ -114,49 +109,75 @@ int _newProjectEstimateSize(
   Map<Type, List<int>> allOffsets,
 ) {
   var bytesCount = offsets.last;
-  bytesCount += 3 + object.completedFilePath.length * 3;
   {
-    final offsets = allOffsets[FileToKeyValueArray]!;
-    for (var i = 0; i < object.completedFilePath.length; i++) {
-      final value = object.completedFilePath[i];
-      bytesCount +=
-          FileToKeyValueArraySchema.estimateSize(value, offsets, allOffsets);
+    final list = object.completedFilePath;
+    if (list != null) {
+      bytesCount += 3 + list.length * 3;
+      {
+        for (var i = 0; i < list.length; i++) {
+          final value = list[i];
+          bytesCount += value.length * 3;
+        }
+      }
     }
   }
   bytesCount += 3 + object.inputFolder.length * 3;
-  bytesCount += 3 + object.listOfKeysPerFile.length * 3;
   {
-    final offsets = allOffsets[FileToKeyValueList]!;
-    for (var i = 0; i < object.listOfKeysPerFile.length; i++) {
-      final value = object.listOfKeysPerFile[i];
-      bytesCount +=
-          FileToKeyValueListSchema.estimateSize(value, offsets, allOffsets);
+    final list = object.listOfKeysPerFile;
+    if (list != null) {
+      bytesCount += 3 + list.length * 3;
+      {
+        final offsets = allOffsets[FileToKeyValueList]!;
+        for (var i = 0; i < list.length; i++) {
+          final value = list[i];
+          bytesCount +=
+              FileToKeyValueListSchema.estimateSize(value, offsets, allOffsets);
+        }
+      }
     }
   }
-  bytesCount += 3 + object.operationsToBeDone.length * 3;
   {
-    for (var i = 0; i < object.operationsToBeDone.length; i++) {
-      final value = object.operationsToBeDone[i];
-      bytesCount += value.length * 3;
+    final list = object.operationsToBeDone;
+    if (list != null) {
+      bytesCount += 3 + list.length * 3;
+      {
+        for (var i = 0; i < list.length; i++) {
+          final value = list[i];
+          bytesCount += value.length * 3;
+        }
+      }
     }
   }
   bytesCount += 3 + object.outputFolder.length * 3;
-  bytesCount += 3 + object.projectDescription.length * 3;
-  bytesCount += 3 + object.projectName.length * 3;
-  bytesCount += 3 + object.totalKeys.length * 3;
   {
-    for (var i = 0; i < object.totalKeys.length; i++) {
-      final value = object.totalKeys[i];
-      bytesCount += value.length * 3;
+    final value = object.projectDescription;
+    if (value != null) {
+      bytesCount += 3 + value.length * 3;
     }
   }
-  bytesCount += 3 + object.uncompletedFilePath.length * 3;
+  bytesCount += 3 + object.projectName.length * 3;
   {
-    final offsets = allOffsets[FileToKeyValueArray]!;
-    for (var i = 0; i < object.uncompletedFilePath.length; i++) {
-      final value = object.uncompletedFilePath[i];
-      bytesCount +=
-          FileToKeyValueArraySchema.estimateSize(value, offsets, allOffsets);
+    final list = object.totalKeys;
+    if (list != null) {
+      bytesCount += 3 + list.length * 3;
+      {
+        for (var i = 0; i < list.length; i++) {
+          final value = list[i];
+          bytesCount += value.length * 3;
+        }
+      }
+    }
+  }
+  {
+    final list = object.uncompletedFilePath;
+    if (list != null) {
+      bytesCount += 3 + list.length * 3;
+      {
+        for (var i = 0; i < list.length; i++) {
+          final value = list[i];
+          bytesCount += value.length * 3;
+        }
+      }
     }
   }
   return bytesCount;
@@ -170,12 +191,7 @@ void _newProjectSerialize(
 ) {
   writer.writeBool(offsets[0], object.analysisCompleted);
   writer.writeLong(offsets[1], object.completedFileCount);
-  writer.writeObjectList<FileToKeyValueArray>(
-    offsets[2],
-    allOffsets,
-    FileToKeyValueArraySchema.serialize,
-    object.completedFilePath,
-  );
+  writer.writeStringList(offsets[2], object.completedFilePath);
   writer.writeLong(offsets[3], object.fileCount);
   writer.writeString(offsets[4], object.inputFolder);
   writer.writeObjectList<FileToKeyValueList>(
@@ -191,12 +207,7 @@ void _newProjectSerialize(
   writer.writeString(offsets[10], object.projectName);
   writer.writeStringList(offsets[11], object.totalKeys);
   writer.writeLong(offsets[12], object.uncompletedFileCount);
-  writer.writeObjectList<FileToKeyValueArray>(
-    offsets[13],
-    allOffsets,
-    FileToKeyValueArraySchema.serialize,
-    object.uncompletedFilePath,
-  );
+  writer.writeStringList(offsets[13], object.uncompletedFilePath);
 }
 
 NewProject _newProjectDeserialize(
@@ -208,37 +219,24 @@ NewProject _newProjectDeserialize(
   final object = NewProject();
   object.analysisCompleted = reader.readBool(offsets[0]);
   object.completedFileCount = reader.readLong(offsets[1]);
-  object.completedFilePath = reader.readObjectList<FileToKeyValueArray>(
-        offsets[2],
-        FileToKeyValueArraySchema.deserialize,
-        allOffsets,
-        FileToKeyValueArray(),
-      ) ??
-      [];
+  object.completedFilePath = reader.readStringList(offsets[2]);
   object.fileCount = reader.readLong(offsets[3]);
   object.inputFolder = reader.readString(offsets[4]);
   object.listOfKeysPerFile = reader.readObjectList<FileToKeyValueList>(
-        offsets[5],
-        FileToKeyValueListSchema.deserialize,
-        allOffsets,
-        FileToKeyValueList(),
-      ) ??
-      [];
-  object.operationsToBeDone = reader.readStringList(offsets[6]) ?? [];
+    offsets[5],
+    FileToKeyValueListSchema.deserialize,
+    allOffsets,
+    FileToKeyValueList(),
+  );
+  object.operationsToBeDone = reader.readStringList(offsets[6]);
   object.outputFolder = reader.readString(offsets[7]);
   object.performanceLoadable = reader.readLong(offsets[8]);
-  object.projectDescription = reader.readString(offsets[9]);
+  object.projectDescription = reader.readStringOrNull(offsets[9]);
   object.projectId = id;
   object.projectName = reader.readString(offsets[10]);
-  object.totalKeys = reader.readStringList(offsets[11]) ?? [];
+  object.totalKeys = reader.readStringList(offsets[11]);
   object.uncompletedFileCount = reader.readLong(offsets[12]);
-  object.uncompletedFilePath = reader.readObjectList<FileToKeyValueArray>(
-        offsets[13],
-        FileToKeyValueArraySchema.deserialize,
-        allOffsets,
-        FileToKeyValueArray(),
-      ) ??
-      [];
+  object.uncompletedFilePath = reader.readStringList(offsets[13]);
   return object;
 }
 
@@ -254,47 +252,34 @@ P _newProjectDeserializeProp<P>(
     case 1:
       return (reader.readLong(offset)) as P;
     case 2:
-      return (reader.readObjectList<FileToKeyValueArray>(
-            offset,
-            FileToKeyValueArraySchema.deserialize,
-            allOffsets,
-            FileToKeyValueArray(),
-          ) ??
-          []) as P;
+      return (reader.readStringList(offset)) as P;
     case 3:
       return (reader.readLong(offset)) as P;
     case 4:
       return (reader.readString(offset)) as P;
     case 5:
       return (reader.readObjectList<FileToKeyValueList>(
-            offset,
-            FileToKeyValueListSchema.deserialize,
-            allOffsets,
-            FileToKeyValueList(),
-          ) ??
-          []) as P;
+        offset,
+        FileToKeyValueListSchema.deserialize,
+        allOffsets,
+        FileToKeyValueList(),
+      )) as P;
     case 6:
-      return (reader.readStringList(offset) ?? []) as P;
+      return (reader.readStringList(offset)) as P;
     case 7:
       return (reader.readString(offset)) as P;
     case 8:
       return (reader.readLong(offset)) as P;
     case 9:
-      return (reader.readString(offset)) as P;
+      return (reader.readStringOrNull(offset)) as P;
     case 10:
       return (reader.readString(offset)) as P;
     case 11:
-      return (reader.readStringList(offset) ?? []) as P;
+      return (reader.readStringList(offset)) as P;
     case 12:
       return (reader.readLong(offset)) as P;
     case 13:
-      return (reader.readObjectList<FileToKeyValueArray>(
-            offset,
-            FileToKeyValueArraySchema.deserialize,
-            allOffsets,
-            FileToKeyValueArray(),
-          ) ??
-          []) as P;
+      return (reader.readStringList(offset)) as P;
     default:
       throw IsarError('Unknown property with id $propertyId');
   }
@@ -457,6 +442,162 @@ extension NewProjectQueryFilter
         includeLower: includeLower,
         upper: upper,
         includeUpper: includeUpper,
+      ));
+    });
+  }
+
+  QueryBuilder<NewProject, NewProject, QAfterFilterCondition>
+      completedFilePathIsNull() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(const FilterCondition.isNull(
+        property: r'completedFilePath',
+      ));
+    });
+  }
+
+  QueryBuilder<NewProject, NewProject, QAfterFilterCondition>
+      completedFilePathIsNotNull() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(const FilterCondition.isNotNull(
+        property: r'completedFilePath',
+      ));
+    });
+  }
+
+  QueryBuilder<NewProject, NewProject, QAfterFilterCondition>
+      completedFilePathElementEqualTo(
+    String value, {
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.equalTo(
+        property: r'completedFilePath',
+        value: value,
+        caseSensitive: caseSensitive,
+      ));
+    });
+  }
+
+  QueryBuilder<NewProject, NewProject, QAfterFilterCondition>
+      completedFilePathElementGreaterThan(
+    String value, {
+    bool include = false,
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.greaterThan(
+        include: include,
+        property: r'completedFilePath',
+        value: value,
+        caseSensitive: caseSensitive,
+      ));
+    });
+  }
+
+  QueryBuilder<NewProject, NewProject, QAfterFilterCondition>
+      completedFilePathElementLessThan(
+    String value, {
+    bool include = false,
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.lessThan(
+        include: include,
+        property: r'completedFilePath',
+        value: value,
+        caseSensitive: caseSensitive,
+      ));
+    });
+  }
+
+  QueryBuilder<NewProject, NewProject, QAfterFilterCondition>
+      completedFilePathElementBetween(
+    String lower,
+    String upper, {
+    bool includeLower = true,
+    bool includeUpper = true,
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.between(
+        property: r'completedFilePath',
+        lower: lower,
+        includeLower: includeLower,
+        upper: upper,
+        includeUpper: includeUpper,
+        caseSensitive: caseSensitive,
+      ));
+    });
+  }
+
+  QueryBuilder<NewProject, NewProject, QAfterFilterCondition>
+      completedFilePathElementStartsWith(
+    String value, {
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.startsWith(
+        property: r'completedFilePath',
+        value: value,
+        caseSensitive: caseSensitive,
+      ));
+    });
+  }
+
+  QueryBuilder<NewProject, NewProject, QAfterFilterCondition>
+      completedFilePathElementEndsWith(
+    String value, {
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.endsWith(
+        property: r'completedFilePath',
+        value: value,
+        caseSensitive: caseSensitive,
+      ));
+    });
+  }
+
+  QueryBuilder<NewProject, NewProject, QAfterFilterCondition>
+      completedFilePathElementContains(String value,
+          {bool caseSensitive = true}) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.contains(
+        property: r'completedFilePath',
+        value: value,
+        caseSensitive: caseSensitive,
+      ));
+    });
+  }
+
+  QueryBuilder<NewProject, NewProject, QAfterFilterCondition>
+      completedFilePathElementMatches(String pattern,
+          {bool caseSensitive = true}) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.matches(
+        property: r'completedFilePath',
+        wildcard: pattern,
+        caseSensitive: caseSensitive,
+      ));
+    });
+  }
+
+  QueryBuilder<NewProject, NewProject, QAfterFilterCondition>
+      completedFilePathElementIsEmpty() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.equalTo(
+        property: r'completedFilePath',
+        value: '',
+      ));
+    });
+  }
+
+  QueryBuilder<NewProject, NewProject, QAfterFilterCondition>
+      completedFilePathElementIsNotEmpty() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.greaterThan(
+        property: r'completedFilePath',
+        value: '',
       ));
     });
   }
@@ -741,6 +882,24 @@ extension NewProjectQueryFilter
   }
 
   QueryBuilder<NewProject, NewProject, QAfterFilterCondition>
+      listOfKeysPerFileIsNull() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(const FilterCondition.isNull(
+        property: r'listOfKeysPerFile',
+      ));
+    });
+  }
+
+  QueryBuilder<NewProject, NewProject, QAfterFilterCondition>
+      listOfKeysPerFileIsNotNull() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(const FilterCondition.isNotNull(
+        property: r'listOfKeysPerFile',
+      ));
+    });
+  }
+
+  QueryBuilder<NewProject, NewProject, QAfterFilterCondition>
       listOfKeysPerFileLengthEqualTo(int length) {
     return QueryBuilder.apply(this, (query) {
       return query.listLength(
@@ -826,6 +985,24 @@ extension NewProjectQueryFilter
         upper,
         includeUpper,
       );
+    });
+  }
+
+  QueryBuilder<NewProject, NewProject, QAfterFilterCondition>
+      operationsToBeDoneIsNull() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(const FilterCondition.isNull(
+        property: r'operationsToBeDone',
+      ));
+    });
+  }
+
+  QueryBuilder<NewProject, NewProject, QAfterFilterCondition>
+      operationsToBeDoneIsNotNull() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(const FilterCondition.isNotNull(
+        property: r'operationsToBeDone',
+      ));
     });
   }
 
@@ -1249,8 +1426,26 @@ extension NewProjectQueryFilter
   }
 
   QueryBuilder<NewProject, NewProject, QAfterFilterCondition>
+      projectDescriptionIsNull() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(const FilterCondition.isNull(
+        property: r'projectDescription',
+      ));
+    });
+  }
+
+  QueryBuilder<NewProject, NewProject, QAfterFilterCondition>
+      projectDescriptionIsNotNull() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(const FilterCondition.isNotNull(
+        property: r'projectDescription',
+      ));
+    });
+  }
+
+  QueryBuilder<NewProject, NewProject, QAfterFilterCondition>
       projectDescriptionEqualTo(
-    String value, {
+    String? value, {
     bool caseSensitive = true,
   }) {
     return QueryBuilder.apply(this, (query) {
@@ -1264,7 +1459,7 @@ extension NewProjectQueryFilter
 
   QueryBuilder<NewProject, NewProject, QAfterFilterCondition>
       projectDescriptionGreaterThan(
-    String value, {
+    String? value, {
     bool include = false,
     bool caseSensitive = true,
   }) {
@@ -1280,7 +1475,7 @@ extension NewProjectQueryFilter
 
   QueryBuilder<NewProject, NewProject, QAfterFilterCondition>
       projectDescriptionLessThan(
-    String value, {
+    String? value, {
     bool include = false,
     bool caseSensitive = true,
   }) {
@@ -1296,8 +1491,8 @@ extension NewProjectQueryFilter
 
   QueryBuilder<NewProject, NewProject, QAfterFilterCondition>
       projectDescriptionBetween(
-    String lower,
-    String upper, {
+    String? lower,
+    String? upper, {
     bool includeLower = true,
     bool includeUpper = true,
     bool caseSensitive = true,
@@ -1570,6 +1765,24 @@ extension NewProjectQueryFilter
       return query.addFilterCondition(FilterCondition.greaterThan(
         property: r'projectName',
         value: '',
+      ));
+    });
+  }
+
+  QueryBuilder<NewProject, NewProject, QAfterFilterCondition>
+      totalKeysIsNull() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(const FilterCondition.isNull(
+        property: r'totalKeys',
+      ));
+    });
+  }
+
+  QueryBuilder<NewProject, NewProject, QAfterFilterCondition>
+      totalKeysIsNotNull() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(const FilterCondition.isNotNull(
+        property: r'totalKeys',
       ));
     });
   }
@@ -1856,6 +2069,162 @@ extension NewProjectQueryFilter
   }
 
   QueryBuilder<NewProject, NewProject, QAfterFilterCondition>
+      uncompletedFilePathIsNull() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(const FilterCondition.isNull(
+        property: r'uncompletedFilePath',
+      ));
+    });
+  }
+
+  QueryBuilder<NewProject, NewProject, QAfterFilterCondition>
+      uncompletedFilePathIsNotNull() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(const FilterCondition.isNotNull(
+        property: r'uncompletedFilePath',
+      ));
+    });
+  }
+
+  QueryBuilder<NewProject, NewProject, QAfterFilterCondition>
+      uncompletedFilePathElementEqualTo(
+    String value, {
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.equalTo(
+        property: r'uncompletedFilePath',
+        value: value,
+        caseSensitive: caseSensitive,
+      ));
+    });
+  }
+
+  QueryBuilder<NewProject, NewProject, QAfterFilterCondition>
+      uncompletedFilePathElementGreaterThan(
+    String value, {
+    bool include = false,
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.greaterThan(
+        include: include,
+        property: r'uncompletedFilePath',
+        value: value,
+        caseSensitive: caseSensitive,
+      ));
+    });
+  }
+
+  QueryBuilder<NewProject, NewProject, QAfterFilterCondition>
+      uncompletedFilePathElementLessThan(
+    String value, {
+    bool include = false,
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.lessThan(
+        include: include,
+        property: r'uncompletedFilePath',
+        value: value,
+        caseSensitive: caseSensitive,
+      ));
+    });
+  }
+
+  QueryBuilder<NewProject, NewProject, QAfterFilterCondition>
+      uncompletedFilePathElementBetween(
+    String lower,
+    String upper, {
+    bool includeLower = true,
+    bool includeUpper = true,
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.between(
+        property: r'uncompletedFilePath',
+        lower: lower,
+        includeLower: includeLower,
+        upper: upper,
+        includeUpper: includeUpper,
+        caseSensitive: caseSensitive,
+      ));
+    });
+  }
+
+  QueryBuilder<NewProject, NewProject, QAfterFilterCondition>
+      uncompletedFilePathElementStartsWith(
+    String value, {
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.startsWith(
+        property: r'uncompletedFilePath',
+        value: value,
+        caseSensitive: caseSensitive,
+      ));
+    });
+  }
+
+  QueryBuilder<NewProject, NewProject, QAfterFilterCondition>
+      uncompletedFilePathElementEndsWith(
+    String value, {
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.endsWith(
+        property: r'uncompletedFilePath',
+        value: value,
+        caseSensitive: caseSensitive,
+      ));
+    });
+  }
+
+  QueryBuilder<NewProject, NewProject, QAfterFilterCondition>
+      uncompletedFilePathElementContains(String value,
+          {bool caseSensitive = true}) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.contains(
+        property: r'uncompletedFilePath',
+        value: value,
+        caseSensitive: caseSensitive,
+      ));
+    });
+  }
+
+  QueryBuilder<NewProject, NewProject, QAfterFilterCondition>
+      uncompletedFilePathElementMatches(String pattern,
+          {bool caseSensitive = true}) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.matches(
+        property: r'uncompletedFilePath',
+        wildcard: pattern,
+        caseSensitive: caseSensitive,
+      ));
+    });
+  }
+
+  QueryBuilder<NewProject, NewProject, QAfterFilterCondition>
+      uncompletedFilePathElementIsEmpty() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.equalTo(
+        property: r'uncompletedFilePath',
+        value: '',
+      ));
+    });
+  }
+
+  QueryBuilder<NewProject, NewProject, QAfterFilterCondition>
+      uncompletedFilePathElementIsNotEmpty() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.greaterThan(
+        property: r'uncompletedFilePath',
+        value: '',
+      ));
+    });
+  }
+
+  QueryBuilder<NewProject, NewProject, QAfterFilterCondition>
       uncompletedFilePathLengthEqualTo(int length) {
     return QueryBuilder.apply(this, (query) {
       return query.listLength(
@@ -1948,23 +2317,9 @@ extension NewProjectQueryFilter
 extension NewProjectQueryObject
     on QueryBuilder<NewProject, NewProject, QFilterCondition> {
   QueryBuilder<NewProject, NewProject, QAfterFilterCondition>
-      completedFilePathElement(FilterQuery<FileToKeyValueArray> q) {
-    return QueryBuilder.apply(this, (query) {
-      return query.object(q, r'completedFilePath');
-    });
-  }
-
-  QueryBuilder<NewProject, NewProject, QAfterFilterCondition>
       listOfKeysPerFileElement(FilterQuery<FileToKeyValueList> q) {
     return QueryBuilder.apply(this, (query) {
       return query.object(q, r'listOfKeysPerFile');
-    });
-  }
-
-  QueryBuilder<NewProject, NewProject, QAfterFilterCondition>
-      uncompletedFilePathElement(FilterQuery<FileToKeyValueArray> q) {
-    return QueryBuilder.apply(this, (query) {
-      return query.object(q, r'uncompletedFilePath');
     });
   }
 }
@@ -2240,6 +2595,13 @@ extension NewProjectQueryWhereDistinct
     });
   }
 
+  QueryBuilder<NewProject, NewProject, QDistinct>
+      distinctByCompletedFilePath() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addDistinctBy(r'completedFilePath');
+    });
+  }
+
   QueryBuilder<NewProject, NewProject, QDistinct> distinctByFileCount() {
     return QueryBuilder.apply(this, (query) {
       return query.addDistinctBy(r'fileCount');
@@ -2301,6 +2663,13 @@ extension NewProjectQueryWhereDistinct
       return query.addDistinctBy(r'uncompletedFileCount');
     });
   }
+
+  QueryBuilder<NewProject, NewProject, QDistinct>
+      distinctByUncompletedFilePath() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addDistinctBy(r'uncompletedFilePath');
+    });
+  }
 }
 
 extension NewProjectQueryProperty
@@ -2323,7 +2692,7 @@ extension NewProjectQueryProperty
     });
   }
 
-  QueryBuilder<NewProject, List<FileToKeyValueArray>, QQueryOperations>
+  QueryBuilder<NewProject, List<String>?, QQueryOperations>
       completedFilePathProperty() {
     return QueryBuilder.apply(this, (query) {
       return query.addPropertyName(r'completedFilePath');
@@ -2342,14 +2711,14 @@ extension NewProjectQueryProperty
     });
   }
 
-  QueryBuilder<NewProject, List<FileToKeyValueList>, QQueryOperations>
+  QueryBuilder<NewProject, List<FileToKeyValueList>?, QQueryOperations>
       listOfKeysPerFileProperty() {
     return QueryBuilder.apply(this, (query) {
       return query.addPropertyName(r'listOfKeysPerFile');
     });
   }
 
-  QueryBuilder<NewProject, List<String>, QQueryOperations>
+  QueryBuilder<NewProject, List<String>?, QQueryOperations>
       operationsToBeDoneProperty() {
     return QueryBuilder.apply(this, (query) {
       return query.addPropertyName(r'operationsToBeDone');
@@ -2369,7 +2738,7 @@ extension NewProjectQueryProperty
     });
   }
 
-  QueryBuilder<NewProject, String, QQueryOperations>
+  QueryBuilder<NewProject, String?, QQueryOperations>
       projectDescriptionProperty() {
     return QueryBuilder.apply(this, (query) {
       return query.addPropertyName(r'projectDescription');
@@ -2382,7 +2751,8 @@ extension NewProjectQueryProperty
     });
   }
 
-  QueryBuilder<NewProject, List<String>, QQueryOperations> totalKeysProperty() {
+  QueryBuilder<NewProject, List<String>?, QQueryOperations>
+      totalKeysProperty() {
     return QueryBuilder.apply(this, (query) {
       return query.addPropertyName(r'totalKeys');
     });
@@ -2395,7 +2765,7 @@ extension NewProjectQueryProperty
     });
   }
 
-  QueryBuilder<NewProject, List<FileToKeyValueArray>, QQueryOperations>
+  QueryBuilder<NewProject, List<String>?, QQueryOperations>
       uncompletedFilePathProperty() {
     return QueryBuilder.apply(this, (query) {
       return query.addPropertyName(r'uncompletedFilePath');
@@ -2406,357 +2776,6 @@ extension NewProjectQueryProperty
 // **************************************************************************
 // IsarEmbeddedGenerator
 // **************************************************************************
-
-// coverage:ignore-file
-// ignore_for_file: duplicate_ignore, non_constant_identifier_names, constant_identifier_names, invalid_use_of_protected_member, unnecessary_cast, prefer_const_constructors, lines_longer_than_80_chars, require_trailing_commas, inference_failure_on_function_invocation, unnecessary_parenthesis, unnecessary_raw_strings, unnecessary_null_checks, join_return_with_assignment, prefer_final_locals, avoid_js_rounded_ints, avoid_positional_boolean_parameters, always_specify_types
-
-const FileToKeyValueArraySchema = Schema(
-  name: r'FileToKeyValueArray',
-  id: 8381636968650662013,
-  properties: {
-    r'key': PropertySchema(
-      id: 0,
-      name: r'key',
-      type: IsarType.string,
-    ),
-    r'value': PropertySchema(
-      id: 1,
-      name: r'value',
-      type: IsarType.string,
-    )
-  },
-  estimateSize: _fileToKeyValueArrayEstimateSize,
-  serialize: _fileToKeyValueArraySerialize,
-  deserialize: _fileToKeyValueArrayDeserialize,
-  deserializeProp: _fileToKeyValueArrayDeserializeProp,
-);
-
-int _fileToKeyValueArrayEstimateSize(
-  FileToKeyValueArray object,
-  List<int> offsets,
-  Map<Type, List<int>> allOffsets,
-) {
-  var bytesCount = offsets.last;
-  bytesCount += 3 + object.key.length * 3;
-  bytesCount += 3 + object.value.length * 3;
-  return bytesCount;
-}
-
-void _fileToKeyValueArraySerialize(
-  FileToKeyValueArray object,
-  IsarWriter writer,
-  List<int> offsets,
-  Map<Type, List<int>> allOffsets,
-) {
-  writer.writeString(offsets[0], object.key);
-  writer.writeString(offsets[1], object.value);
-}
-
-FileToKeyValueArray _fileToKeyValueArrayDeserialize(
-  Id id,
-  IsarReader reader,
-  List<int> offsets,
-  Map<Type, List<int>> allOffsets,
-) {
-  final object = FileToKeyValueArray();
-  object.key = reader.readString(offsets[0]);
-  object.value = reader.readString(offsets[1]);
-  return object;
-}
-
-P _fileToKeyValueArrayDeserializeProp<P>(
-  IsarReader reader,
-  int propertyId,
-  int offset,
-  Map<Type, List<int>> allOffsets,
-) {
-  switch (propertyId) {
-    case 0:
-      return (reader.readString(offset)) as P;
-    case 1:
-      return (reader.readString(offset)) as P;
-    default:
-      throw IsarError('Unknown property with id $propertyId');
-  }
-}
-
-extension FileToKeyValueArrayQueryFilter on QueryBuilder<FileToKeyValueArray,
-    FileToKeyValueArray, QFilterCondition> {
-  QueryBuilder<FileToKeyValueArray, FileToKeyValueArray, QAfterFilterCondition>
-      keyEqualTo(
-    String value, {
-    bool caseSensitive = true,
-  }) {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.equalTo(
-        property: r'key',
-        value: value,
-        caseSensitive: caseSensitive,
-      ));
-    });
-  }
-
-  QueryBuilder<FileToKeyValueArray, FileToKeyValueArray, QAfterFilterCondition>
-      keyGreaterThan(
-    String value, {
-    bool include = false,
-    bool caseSensitive = true,
-  }) {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.greaterThan(
-        include: include,
-        property: r'key',
-        value: value,
-        caseSensitive: caseSensitive,
-      ));
-    });
-  }
-
-  QueryBuilder<FileToKeyValueArray, FileToKeyValueArray, QAfterFilterCondition>
-      keyLessThan(
-    String value, {
-    bool include = false,
-    bool caseSensitive = true,
-  }) {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.lessThan(
-        include: include,
-        property: r'key',
-        value: value,
-        caseSensitive: caseSensitive,
-      ));
-    });
-  }
-
-  QueryBuilder<FileToKeyValueArray, FileToKeyValueArray, QAfterFilterCondition>
-      keyBetween(
-    String lower,
-    String upper, {
-    bool includeLower = true,
-    bool includeUpper = true,
-    bool caseSensitive = true,
-  }) {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.between(
-        property: r'key',
-        lower: lower,
-        includeLower: includeLower,
-        upper: upper,
-        includeUpper: includeUpper,
-        caseSensitive: caseSensitive,
-      ));
-    });
-  }
-
-  QueryBuilder<FileToKeyValueArray, FileToKeyValueArray, QAfterFilterCondition>
-      keyStartsWith(
-    String value, {
-    bool caseSensitive = true,
-  }) {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.startsWith(
-        property: r'key',
-        value: value,
-        caseSensitive: caseSensitive,
-      ));
-    });
-  }
-
-  QueryBuilder<FileToKeyValueArray, FileToKeyValueArray, QAfterFilterCondition>
-      keyEndsWith(
-    String value, {
-    bool caseSensitive = true,
-  }) {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.endsWith(
-        property: r'key',
-        value: value,
-        caseSensitive: caseSensitive,
-      ));
-    });
-  }
-
-  QueryBuilder<FileToKeyValueArray, FileToKeyValueArray, QAfterFilterCondition>
-      keyContains(String value, {bool caseSensitive = true}) {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.contains(
-        property: r'key',
-        value: value,
-        caseSensitive: caseSensitive,
-      ));
-    });
-  }
-
-  QueryBuilder<FileToKeyValueArray, FileToKeyValueArray, QAfterFilterCondition>
-      keyMatches(String pattern, {bool caseSensitive = true}) {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.matches(
-        property: r'key',
-        wildcard: pattern,
-        caseSensitive: caseSensitive,
-      ));
-    });
-  }
-
-  QueryBuilder<FileToKeyValueArray, FileToKeyValueArray, QAfterFilterCondition>
-      keyIsEmpty() {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.equalTo(
-        property: r'key',
-        value: '',
-      ));
-    });
-  }
-
-  QueryBuilder<FileToKeyValueArray, FileToKeyValueArray, QAfterFilterCondition>
-      keyIsNotEmpty() {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.greaterThan(
-        property: r'key',
-        value: '',
-      ));
-    });
-  }
-
-  QueryBuilder<FileToKeyValueArray, FileToKeyValueArray, QAfterFilterCondition>
-      valueEqualTo(
-    String value, {
-    bool caseSensitive = true,
-  }) {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.equalTo(
-        property: r'value',
-        value: value,
-        caseSensitive: caseSensitive,
-      ));
-    });
-  }
-
-  QueryBuilder<FileToKeyValueArray, FileToKeyValueArray, QAfterFilterCondition>
-      valueGreaterThan(
-    String value, {
-    bool include = false,
-    bool caseSensitive = true,
-  }) {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.greaterThan(
-        include: include,
-        property: r'value',
-        value: value,
-        caseSensitive: caseSensitive,
-      ));
-    });
-  }
-
-  QueryBuilder<FileToKeyValueArray, FileToKeyValueArray, QAfterFilterCondition>
-      valueLessThan(
-    String value, {
-    bool include = false,
-    bool caseSensitive = true,
-  }) {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.lessThan(
-        include: include,
-        property: r'value',
-        value: value,
-        caseSensitive: caseSensitive,
-      ));
-    });
-  }
-
-  QueryBuilder<FileToKeyValueArray, FileToKeyValueArray, QAfterFilterCondition>
-      valueBetween(
-    String lower,
-    String upper, {
-    bool includeLower = true,
-    bool includeUpper = true,
-    bool caseSensitive = true,
-  }) {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.between(
-        property: r'value',
-        lower: lower,
-        includeLower: includeLower,
-        upper: upper,
-        includeUpper: includeUpper,
-        caseSensitive: caseSensitive,
-      ));
-    });
-  }
-
-  QueryBuilder<FileToKeyValueArray, FileToKeyValueArray, QAfterFilterCondition>
-      valueStartsWith(
-    String value, {
-    bool caseSensitive = true,
-  }) {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.startsWith(
-        property: r'value',
-        value: value,
-        caseSensitive: caseSensitive,
-      ));
-    });
-  }
-
-  QueryBuilder<FileToKeyValueArray, FileToKeyValueArray, QAfterFilterCondition>
-      valueEndsWith(
-    String value, {
-    bool caseSensitive = true,
-  }) {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.endsWith(
-        property: r'value',
-        value: value,
-        caseSensitive: caseSensitive,
-      ));
-    });
-  }
-
-  QueryBuilder<FileToKeyValueArray, FileToKeyValueArray, QAfterFilterCondition>
-      valueContains(String value, {bool caseSensitive = true}) {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.contains(
-        property: r'value',
-        value: value,
-        caseSensitive: caseSensitive,
-      ));
-    });
-  }
-
-  QueryBuilder<FileToKeyValueArray, FileToKeyValueArray, QAfterFilterCondition>
-      valueMatches(String pattern, {bool caseSensitive = true}) {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.matches(
-        property: r'value',
-        wildcard: pattern,
-        caseSensitive: caseSensitive,
-      ));
-    });
-  }
-
-  QueryBuilder<FileToKeyValueArray, FileToKeyValueArray, QAfterFilterCondition>
-      valueIsEmpty() {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.equalTo(
-        property: r'value',
-        value: '',
-      ));
-    });
-  }
-
-  QueryBuilder<FileToKeyValueArray, FileToKeyValueArray, QAfterFilterCondition>
-      valueIsNotEmpty() {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.greaterThan(
-        property: r'value',
-        value: '',
-      ));
-    });
-  }
-}
-
-extension FileToKeyValueArrayQueryObject on QueryBuilder<FileToKeyValueArray,
-    FileToKeyValueArray, QFilterCondition> {}
 
 // coverage:ignore-file
 // ignore_for_file: duplicate_ignore, non_constant_identifier_names, constant_identifier_names, invalid_use_of_protected_member, unnecessary_cast, prefer_const_constructors, lines_longer_than_80_chars, require_trailing_commas, inference_failure_on_function_invocation, unnecessary_parenthesis, unnecessary_raw_strings, unnecessary_null_checks, join_return_with_assignment, prefer_final_locals, avoid_js_rounded_ints, avoid_positional_boolean_parameters, always_specify_types

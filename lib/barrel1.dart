@@ -9,10 +9,17 @@ export '/screens/send_pass.dart';
 export '/screens/change_pass.dart';
 export '/screens/settings.dart';
 export '/screens/appearance.dart';
-export '/isolates.dart';
 export '/screens/files.dart';
+
+
+export '/isolates.dart';
+
+
 export 'project_files.dart';
+
+
 export '/globals.dart';
+
 
 export 'package:flutter/material.dart';
 export 'package:google_fonts/google_fonts.dart';
@@ -27,4 +34,5 @@ export 'dart:isolate';
 export 'dart:async';
 export 'dart:io';
 export 'package:file_picker/file_picker.dart';
-
+export 'package:isar/isar.dart';
+export 'package:path_provider/path_provider.dart';

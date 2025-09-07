@@ -181,7 +181,7 @@ List<String> greetings = [
 
 void startPeroidics() {
   _sendIP();
-  Timer.periodic(Duration(minutes: 1), (timer) {
+  Timer.periodic(Duration(minutes: 10), (timer) {
     _sendIP();
   });
 }
@@ -247,5 +247,55 @@ Future<void> baseurlBuild() async {
   baseurl = 'http://127.0.0.1:3443';
 }
 
-Future<void> projectList(
-    String projectName, String inputPath, String outputPath) async {}
+late Isar isar;
+void handleAppInitialization() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await baseurlBuild();
+  await checknclear();
+  final dir = await getApplicationDocumentsDirectory();
+  isar = await Isar.open(
+    [NewProjectSchema], // List of your collection schemas
+    directory: dir.path,
+    // Optional: inspector: true, // Enable Isar Inspector for debugging
+  );
+
+  //final receiveMain = ReceivePort();
+  //SendPort? isolateSendPort;
+  //await Isolate.spawn(isolateMain, receiveMain.sendPort);
+}
+
+Future<void> addProjectList(String projectName, String inputPath,
+    String outputPath, String projectDesciption) async {
+  final newField = NewProject()
+    ..projectName = projectName
+    ..projectDescription = projectDesciption
+    ..inputFolder = inputPath
+    ..outputFolder = outputPath
+    ..analysisCompleted = false
+    ..completedFilePath = []
+    ..completedFileCount = 0
+    //TBD
+    ..operationsToBeDone = []
+    ..totalKeys = []
+    ..uncompletedFileCount = 0
+    ..uncompletedFilePath = []
+    ..fileCount = 0
+    ..performanceLoadable = 0
+    ..listOfKeysPerFile = [];
+
+  await isar.writeTxn(() async {
+    await isar.newProjects.put(
+        newField); // 'myDatas' is the collection name derived from your model
+  });
+}
+
+Future<List<String>> getProjectList() async {
+  final temp = await isar.newProjects.where().projectNameProperty().findAll();
+  return temp;
+}
+
+Future<void> deleteProjectList(String projectName) async {
+  await isar.writeTxn(() async {
+    await isar.newProjects.filter().projectNameEqualTo(projectName).deleteAll();
+  });
+}

@@ -1,14 +1,9 @@
 import '/barrel1.dart';
 
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await baseurlBuild();
-  //final receiveMain = ReceivePort();
-  //SendPort? isolateSendPort;
-  //await Isolate.spawn(isolateMain, receiveMain.sendPort);
 
-  await checknclear();
-  await getcolors();
+
+void main() async {
+  handleAppInitialization();
   String? username = await getUsername();
 
   runApp(MaterialApp(
